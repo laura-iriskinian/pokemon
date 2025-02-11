@@ -1,23 +1,35 @@
 import pygame
-import random
-import json
-from sound import Sound
-
-#load image files and sound
-music = Sound()
-
-pygame.display.set_caption("Pokemon") 
-screen = pygame.display.set_mode((800, 600))
-background = pygame.image.load("pictures/background.png")
 
 
-
+from fight import Fight
+from pokemon import Pokemon
 
 pygame.init()
 
+clock = pygame.time.Clock()
+fps = 60
+
+
+fight = Fight()
+pokemon = Pokemon()
 run = True
 
 while run:
+
+    clock.tick(fps)
+
+    # draw background
+    fight.draw_background()
+
+    # draw bottom panel
+    fight.draw_panel()
+
+    # draw pokemon
+    pokemon.draw_pokemon()
+
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            run = False
 
 
     pygame.display.update()
