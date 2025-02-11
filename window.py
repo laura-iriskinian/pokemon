@@ -1,7 +1,7 @@
 import pygame
 
 
-class Screen:
+class Window:
     def __init__(self):
 
         # color
