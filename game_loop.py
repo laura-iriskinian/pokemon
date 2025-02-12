@@ -4,6 +4,7 @@ from pygame.locals import *
 from fight import Fight
 from pokemon import Pokemon
 from trainer import Trainer
+from menu import Menu
 
 
 pygame.init()
@@ -24,33 +25,33 @@ fight.draw_panel()
 trainer.draw_panel_button(position) 
 # draw pokemon
 
+def game():
+    while run:
 
-while run:
-
-    clock.tick(fps)
-
-
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            run = False
-
-        if event.type == KEYDOWN:
-            if event.key == K_DOWN:
-                if position >= 1:
-                    position += 1
-                    fight.draw_panel()
-                    trainer.draw_panel_button(position) 
-                if position == 4:
-                    position -=3
-                    fight.draw_panel()
-                    trainer.draw_panel_button(position) 
-            if event.key == K_RETURN:
-                if trainer.rectangle_top.colliderect(trainer.rectangle_button):
-                    pokemon.draw_pokemons()
-                    fight.draw_panel()
+        clock.tick(fps)
 
 
-    pygame.display.update()
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                run = False
+
+            if event.type == KEYDOWN:
+                if event.key == K_DOWN:
+                    if position >= 1:
+                        position += 1
+                        fight.draw_panel()
+                        trainer.draw_panel_button(position) 
+                    if position == 4:
+                        position -=3
+                        fight.draw_panel()
+                        trainer.draw_panel_button(position) 
+                if event.key == K_RETURN:
+                    if trainer.rectangle_top.colliderect(trainer.rectangle_button):
+                        pokemon.draw_pokemons()
+                        fight.draw_panel()
 
 
-pygame.quit()
+        pygame.display.update()
+
+
+    pygame.quit()
