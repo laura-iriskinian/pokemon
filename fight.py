@@ -7,7 +7,9 @@ class Fight():
     def __init__(self):
         # background image
         self.window = Window() 
+
         self.background = pygame.image.load("assets/pictures/background.png").convert_alpha()
+
 
     def draw_panel(self):
         """draw rectangle for bottom panel"""
@@ -21,6 +23,11 @@ class Fight():
         pygame.draw.rect(self.window.screen, self.window.GREY, rectangle_left, 3)
         pygame.draw.rect(self.window.screen, self.window.GREY, rectangle_right, 3)
 
-    def draw_background(self):
+        self.window.draw_text("Attack !",self.window.text_font_menu_battle,self.window.WHITE,50, (self.window.screen_height - self.window.bottom_panel)+6)
+        self.window.draw_text("Run ",self.window.text_font_menu_battle,self.window.WHITE,50, (self.window.screen_height - (self.window.bottom_panel - (self.window.bottom_panel/3))))
+        self.window.draw_text("Change pokemon",self.window.text_font_menu_battle,self.window.WHITE,50, (self.window.screen_height - (self.window.bottom_panel/3)))
+
+
+    def draw_background_fight(self):
         """function to drawing background"""
         self.window.screen.blit(self.background,(0,0))

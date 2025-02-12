@@ -2,16 +2,42 @@ import pygame
 
 
 class Window:
+    """class to define the window, to link : window.screen"""
     def __init__(self):
 
         # color
         self.BLUE = (27, 1, 155)
         self.GREY = (128,128,128)
+        self.WHITE = (255,255,255)
+        self.BLACK = (0,0,0)
+
+        # text font 
+        self.text_font_menu_battle = pygame.font.SysFont("Arial",30)
+
 
         # game window
         self.bottom_panel = 150
         self.screen_width = 800
         self.screen_height = 400 + self.bottom_panel
 
+        # position y button game pannel
+        
+        self.py_rectangle_top = (self.screen_height - self.bottom_panel)+3
+        self.py_rectangle_middle = (self.screen_height - (self.bottom_panel - (self.bottom_panel/3)))
+        self.py_rectangle_bottom = (self.screen_height - (self.bottom_panel/3))
+
+        # position x button game panel
+        self.px_pannel_left = 3
+
+        # size button x/y button game pannel
+        self.sy_button = (self.bottom_panel/3)-3
+        self.sx_button = (self.screen_width / 2)-6
+
+
         pygame.display.set_caption("Pokemon") 
         self.screen = pygame.display.set_mode((self.screen_width, self.screen_height))
+
+
+    def draw_text(self,text,font,text_col,x,y):
+        img = font.render(text,True,text_col)
+        self.screen.blit(img,(x,y))
