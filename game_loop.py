@@ -48,7 +48,7 @@ while run:
                 if trainer.rectangle_top.colliderect(trainer.rectangle_button):
                     pokemon.draw_pokemons()
                     fight.draw_panel()
-
+                    pokemon.draw_hp_opponent_pokemon()
 
     pygame.display.update()
 
