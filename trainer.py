@@ -1,13 +1,15 @@
 import pygame
 from pygame.locals import *
 from window import Window
+from pokemon import Pokemon
+from fight import Fight
 
-
-class Trainer():
+class Trainer(Pokemon):
     """class trainer : to select attack, menu, pokedex"""
     def __init__(self):
-
+        super().__init__()
         self.window = Window()
+        self.fight = Fight()
 
         # rectangle button to panel : (position x,position y,size x, size y)
         self.rectangle_top = pygame.Rect(self.window.px_pannel_left, self.window.py_rectangle_top, self.window.sx_button, self.window.sy_button)
@@ -28,3 +30,7 @@ class Trainer():
                                                 3)
         
         pygame.draw.rect(self.window.screen, self.window.GREY, self.rectangle_button, 3)
+
+    def trainer_attack(self):
+        self.attack()
+        self.draw_hp_opponent_pokemon()
