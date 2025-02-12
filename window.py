@@ -28,6 +28,7 @@ class Window:
 
         # position x button game panel
         self.px_pannel_left = 3
+        self.px_pannel_right = (self.screen_width/2)+3
 
         # size button x/y button game pannel
         self.sy_button = (self.bottom_panel/3)-3
