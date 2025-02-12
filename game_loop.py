@@ -46,7 +46,8 @@ while run:
                     trainer.draw_panel_button(position) 
             if event.key == K_RETURN:
                 if trainer.rectangle_top.colliderect(trainer.rectangle_button):
-                    pokemon.draw_pokemon()
+                    pokemon.draw_pokemons()
+                    fight.draw_panel()
 
 
     pygame.display.update()
