@@ -1,0 +1,3610 @@
+[
+    {
+        "pokedex_id": 1,
+        "name": "Bulbasaur",
+        "sprites":{
+            "front": "assets/pictures/Grass/bulbasaur_front.png",
+            "back": "assets/pictures/Grass/bulbasaur_back.png"
+        },
+        "type": "Grass",
+        "stat":{
+            "hp": 45,
+            "atk": 49,
+            "def": 49
+        },
+        "resistances":[
+            {
+                "name": "Normal",
+                "multiply": 1
+            },
+            {
+                "name": "Grass",
+                "multiply": 1
+            },
+            {
+                "name": "Fire",
+                "multiply": 2
+            }, 
+            {
+                "name": "Water",
+                "multiply": 0.5
+            }, 
+            {
+                "name": "Electric",
+                "multiply": 0.5
+            },
+            {
+                "name": "Ice",
+                "multiply": 2
+            }, 
+            {
+                "name": "Fight",
+                "multiply": 0.5
+            },
+            {
+                "name": "Poison",
+                "multiply": 1
+            },
+            {
+                "name": "Ground",
+                "multiply": 1
+            },
+            {
+                "name": "Flying",
+                "multiply": 2
+            },
+            {
+                "name": "Psychic",
+                "multiply": 2
+            },
+            {
+                "name": "Bug",
+                "multiply": 1
+            },
+            {
+                "name": "Rock",
+                "multiply": 1
+            },
+            {
+                "name": "Ghost",
+                "multiply": 1
+            },
+            {
+                "name": "Dragon",
+                "multiply": 1
+            },
+            {
+                "name": "Dark",
+                "multiply": 1
+            },
+            {
+                "name": "Steel",
+                "multiply": 1
+            },
+            {
+                "name": "Fairy",
+                "multiply": 0.5
+            }
+        ]
+    },
+    {
+        "pokedex_id": 2,
+        "name": "Ivysaur",
+        "sprites":{
+            "front": "assets/pictures/Grass/ivysaur_front.png",
+            "back": "assets/pictures/Grass/ivysaur_back.png"
+        },
+        "type": "Grass",
+        "stat":{
+            "hp": 60,
+            "atk": 62,
+            "def": 63
+        },
+        "resistances":[
+            {
+                "name": "Normal",
+                "multiply": 1
+            },
+            {
+                "name": "Grass",
+                "multiply": 1
+            },
+            {
+                "name": "Fire",
+                "multiply": 2
+            }, 
+            {
+                "name": "Water",
+                "multiply": 0.5
+            }, 
+            {
+                "name": "Electric",
+                "multiply": 0.5
+            },
+            {
+                "name": "Ice",
+                "multiply": 2
+            }, 
+            {
+                "name": "Fight",
+                "multiply": 0.5
+            },
+            {
+                "name": "Poison",
+                "multiply": 1
+            },
+            {
+                "name": "Ground",
+                "multiply": 1
+            },
+            {
+                "name": "Flying",
+                "multiply": 2
+            },
+            {
+                "name": "Psychic",
+                "multiply": 2
+            },
+            {
+                "name": "Bug",
+                "multiply": 1
+            },
+            {
+                "name": "Rock",
+                "multiply": 1
+            },
+            {
+                "name": "Ghost",
+                "multiply": 1
+            },
+            {
+                "name": "Dragon",
+                "multiply": 1
+            },
+            {
+                "name": "Dark",
+                "multiply": 1
+            },
+            {
+                "name": "Steel",
+                "multiply": 1
+            },
+            {
+                "name": "Fairy",
+                "multiply": 0.5
+            }
+        ]
+    },
+    {
+        "pokedex_id": 3,
+        "name": "Venusaur",
+        "sprites":{
+            "front": "assets/pictures/Grass/venusaur_front.png",
+            "back": "assets/pictures/Grass/venusaur_back.png"
+        },
+        "type": "Grass",
+        "stat":{
+            "hp": 80,
+            "atk": 82,
+            "def": 83
+        },
+        "resistances":[
+            {
+                "name": "Normal",
+                "multiply": 1
+            },
+            {
+                "name": "Grass",
+                "multiply": 1
+            },
+            {
+                "name": "Fire",
+                "multiply": 2
+            }, 
+            {
+                "name": "Water",
+                "multiply": 0.5
+            }, 
+            {
+                "name": "Electric",
+                "multiply": 0.5
+            },
+            {
+                "name": "Ice",
+                "multiply": 2
+            }, 
+            {
+                "name": "Fight",
+                "multiply": 0.5
+            },
+            {
+                "name": "Poison",
+                "multiply": 1
+            },
+            {
+                "name": "Ground",
+                "multiply": 1
+            },
+            {
+                "name": "Flying",
+                "multiply": 2
+            },
+            {
+                "name": "Psychic",
+                "multiply": 2
+            },
+            {
+                "name": "Bug",
+                "multiply": 1
+            },
+            {
+                "name": "Rock",
+                "multiply": 1
+            },
+            {
+                "name": "Ghost",
+                "multiply": 1
+            },
+            {
+                "name": "Dragon",
+                "multiply": 1
+            },
+            {
+                "name": "Dark",
+                "multiply": 1
+            },
+            {
+                "name": "Steel",
+                "multiply": 1
+            },
+            {
+                "name": "Fairy",
+                "multiply": 0.5
+            }
+        ]
+    },
+    {
+        "pokedex_id": 4,
+        "name": "Charmander",
+        "sprites":{
+            "front": "assets/pictures/Fire/charmander_front.png",
+            "back": "assets/pictures/Fire/charmander_back.png"
+        },
+        "type": "Fire",
+        "stat":{
+            "hp": 39,
+            "atk": 52,
+            "def": 43
+        },
+        "resistances":[
+            {
+                "name": "Normal",
+                "multiply": 1
+            },
+            {
+                "name": "Grass",
+                "multiply": 0.5
+            },
+            {
+                "name": "Fire",
+                "multiply": 1
+            }, 
+            {
+                "name": "Water",
+                "multiply": 2
+            }, 
+            {
+                "name": "Electric",
+                "multiply": 1
+            },
+            {
+                "name": "Ice",
+                "multiply": 0.5
+            }, 
+            {
+                "name": "Fight",
+                "multiply": 1
+            },
+            {
+                "name": "Poison",
+                "multiply": 1
+            },
+            {
+                "name": "Ground",
+                "multiply": 2
+            },
+            {
+                "name": "Flying",
+                "multiply": 1
+            },
+            {
+                "name": "Psychic",
+                "multiply": 1
+            },
+            {
+                "name": "Bug",
+                "multiply": 0.5
+            },
+            {
+                "name": "Rock",
+                "multiply": 2
+            },
+            {
+                "name": "Ghost",
+                "multiply": 1
+            },
+            {
+                "name": "Dragon",
+                "multiply": 1
+            },
+            {
+                "name": "Dark",
+                "multiply": 1
+            },
+            {
+                "name": "Steel",
+                "multiply": 0.5
+            },
+            {
+                "name": "Fairy",
+                "multiply": 0.5
+            }
+        ]
+    },
+    {
+        "pokedex_id": 5,
+        "name": "Charmeleon",
+        "sprites":{
+            "front": "assets/pictures/Fire/charmeleon_front.png",
+            "back": "assets/pictures/Fire/charmeleon_back.png"
+        },
+        "type": "Fire",
+        "stat":{
+            "hp": 58,
+            "atk": 64,
+            "def": 58
+        },
+        "resistances":[
+            {
+                "name": "Normal",
+                "multiply": 1
+            },
+            {
+                "name": "Grass",
+                "multiply": 0.5
+            },
+            {
+                "name": "Fire",
+                "multiply": 1
+            }, 
+            {
+                "name": "Water",
+                "multiply": 2
+            }, 
+            {
+                "name": "Electric",
+                "multiply": 1
+            },
+            {
+                "name": "Ice",
+                "multiply": 0.5
+            }, 
+            {
+                "name": "Fight",
+                "multiply": 1
+            },
+            {
+                "name": "Poison",
+                "multiply": 1
+            },
+            {
+                "name": "Ground",
+                "multiply": 2
+            },
+            {
+                "name": "Flying",
+                "multiply": 1
+            },
+            {
+                "name": "Psychic",
+                "multiply": 1
+            },
+            {
+                "name": "Bug",
+                "multiply": 0.5
+            },
+            {
+                "name": "Rock",
+                "multiply": 2
+            },
+            {
+                "name": "Ghost",
+                "multiply": 1
+            },
+            {
+                "name": "Dragon",
+                "multiply": 1
+            },
+            {
+                "name": "Dark",
+                "multiply": 1
+            },
+            {
+                "name": "Steel",
+                "multiply": 0.5
+            },
+            {
+                "name": "Fairy",
+                "multiply": 0.5
+            }
+        ]
+    },
+    {
+        "pokedex_id": 6,
+        "name": "Charizard",
+        "sprites":{
+            "front": "assets/pictures/Fire/charizard_front.png",
+            "back": "assets/pictures/Fire/charizard_back.png"
+        },
+        "type": "Fire",
+        "stat":{
+            "hp": 78,
+            "atk": 84,
+            "def": 78
+        },
+        "resistances":[
+            {
+                "name": "Normal",
+                "multiply": 1
+            },
+            {
+                "name": "Grass",
+                "multiply": 0.5
+            },
+            {
+                "name": "Fire",
+                "multiply": 1
+            }, 
+            {
+                "name": "Water",
+                "multiply": 2
+            }, 
+            {
+                "name": "Electric",
+                "multiply": 1
+            },
+            {
+                "name": "Ice",
+                "multiply": 0.5
+            }, 
+            {
+                "name": "Fight",
+                "multiply": 1
+            },
+            {
+                "name": "Poison",
+                "multiply": 1
+            },
+            {
+                "name": "Ground",
+                "multiply": 2
+            },
+            {
+                "name": "Flying",
+                "multiply": 1
+            },
+            {
+                "name": "Psychic",
+                "multiply": 1
+            },
+            {
+                "name": "Bug",
+                "multiply": 0.5
+            },
+            {
+                "name": "Rock",
+                "multiply": 2
+            },
+            {
+                "name": "Ghost",
+                "multiply": 1
+            },
+            {
+                "name": "Dragon",
+                "multiply": 1
+            },
+            {
+                "name": "Dark",
+                "multiply": 1
+            },
+            {
+                "name": "Steel",
+                "multiply": 0.5
+            },
+            {
+                "name": "Fairy",
+                "multiply": 0.5
+            }
+        ]
+    },
+    {
+        "pokedex_id": 7,
+        "name": "Squirtle",
+        "sprites":{
+            "front": "assets/pictures/Water/squirtle_front.png",
+            "back": "assets/pictures/Water/squirtle_back.png"
+        },
+        "type": "Water",
+        "stat":{
+            "hp": 44,
+            "atk": 48,
+            "def": 65
+        },
+        "resistances":[
+            {
+                "name": "Normal",
+                "multiply": 1
+            },
+            {
+                "name": "Grass",
+                "multiply": 2
+            },
+            {
+                "name": "Fire",
+                "multiply": 0.5
+            }, 
+            {
+                "name": "Water",
+                "multiply": 1
+            }, 
+            {
+                "name": "Electric",
+                "multiply": 2
+            },
+            {
+                "name": "Ice",
+                "multiply": 0.5
+            }, 
+            {
+                "name": "Fight",
+                "multiply": 1
+            },
+            {
+                "name": "Poison",
+                "multiply": 1
+            },
+            {
+                "name": "Ground",
+                "multiply": 1
+            },
+            {
+                "name": "Flying",
+                "multiply": 1
+            },
+            {
+                "name": "Psychic",
+                "multiply": 1
+            },
+            {
+                "name": "Bug",
+                "multiply": 1
+            },
+            {
+                "name": "Rock",
+                "multiply": 1
+            },
+            {
+                "name": "Ghost",
+                "multiply": 1
+            },
+            {
+                "name": "Dragon",
+                "multiply": 1
+            },
+            {
+                "name": "Dark",
+                "multiply": 1
+            },
+            {
+                "name": "Steel",
+                "multiply": 0.5
+            },
+            {
+                "name": "Fairy",
+                "multiply": 1
+            }
+        ]
+    },
+    {
+        "pokedex_id": 8,
+        "name": "Wartortle",
+        "sprites":{
+            "front": "assets/pictures/Water/wartortle_front.png",
+            "back": "assets/pictures/Water/wartortle_back.png"
+        },
+        "type": "Water",
+        "stat":{
+            "hp": 59,
+            "atk": 63,
+            "def": 80
+        },
+        "resistances":[
+            {
+                "name": "Normal",
+                "multiply": 1
+            },
+            {
+                "name": "Grass",
+                "multiply": 2
+            },
+            {
+                "name": "Fire",
+                "multiply": 0.5
+            }, 
+            {
+                "name": "Water",
+                "multiply": 1
+            }, 
+            {
+                "name": "Electric",
+                "multiply": 2
+            },
+            {
+                "name": "Ice",
+                "multiply": 0.5
+            }, 
+            {
+                "name": "Fight",
+                "multiply": 1
+            },
+            {
+                "name": "Poison",
+                "multiply": 1
+            },
+            {
+                "name": "Ground",
+                "multiply": 1
+            },
+            {
+                "name": "Flying",
+                "multiply": 1
+            },
+            {
+                "name": "Psychic",
+                "multiply": 1
+            },
+            {
+                "name": "Bug",
+                "multiply": 1
+            },
+            {
+                "name": "Rock",
+                "multiply": 1
+            },
+            {
+                "name": "Ghost",
+                "multiply": 1
+            },
+            {
+                "name": "Dragon",
+                "multiply": 1
+            },
+            {
+                "name": "Dark",
+                "multiply": 1
+            },
+            {
+                "name": "Steel",
+                "multiply": 0.5
+            },
+            {
+                "name": "Fairy",
+                "multiply": 1
+            }
+        ]
+    },
+    {
+        "pokedex_id": 9,
+        "name": "Blastoise",
+        "sprites":{
+            "front": "assets/pictures/Water/blastoise_front.png",
+            "back": "assets/pictures/Water/blastoise_back.png"
+        },
+        "type": "Water",
+        "stat":{
+            "hp": 44,
+            "atk": 48,
+            "def": 65
+        },
+        "resistances":[
+            {
+                "name": "Normal",
+                "multiply": 1
+            },
+            {
+                "name": "Grass",
+                "multiply": 2
+            },
+            {
+                "name": "Fire",
+                "multiply": 0.5
+            }, 
+            {
+                "name": "Water",
+                "multiply": 1
+            }, 
+            {
+                "name": "Electric",
+                "multiply": 2
+            },
+            {
+                "name": "Ice",
+                "multiply": 0.5
+            }, 
+            {
+                "name": "Fight",
+                "multiply": 1
+            },
+            {
+                "name": "Poison",
+                "multiply": 1
+            },
+            {
+                "name": "Ground",
+                "multiply": 1
+            },
+            {
+                "name": "Flying",
+                "multiply": 1
+            },
+            {
+                "name": "Psychic",
+                "multiply": 1
+            },
+            {
+                "name": "Bug",
+                "multiply": 1
+            },
+            {
+                "name": "Rock",
+                "multiply": 1
+            },
+            {
+                "name": "Ghost",
+                "multiply": 1
+            },
+            {
+                "name": "Dragon",
+                "multiply": 1
+            },
+            {
+                "name": "Dark",
+                "multiply": 1
+            },
+            {
+                "name": "Steel",
+                "multiply": 0.5
+            },
+            {
+                "name": "Fairy",
+                "multiply": 1
+            }
+        ]
+    },
+    {
+        "pokedex_id": 10,
+        "name": "Caterpie",
+        "sprites": {
+            "front": "assets/pictures/Bug/caterpie_front.png",
+            "back": "assets/pictures/Bug/caterpie_back.png"
+        },
+        "type": "Bug",
+        "stat": {
+            "hp": 45,
+            "atk": 30,
+            "def": 35
+        },
+        "resistances": [
+            {
+                "name": "Normal",
+                "multiply": 1
+            },
+            {
+                "name": "Fighting",
+                "multiply": 0.5
+            },
+            {
+                "name": "Flying",
+                "multiply": 2
+            },
+            {
+                "name": "Poison",
+                "multiply": 1
+            },
+            {
+                "name": "Ground",
+                "multiply": 0.5
+            },
+            {
+                "name": "Rock",
+                "multiply": 2
+            },
+            {
+                "name": "Bug",
+                "multiply": 1
+            },
+            {
+                "name": "Ghost",
+                "multiply": 1
+            },
+            {
+                "name": "Steel",
+                "multiply": 1
+            },
+            {
+                "name": "Fire",
+                "multiply": 2
+            },
+            {
+                "name": "Water",
+                "multiply": 1
+            },
+            {
+                "name": "Grass",
+                "multiply": 0.5
+            },
+            {
+                "name": "Electric",
+                "multiply": 1
+            },
+            {
+                "name": "Psychic",
+                "multiply": 1
+            },
+            {
+                "name": "Ice",
+                "multiply": 1
+            },
+            {
+                "name": "Dragon",
+                "multiply": 1
+            },
+            {
+                "name": "Dark",
+                "multiply": 1
+            },
+            {
+                "name": "Fairy",
+                "multiply": 1
+            }
+        ]
+    },
+    {
+        "pokedex_id": 11,
+        "name": "Metapod",
+        "sprites": {
+            "front": "assets/pictures/Bug/metapod_front.png",
+            "back": "assets/pictures/Bug/metapod_back.png"
+        },
+        "type": "Bug",
+        "stat": {
+            "hp": 50,
+            "atk": 20,
+            "def": 55
+        },
+        "resistances": [
+            {
+                "name": "Normal",
+                "multiply": 1
+            },
+            {
+                "name": "Fighting",
+                "multiply": 0.5
+            },
+            {
+                "name": "Flying",
+                "multiply": 2
+            },
+            {
+                "name": "Poison",
+                "multiply": 1
+            },
+            {
+                "name": "Ground",
+                "multiply": 0.5
+            },
+            {
+                "name": "Rock",
+                "multiply": 2
+            },
+            {
+                "name": "Bug",
+                "multiply": 1
+            },
+            {
+                "name": "Ghost",
+                "multiply": 1
+            },
+            {
+                "name": "Steel",
+                "multiply": 1
+            },
+            {
+                "name": "Fire",
+                "multiply": 2
+            },
+            {
+                "name": "Water",
+                "multiply": 1
+            },
+            {
+                "name": "Grass",
+                "multiply": 0.5
+            },
+            {
+                "name": "Electric",
+                "multiply": 1
+            },
+            {
+                "name": "Psychic",
+                "multiply": 1
+            },
+            {
+                "name": "Ice",
+                "multiply": 1
+            },
+            {
+                "name": "Dragon",
+                "multiply": 1
+            },
+            {
+                "name": "Dark",
+                "multiply": 1
+            },
+            {
+                "name": "Fairy",
+                "multiply": 1
+            }
+        ]
+    },
+    {
+        "pokedex_id": 12,
+        "name": "Butterfree",
+        "sprites": {
+            "front": "assets/pictures/Bug/butterfree_front.png",
+            "back": "assets/pictures/Bug/butterfree_back.png"
+        },
+        "type": "Bug",
+        "stat": {
+            "hp": 60,
+            "atk": 45,
+            "def": 50
+        },
+        "resistances": [
+            {
+                "name": "Normal",
+                "multiply": 1
+            },
+            {
+                "name": "Fighting",
+                "multiply": 0.5
+            },
+            {
+                "name": "Flying",
+                "multiply": 2
+            },
+            {
+                "name": "Poison",
+                "multiply": 1
+            },
+            {
+                "name": "Ground",
+                "multiply": 0.5
+            },
+            {
+                "name": "Rock",
+                "multiply": 2
+            },
+            {
+                "name": "Bug",
+                "multiply": 1
+            },
+            {
+                "name": "Ghost",
+                "multiply": 1
+            },
+            {
+                "name": "Steel",
+                "multiply": 1
+            },
+            {
+                "name": "Fire",
+                "multiply": 2
+            },
+            {
+                "name": "Water",
+                "multiply": 1
+            },
+            {
+                "name": "Grass",
+                "multiply": 0.5
+            },
+            {
+                "name": "Electric",
+                "multiply": 1
+            },
+            {
+                "name": "Psychic",
+                "multiply": 1
+            },
+            {
+                "name": "Ice",
+                "multiply": 1
+            },
+            {
+                "name": "Dragon",
+                "multiply": 1
+            },
+            {
+                "name": "Dark",
+                "multiply": 1
+            },
+            {
+                "name": "Fairy",
+                "multiply": 1
+            }
+        ]
+    },
+    {
+        "pokedex_id": 16,
+        "name": "Pidgey",
+        "sprites": {
+            "front": "assets/pictures/Flying/pidgey_front.png",
+            "back": "assets/pictures/Flying/pidgey_back.png"
+        },
+        "type": "Flying",
+        "stat": {
+            "hp": 40,
+            "atk": 45,
+            "def": 40
+        },
+        "resistances": [
+            {
+                "name": "Normal",
+                "multiply": 1
+            },
+            {
+                "name": "Fighting",
+                "multiply": 0.5
+            },
+            {
+                "name": "Flying",
+                "multiply": 1
+            },
+            {
+                "name": "Poison",
+                "multiply": 1
+            },
+            {
+                "name": "Ground",
+                "multiply": 0
+            },
+            {
+                "name": "Rock",
+                "multiply": 2
+            },
+            {
+                "name": "Bug",
+                "multiply": 0.5
+            },
+            {
+                "name": "Ghost",
+                "multiply": 1
+            },
+            {
+                "name": "Steel",
+                "multiply": 1
+            },
+            {
+                "name": "Fire",
+                "multiply": 1
+            },
+            {
+                "name": "Water",
+                "multiply": 1
+            },
+            {
+                "name": "Grass",
+                "multiply": 0.5
+            },
+            {
+                "name": "Electric",
+                "multiply": 2
+            },
+            {
+                "name": "Psychic",
+                "multiply": 1
+            },
+            {
+                "name": "Ice",
+                "multiply": 2
+            },
+            {
+                "name": "Dragon",
+                "multiply": 1
+            },
+            {
+                "name": "Dark",
+                "multiply": 1
+            },
+            {
+                "name": "Fairy",
+                "multiply": 1
+            }
+        ]
+    },
+    {
+        "pokedex_id": 17,
+        "name": "Pidgeotto",
+        "sprites": {
+            "front": "assets/pictures/Flying/pidgeotto_front.png",
+            "back": "assets/pictures/Flying/pidgeotto_back.png"
+        },
+        "type": "Flying",
+        "stat": {
+            "hp": 63,
+            "atk": 60,
+            "def": 55
+        },
+        "resistances": [
+            {
+                "name": "Normal",
+                "multiply": 1
+            },
+            {
+                "name": "Fighting",
+                "multiply": 0.5
+            },
+            {
+                "name": "Flying",
+                "multiply": 1
+            },
+            {
+                "name": "Poison",
+                "multiply": 1
+            },
+            {
+                "name": "Ground",
+                "multiply": 0
+            },
+            {
+                "name": "Rock",
+                "multiply": 2
+            },
+            {
+                "name": "Bug",
+                "multiply": 0.5
+            },
+            {
+                "name": "Ghost",
+                "multiply": 1
+            },
+            {
+                "name": "Steel",
+                "multiply": 1
+            },
+            {
+                "name": "Fire",
+                "multiply": 1
+            },
+            {
+                "name": "Water",
+                "multiply": 1
+            },
+            {
+                "name": "Grass",
+                "multiply": 0.5
+            },
+            {
+                "name": "Electric",
+                "multiply": 2
+            },
+            {
+                "name": "Psychic",
+                "multiply": 1
+            },
+            {
+                "name": "Ice",
+                "multiply": 2
+            },
+            {
+                "name": "Dragon",
+                "multiply": 1
+            },
+            {
+                "name": "Dark",
+                "multiply": 1
+            },
+            {
+                "name": "Fairy",
+                "multiply": 1
+            }
+        ]
+    },
+    {
+        "pokedex_id": 18,
+        "name": "Pidgeot",
+        "sprites": {
+            "front": "assets/pictures/Flying/pidgeot_front.png",
+            "back": "assets/pictures/Flying/pidgeot_back.png"
+        },
+        "type": "Flying",
+        "stat": {
+            "hp": 83,
+            "atk": 80,
+            "def": 75
+        },
+        "resistances": [
+            {
+                "name": "Normal",
+                "multiply": 1
+            },
+            {
+                "name": "Fighting",
+                "multiply": 0.5
+            },
+            {
+                "name": "Flying",
+                "multiply": 1
+            },
+            {
+                "name": "Poison",
+                "multiply": 1
+            },
+            {
+                "name": "Ground",
+                "multiply": 0
+            },
+            {
+                "name": "Rock",
+                "multiply": 2
+            },
+            {
+                "name": "Bug",
+                "multiply": 0.5
+            },
+            {
+                "name": "Ghost",
+                "multiply": 1
+            },
+            {
+                "name": "Steel",
+                "multiply": 1
+            },
+            {
+                "name": "Fire",
+                "multiply": 1
+            },
+            {
+                "name": "Water",
+                "multiply": 1
+            },
+            {
+                "name": "Grass",
+                "multiply": 0.5
+            },
+            {
+                "name": "Electric",
+                "multiply": 2
+            },
+            {
+                "name": "Psychic",
+                "multiply": 1
+            },
+            {
+                "name": "Ice",
+                "multiply": 2
+            },
+            {
+                "name": "Dragon",
+                "multiply": 1
+            },
+            {
+                "name": "Dark",
+                "multiply": 1
+            },
+            {
+                "name": "Fairy",
+                "multiply": 1
+            }
+        ]
+    },
+    {
+        "pokedex_id": 23,
+        "name": "Ekans",
+        "sprites": {
+            "front": "assets/pictures/Poison/ekans_front.png",
+            "back": "assets/pictures/Poison/ekans_back.png"
+        },
+        "type": "Poison",
+        "stat": {
+            "hp": 35,
+            "atk": 60,
+            "def": 44
+        },
+        "resistances": [
+            {
+                "name": "Normal",
+                "multiply": 1
+            },
+            {
+                "name": "Fighting",
+                "multiply": 0.5
+            },
+            {
+                "name": "Flying",
+                "multiply": 1
+            },
+            {
+                "name": "Poison",
+                "multiply": 1
+            },
+            {
+                "name": "Ground",
+                "multiply": 2
+            },
+            {
+                "name": "Rock",
+                "multiply": 1
+            },
+            {
+                "name": "Bug",
+                "multiply": 0.5
+            },
+            {
+                "name": "Ghost",
+                "multiply": 1
+            },
+            {
+                "name": "Steel",
+                "multiply": 1
+            },
+            {
+                "name": "Fire",
+                "multiply": 1
+            },
+            {
+                "name": "Water",
+                "multiply": 1
+            },
+            {
+                "name": "Grass",
+                "multiply": 0.5
+            },
+            {
+                "name": "Electric",
+                "multiply": 1
+            },
+            {
+                "name": "Psychic",
+                "multiply": 2
+            },
+            {
+                "name": "Ice",
+                "multiply": 1
+            },
+            {
+                "name": "Dragon",
+                "multiply": 1
+            },
+            {
+                "name": "Dark",
+                "multiply": 1
+            },
+            {
+                "name": "Fairy",
+                "multiply": 1
+            }
+        ]
+    },
+    {
+        "pokedex_id": 24,
+        "name": "Arbok",
+        "sprites": {
+            "front": "assets/pictures/Poison/arbok_front.png",
+            "back": "assets/pictures/Poison/arbok_back.png"
+        },
+        "type": "Poison",
+        "stat": {
+            "hp": 60,
+            "atk": 85,
+            "def": 69
+        },
+        "resistances": [
+            {
+                "name": "Normal",
+                "multiply": 1
+            },
+            {
+                "name": "Fighting",
+                "multiply": 0.5
+            },
+            {
+                "name": "Flying",
+                "multiply": 1
+            },
+            {
+                "name": "Poison",
+                "multiply": 1
+            },
+            {
+                "name": "Ground",
+                "multiply": 2
+            },
+            {
+                "name": "Rock",
+                "multiply": 1
+            },
+            {
+                "name": "Bug",
+                "multiply": 0.5
+            },
+            {
+                "name": "Ghost",
+                "multiply": 1
+            },
+            {
+                "name": "Steel",
+                "multiply": 1
+            },
+            {
+                "name": "Fire",
+                "multiply": 1
+            },
+            {
+                "name": "Water",
+                "multiply": 1
+            },
+            {
+                "name": "Grass",
+                "multiply": 0.5
+            },
+            {
+                "name": "Electric",
+                "multiply": 1
+            },
+            {
+                "name": "Psychic",
+                "multiply": 2
+            },
+            {
+                "name": "Ice",
+                "multiply": 1
+            },
+            {
+                "name": "Dragon",
+                "multiply": 1
+            },
+            {
+                "name": "Dark",
+                "multiply": 1
+            },
+            {
+                "name": "Fairy",
+                "multiply": 1
+            }
+        ]
+    },
+    {
+        "pokedex_id": 25,
+        "name": "Pikachu",
+        "sprites": {
+            "front": "assets/pictures/Electric/pikachu_front.png",
+            "back": "assets/pictures/Electric/pikachu_back.png"
+        },
+        "type": "Electric",
+        "stat": {
+            "hp": 35,
+            "atk": 55,
+            "def": 40
+        },
+        "resistances": [
+            {
+                "name": "Normal",
+                "multiply": 1
+            },
+            {
+                "name": "Fighting",
+                "multiply": 1
+            },
+            {
+                "name": "Flying",
+                "multiply": 0.5
+            },
+            {
+                "name": "Poison",
+                "multiply": 1
+            },
+            {
+                "name": "Ground",
+                "multiply": 2
+            },
+            {
+                "name": "Rock",
+                "multiply": 1
+            },
+            {
+                "name": "Bug",
+                "multiply": 1
+            },
+            {
+                "name": "Ghost",
+                "multiply": 1
+            },
+            {
+                "name": "Steel",
+                "multiply": 0.5
+            },
+            {
+                "name": "Fire",
+                "multiply": 1
+            },
+            {
+                "name": "Water",
+                "multiply": 1
+            },
+            {
+                "name": "Grass",
+                "multiply": 1
+            },
+            {
+                "name": "Electric",
+                "multiply": 1
+            },
+            {
+                "name": "Psychic",
+                "multiply": 1
+            },
+            {
+                "name": "Ice",
+                "multiply": 1
+            },
+            {
+                "name": "Dragon",
+                "multiply": 1
+            },
+            {
+                "name": "Dark",
+                "multiply": 1
+            },
+            {
+                "name": "Fairy",
+                "multiply": 1
+            }
+        ]
+    },
+    {
+        "pokedex_id": 26,
+        "name": "Raichu",
+        "sprites": {
+            "front": "assets/pictures/Electric/raichu_front.png",
+            "back": "assets/pictures/Electric/raichu_back.png"
+        },
+        "type": "Electric",
+        "stat": {
+            "hp": 60,
+            "atk": 90,
+            "def": 55
+        },
+        "resistances": [
+            {
+                "name": "Normal",
+                "multiply": 1
+            },
+            {
+                "name": "Fighting",
+                "multiply": 1
+            },
+            {
+                "name": "Flying",
+                "multiply": 0.5
+            },
+            {
+                "name": "Poison",
+                "multiply": 1
+            },
+            {
+                "name": "Ground",
+                "multiply": 2
+            },
+            {
+                "name": "Rock",
+                "multiply": 1
+            },
+            {
+                "name": "Bug",
+                "multiply": 1
+            },
+            {
+                "name": "Ghost",
+                "multiply": 1
+            },
+            {
+                "name": "Steel",
+                "multiply": 0.5
+            },
+            {
+                "name": "Fire",
+                "multiply": 1
+            },
+            {
+                "name": "Water",
+                "multiply": 1
+            },
+            {
+                "name": "Grass",
+                "multiply": 1
+            },
+            {
+                "name": "Electric",
+                "multiply": 1
+            },
+            {
+                "name": "Psychic",
+                "multiply": 1
+            },
+            {
+                "name": "Ice",
+                "multiply": 1
+            },
+            {
+                "name": "Dragon",
+                "multiply": 1
+            },
+            {
+                "name": "Dark",
+                "multiply": 1
+            },
+            {
+                "name": "Fairy",
+                "multiply": 1
+            }
+        ]
+    },
+    {
+        "pokedex_id": 35,
+        "name": "Clefairy",
+        "sprites": {
+            "front": "assets/pictures/Fairy/clefairy_front.png",
+            "back": "assets/pictures/Fairy/clefairy_back.png"
+        },
+        "type": "Fairy",
+        "stat": {
+            "hp": 70,
+            "atk": 45,
+            "def": 48
+        },
+        "resistances": [
+            {
+                "name": "Normal",
+                "multiply": 1
+            },
+            {
+                "name": "Fighting",
+                "multiply": 0.5
+            },
+            {
+                "name": "Flying",
+                "multiply": 1
+            },
+            {
+                "name": "Poison",
+                "multiply": 2
+            },
+            {
+                "name": "Ground",
+                "multiply": 1
+            },
+            {
+                "name": "Rock",
+                "multiply": 1
+            },
+            {
+                "name": "Bug",
+                "multiply": 0.5
+            },
+            {
+                "name": "Ghost",
+                "multiply": 1
+            },
+            {
+                "name": "Steel",
+                "multiply": 2
+            },
+            {
+                "name": "Fire",
+                "multiply": 1
+            },
+            {
+                "name": "Water",
+                "multiply": 1
+            },
+            {
+                "name": "Grass",
+                "multiply": 1
+            },
+            {
+                "name": "Electric",
+                "multiply": 1
+            },
+            {
+                "name": "Psychic",
+                "multiply": 1
+            },
+            {
+                "name": "Ice",
+                "multiply": 1
+            },
+            {
+                "name": "Dragon",
+                "multiply": 0
+            },
+            {
+                "name": "Dark",
+                "multiply": 0.5
+            },
+            {
+                "name": "Fairy",
+                "multiply": 1
+            }
+        ]
+    },
+    {
+        "pokedex_id": 36,
+        "name": "Clefable",
+        "sprites": {
+            "front": "assets/pictures/Fairy/clefable_front.png",
+            "back": "assets/pictures/Fairy/clefable_back.png"
+        },
+        "type": "Fairy",
+        "stat": {
+            "hp": 95,
+            "atk": 70,
+            "def": 73
+        },
+        "resistances": [
+            {
+                "name": "Normal",
+                "multiply": 1
+            },
+            {
+                "name": "Fighting",
+                "multiply": 0.5
+            },
+            {
+                "name": "Flying",
+                "multiply": 1
+            },
+            {
+                "name": "Poison",
+                "multiply": 2
+            },
+            {
+                "name": "Ground",
+                "multiply": 1
+            },
+            {
+                "name": "Rock",
+                "multiply": 1
+            },
+            {
+                "name": "Bug",
+                "multiply": 0.5
+            },
+            {
+                "name": "Ghost",
+                "multiply": 1
+            },
+            {
+                "name": "Steel",
+                "multiply": 2
+            },
+            {
+                "name": "Fire",
+                "multiply": 1
+            },
+            {
+                "name": "Water",
+                "multiply": 1
+            },
+            {
+                "name": "Grass",
+                "multiply": 1
+            },
+            {
+                "name": "Electric",
+                "multiply": 1
+            },
+            {
+                "name": "Psychic",
+                "multiply": 1
+            },
+            {
+                "name": "Ice",
+                "multiply": 1
+            },
+            {
+                "name": "Dragon",
+                "multiply": 0
+            },
+            {
+                "name": "Dark",
+                "multiply": 0.5
+            },
+            {
+                "name": "Fairy",
+                "multiply": 1
+            }
+        ]
+    },
+    {
+        "pokedex_id": 66,
+        "name": "Machop",
+        "sprites": {
+            "front": "assets/pictures/Fighting/machop_front.png",
+            "back": "assets/pictures/Fighting/machop_back.png"
+        },
+        "type": "Fighting",
+        "stat": {
+            "hp": 70,
+            "atk": 80,
+            "def": 50
+        },
+        "resistances": [
+            {
+                "name": "Normal",
+                "multiply": 1
+            },
+            {
+                "name": "Fighting",
+                "multiply": 1
+            },
+            {
+                "name": "Flying",
+                "multiply": 2
+            },
+            {
+                "name": "Poison",
+                "multiply": 1
+            },
+            {
+                "name": "Ground",
+                "multiply": 1
+            },
+            {
+                "name": "Rock",
+                "multiply": 0.5
+            },
+            {
+                "name": "Bug",
+                "multiply": 0.5
+            },
+            {
+                "name": "Ghost",
+                "multiply": 1
+            },
+            {
+                "name": "Steel",
+                "multiply": 1
+            },
+            {
+                "name": "Fire",
+                "multiply": 1
+            },
+            {
+                "name": "Water",
+                "multiply": 1
+            },
+            {
+                "name": "Grass",
+                "multiply": 1
+            },
+            {
+                "name": "Electric",
+                "multiply": 1
+            },
+            {
+                "name": "Psychic",
+                "multiply": 2
+            },
+            {
+                "name": "Ice",
+                "multiply": 1
+            },
+            {
+                "name": "Dragon",
+                "multiply": 1
+            },
+            {
+                "name": "Dark",
+                "multiply": 0.5
+            },
+            {
+                "name": "Fairy",
+                "multiply": 2
+            }
+        ]
+    },
+    {
+        "pokedex_id": 67,
+        "name": "Machoke",
+        "sprites": {
+            "front": "assets/pictures/Fighting/machoke_front.png",
+            "back": "assets/pictures/Fighting/machoke_back.png"
+        },
+        "type": "Fighting",
+        "stat": {
+            "hp": 80,
+            "atk": 100,
+            "def": 70
+        },
+        "resistances": [
+            {
+                "name": "Normal",
+                "multiply": 1
+            },
+            {
+                "name": "Fighting",
+                "multiply": 1
+            },
+            {
+                "name": "Flying",
+                "multiply": 2
+            },
+            {
+                "name": "Poison",
+                "multiply": 1
+            },
+            {
+                "name": "Ground",
+                "multiply": 1
+            },
+            {
+                "name": "Rock",
+                "multiply": 0.5
+            },
+            {
+                "name": "Bug",
+                "multiply": 0.5
+            },
+            {
+                "name": "Ghost",
+                "multiply": 1
+            },
+            {
+                "name": "Steel",
+                "multiply": 1
+            },
+            {
+                "name": "Fire",
+                "multiply": 1
+            },
+            {
+                "name": "Water",
+                "multiply": 1
+            },
+            {
+                "name": "Grass",
+                "multiply": 1
+            },
+            {
+                "name": "Electric",
+                "multiply": 1
+            },
+            {
+                "name": "Psychic",
+                "multiply": 2
+            },
+            {
+                "name": "Ice",
+                "multiply": 1
+            },
+            {
+                "name": "Dragon",
+                "multiply": 1
+            },
+            {
+                "name": "Dark",
+                "multiply": 0.5
+            },
+            {
+                "name": "Fairy",
+                "multiply": 2
+            }
+        ]
+    },
+    {
+        "pokedex_id": 68,
+        "name": "Machamp",
+        "sprites": {
+            "front": "assets/pictures/Fighting/machamp_front.png",
+            "back": "assets/pictures/Fighting/machamp_back.png"
+        },
+        "type": "Fighting",
+        "stat": {
+            "hp": 90,
+            "atk": 130,
+            "def": 80
+        },
+        "resistances": [
+            {
+                "name": "Normal",
+                "multiply": 1
+            },
+            {
+                "name": "Fighting",
+                "multiply": 1
+            },
+            {
+                "name": "Flying",
+                "multiply": 2
+            },
+            {
+                "name": "Poison",
+                "multiply": 1
+            },
+            {
+                "name": "Ground",
+                "multiply": 1
+            },
+            {
+                "name": "Rock",
+                "multiply": 0.5
+            },
+            {
+                "name": "Bug",
+                "multiply": 0.5
+            },
+            {
+                "name": "Ghost",
+                "multiply": 1
+            },
+            {
+                "name": "Steel",
+                "multiply": 1
+            },
+            {
+                "name": "Fire",
+                "multiply": 1
+            },
+            {
+                "name": "Water",
+                "multiply": 1
+            },
+            {
+                "name": "Grass",
+                "multiply": 1
+            },
+            {
+                "name": "Electric",
+                "multiply": 1
+            },
+            {
+                "name": "Psychic",
+                "multiply": 2
+            },
+            {
+                "name": "Ice",
+                "multiply": 1
+            },
+            {
+                "name": "Dragon",
+                "multiply": 1
+            },
+            {
+                "name": "Dark",
+                "multiply": 0.5
+            },
+            {
+                "name": "Fairy",
+                "multiply": 2
+            }
+        ]
+    },
+    {
+        "pokedex_id": 81,
+        "name": "Magnemite",
+        "sprites": {
+            "front": "assets/pictures/Steel/magnemite_front.png",
+            "back": "assets/pictures/Steel/magnemite_back.png"
+        },
+        "type": "Steel",
+        "stat": {
+            "hp": 25,
+            "atk": 35,
+            "def": 70
+        },
+        "resistances": [
+            {
+                "name": "Normal",
+                "multiply": 0.5
+            },
+            {
+                "name": "Fighting",
+                "multiply": 2
+            },
+            {
+                "name": "Flying",
+                "multiply": 0.5
+            },
+            {
+                "name": "Poison",
+                "multiply": 0
+            },
+            {
+                "name": "Ground",
+                "multiply": 2
+            },
+            {
+                "name": "Rock",
+                "multiply": 0.5
+            },
+            {
+                "name": "Bug",
+                "multiply": 0.5
+            },
+            {
+                "name": "Ghost",
+                "multiply": 1
+            },
+            {
+                "name": "Steel",
+                "multiply": 1
+            },
+            {
+                "name": "Fire",
+                "multiply": 2
+            },
+            {
+                "name": "Water",
+                "multiply": 1
+            },
+            {
+                "name": "Grass",
+                "multiply": 0.5
+            },
+            {
+                "name": "Electric",
+                "multiply": 1
+            },
+            {
+                "name": "Psychic",
+                "multiply": 0.5
+            },
+            {
+                "name": "Ice",
+                "multiply": 0.5
+            },
+            {
+                "name": "Dragon",
+                "multiply": 0.5
+            },
+            {
+                "name": "Dark",
+                "multiply": 1
+            },
+            {
+                "name": "Fairy",
+                "multiply": 0.5
+            }
+        ]
+    },
+    {
+        "pokedex_id": 82,
+        "name": "Magneton",
+        "sprites": {
+            "front": "assets/pictures/Steel/magneton_front.png",
+            "back": "assets/pictures/Steel/magneton_back.png"
+        },
+        "type": "Steel",
+        "stat": {
+            "hp": 50,
+            "atk": 60,
+            "def": 95
+        },
+        "resistances": [
+            {
+                "name": "Normal",
+                "multiply": 0.5
+            },
+            {
+                "name": "Fighting",
+                "multiply": 2
+            },
+            {
+                "name": "Flying",
+                "multiply": 0.5
+            },
+            {
+                "name": "Poison",
+                "multiply": 0
+            },
+            {
+                "name": "Ground",
+                "multiply": 2
+            },
+            {
+                "name": "Rock",
+                "multiply": 0.5
+            },
+            {
+                "name": "Bug",
+                "multiply": 0.5
+            },
+            {
+                "name": "Ghost",
+                "multiply": 1
+            },
+            {
+                "name": "Steel",
+                "multiply": 1
+            },
+            {
+                "name": "Fire",
+                "multiply": 2
+            },
+            {
+                "name": "Water",
+                "multiply": 1
+            },
+            {
+                "name": "Grass",
+                "multiply": 0.5
+            },
+            {
+                "name": "Electric",
+                "multiply": 1
+            },
+            {
+                "name": "Psychic",
+                "multiply": 0.5
+            },
+            {
+                "name": "Ice",
+                "multiply": 0.5
+            },
+            {
+                "name": "Dragon",
+                "multiply": 0.5
+            },
+            {
+                "name": "Dark",
+                "multiply": 1
+            },
+            {
+                "name": "Fairy",
+                "multiply": 0.5
+            }
+        ]
+    },
+    {
+        "pokedex_id": 83,
+        "name": "Farfetch'd",
+        "sprites": {
+            "front": "assets/pictures/Flying/farfetchd_front.png",
+            "back": "assets/pictures/Flying/farfetchd_back.png"
+        },
+        "type": "Flying",
+        "stat": {
+            "hp": 52,
+            "atk": 90,
+            "def": 55
+        },
+        "resistances": [
+            {
+                "name": "Normal",
+                "multiply": 1
+            },
+            {
+                "name": "Fighting",
+                "multiply": 1
+            },
+            {
+                "name": "Flying",
+                "multiply": 1
+            },
+            {
+                "name": "Poison",
+                "multiply": 1
+            },
+            {
+                "name": "Ground",
+                "multiply": 0
+            },
+            {
+                "name": "Rock",
+                "multiply": 2
+            },
+            {
+                "name": "Bug",
+                "multiply": 0.5
+            },
+            {
+                "name": "Ghost",
+                "multiply": 0
+            },
+            {
+                "name": "Steel",
+                "multiply": 1
+            },
+            {
+                "name": "Fire",
+                "multiply": 1
+            },
+            {
+                "name": "Water",
+                "multiply": 1
+            },
+            {
+                "name": "Grass",
+                "multiply": 0.5
+            },
+            {
+                "name": "Electric",
+                "multiply": 2
+            },
+            {
+                "name": "Psychic",
+                "multiply": 1
+            },
+            {
+                "name": "Ice",
+                "multiply": 2
+            },
+            {
+                "name": "Dragon",
+                "multiply": 1
+            },
+            {
+                "name": "Dark",
+                "multiply": 1
+            },
+            {
+                "name": "Fairy",
+                "multiply": 1
+            }
+        ]
+    },
+    {
+        "pokedex_id": 92,
+        "name": "Gastly",
+        "sprites": {
+            "front": "assets/pictures/Ghost/gastly_front.png",
+            "back": "assets/pictures/Ghost/gastly_back.png"
+        },
+        "type": "Ghost",
+        "stat": {
+            "hp": 30,
+            "atk": 35,
+            "def": 30
+        },
+        "resistances": [
+            {
+                "name": "Normal",
+                "multiply": 0
+            },
+            {
+                "name": "Fighting",
+                "multiply": 0
+            },
+            {
+                "name": "Flying",
+                "multiply": 1
+            },
+            {
+                "name": "Poison",
+                "multiply": 0.5
+            },
+            {
+                "name": "Ground",
+                "multiply": 1
+            },
+            {
+                "name": "Rock",
+                "multiply": 1
+            },
+            {
+                "name": "Bug",
+                "multiply": 0.5
+            },
+            {
+                "name": "Ghost",
+                "multiply": 1
+            },
+            {
+                "name": "Steel",
+                "multiply": 1
+            },
+            {
+                "name": "Fire",
+                "multiply": 1
+            },
+            {
+                "name": "Water",
+                "multiply": 1
+            },
+            {
+                "name": "Grass",
+                "multiply": 1
+            },
+            {
+                "name": "Electric",
+                "multiply": 1
+            },
+            {
+                "name": "Psychic",
+                "multiply": 1
+            },
+            {
+                "name": "Ice",
+                "multiply": 1
+            },
+            {
+                "name": "Dragon",
+                "multiply": 1
+            },
+            {
+                "name": "Dark",
+                "multiply": 2
+            },
+            {
+                "name": "Fairy",
+                "multiply": 1
+            }
+        ]
+    },
+    {
+        "pokedex_id": 93,
+        "name": "Haunter",
+        "sprites": {
+            "front": "assets/pictures/Ghost/haunter_front.png",
+            "back": "assets/pictures/Ghost/haunter_back.png"
+        },
+        "type": "Ghost",
+        "stat": {
+            "hp": 45,
+            "atk": 50,
+            "def": 45
+        },
+        "resistances": [
+            {
+                "name": "Normal",
+                "multiply": 0
+            },
+            {
+                "name": "Fighting",
+                "multiply": 0
+            },
+            {
+                "name": "Flying",
+                "multiply": 1
+            },
+            {
+                "name": "Poison",
+                "multiply": 0.5
+            },
+            {
+                "name": "Ground",
+                "multiply": 1
+            },
+            {
+                "name": "Rock",
+                "multiply": 1
+            },
+            {
+                "name": "Bug",
+                "multiply": 0.5
+            },
+            {
+                "name": "Ghost",
+                "multiply": 1
+            },
+            {
+                "name": "Steel",
+                "multiply": 1
+            },
+            {
+                "name": "Fire",
+                "multiply": 1
+            },
+            {
+                "name": "Water",
+                "multiply": 1
+            },
+            {
+                "name": "Grass",
+                "multiply": 1
+            },
+            {
+                "name": "Electric",
+                "multiply": 1
+            },
+            {
+                "name": "Psychic",
+                "multiply": 1
+            },
+            {
+                "name": "Ice",
+                "multiply": 1
+            },
+            {
+                "name": "Dragon",
+                "multiply": 1
+            },
+            {
+                "name": "Dark",
+                "multiply": 2
+            },
+            {
+                "name": "Fairy",
+                "multiply": 1
+            }
+        ]
+    },
+    {
+        "pokedex_id": 94,
+        "name": "Gengar",
+        "sprites": {
+            "front": "assets/pictures/Ghost/gengar_front.png",
+            "back": "assets/pictures/Ghost/gengar_back.png"
+        },
+        "type": "Ghost",
+        "stat": {
+            "hp": 60,
+            "atk": 65,
+            "def": 60
+        },
+        "resistances": [
+            {
+                "name": "Normal",
+                "multiply": 0
+            },
+            {
+                "name": "Fighting",
+                "multiply": 0
+            },
+            {
+                "name": "Flying",
+                "multiply": 1
+            },
+            {
+                "name": "Poison",
+                "multiply": 0.5
+            },
+            {
+                "name": "Ground",
+                "multiply": 1
+            },
+            {
+                "name": "Rock",
+                "multiply": 1
+            },
+            {
+                "name": "Bug",
+                "multiply": 0.5
+            },
+            {
+                "name": "Ghost",
+                "multiply": 1
+            },
+            {
+                "name": "Steel",
+                "multiply": 1
+            },
+            {
+                "name": "Fire",
+                "multiply": 1
+            },
+            {
+                "name": "Water",
+                "multiply": 1
+            },
+            {
+                "name": "Grass",
+                "multiply": 1
+            },
+            {
+                "name": "Electric",
+                "multiply": 1
+            },
+            {
+                "name": "Psychic",
+                "multiply": 1
+            },
+            {
+                "name": "Ice",
+                "multiply": 1
+            },
+            {
+                "name": "Dragon",
+                "multiply": 1
+            },
+            {
+                "name": "Dark",
+                "multiply": 2
+            },
+            {
+                "name": "Fairy",
+                "multiply": 1
+            }
+        ]
+    },
+    {
+        "pokedew_id": 95,
+        "name": "Onix",
+        "sprites":{
+            "front": "assets/pictures/Rock/onix_front.png",
+            "back": "assets/pictures/Rock/onix_back.png"
+        },
+        "type": "Rock",
+        "stat":{
+            "hp": 35,
+            "atk": 45,
+            "def": 160
+        },
+        "resistances":[
+            {
+                "name": "Normal",
+                "multiplier": 0.5
+            },
+            {
+                "name": "Plante",
+                "multiplier": 4
+            },
+            {
+                "name": "Feu",
+                "multiplier": 0.5
+            },
+            {
+                "name": "Eau",
+                "multiplier": 4
+            },
+            {
+                "name": "Électrik",
+                "multiplier": 0
+            },
+            {
+                "name": "Glace",
+                "multiplier": 2
+            },
+            {
+                "name": "Combat",
+                "multiplier": 2
+            },
+            {
+                "name": "Poison",
+                "multiplier": 0.25
+            },
+            {
+                "name": "Sol",
+                "multiplier": 2
+            },
+            {
+                "name": "Vol",
+                "multiplier": 0.5
+            },
+            {
+                "name": "Psy",
+                "multiplier": 1
+            },
+            {
+                "name": "Insecte",
+                "multiplier": 1
+            },
+            {
+                "name": "Roche",
+                "multiplier": 1
+            },
+            {
+                "name": "Spectre",
+                "multiplier": 1
+            },
+            {
+                "name": "Dragon",
+                "multiplier": 1
+            },
+            {
+                "name": "Ténèbres",
+                "multiplier": 1
+            },
+            {
+                "name": "Acier",
+                "multiplier": 2
+            },
+            {
+                "name": "Fée",
+                "multiplier": 1
+            }
+        ]
+    },
+    {
+        "pokedex_id": 104,
+        "name": "Cubone",
+        "sprites": {
+            "front": "assets/pictures/Ground/cubone_front.png",
+            "back": "assets/pictures/Ground/cubone_back.png"
+        },
+        "type": "Ground",
+        "stat": {
+            "hp": 50,
+            "atk": 50,
+            "def": 95
+        },
+        "resistances": [
+            {
+                "name": "Normal",
+                "multiply": 1
+            },
+            {
+                "name": "Fighting",
+                "multiply": 1
+            },
+            {
+                "name": "Flying",
+                "multiply": 1
+            },
+            {
+                "name": "Poison",
+                "multiply": 0.5
+            },
+            {
+                "name": "Ground",
+                "multiply": 1
+            },
+            {
+                "name": "Rock",
+                "multiply": 0.5
+            },
+            {
+                "name": "Bug",
+                "multiply": 1
+            },
+            {
+                "name": "Ghost",
+                "multiply": 1
+            },
+            {
+                "name": "Steel",
+                "multiply": 1
+            },
+            {
+                "name": "Fire",
+                "multiply": 1
+            },
+            {
+                "name": "Water",
+                "multiply": 2
+            },
+            {
+                "name": "Grass",
+                "multiply": 2
+            },
+            {
+                "name": "Electric",
+                "multiply": 0
+            },
+            {
+                "name": "Psychic",
+                "multiply": 1
+            },
+            {
+                "name": "Ice",
+                "multiply": 2
+            },
+            {
+                "name": "Dragon",
+                "multiply": 1
+            },
+            {
+                "name": "Dark",
+                "multiply": 1
+            },
+            {
+                "name": "Fairy",
+                "multiply": 1
+            }
+        ]
+    },
+    {
+        "pokedex_id": 105,
+        "name": "Marowak",
+        "sprites": {
+            "front": "assets/pictures/Ground/marowak_front.png",
+            "back": "assets/pictures/Ground/marowak_back.png"
+        },
+        "type": "Ground",
+        "stat": {
+            "hp": 60,
+            "atk": 80,
+            "def": 110
+        },
+        "resistances": [
+            {
+                "name": "Normal",
+                "multiply": 1
+            },
+            {
+                "name": "Fighting",
+                "multiply": 1
+            },
+            {
+                "name": "Flying",
+                "multiply": 1
+            },
+            {
+                "name": "Poison",
+                "multiply": 0.5
+            },
+            {
+                "name": "Ground",
+                "multiply": 1
+            },
+            {
+                "name": "Rock",
+                "multiply": 0.5
+            },
+            {
+                "name": "Bug",
+                "multiply": 1
+            },
+            {
+                "name": "Ghost",
+                "multiply": 1
+            },
+            {
+                "name": "Steel",
+                "multiply": 1
+            },
+            {
+                "name": "Fire",
+                "multiply": 1
+            },
+            {
+                "name": "Water",
+                "multiply": 2
+            },
+            {
+                "name": "Grass",
+                "multiply": 2
+            },
+            {
+                "name": "Electric",
+                "multiply": 0
+            },
+            {
+                "name": "Psychic",
+                "multiply": 1
+            },
+            {
+                "name": "Ice",
+                "multiply": 2
+            },
+            {
+                "name": "Dragon",
+                "multiply": 1
+            },
+            {
+                "name": "Dark",
+                "multiply": 1
+            },
+            {
+                "name": "Fairy",
+                "multiply": 1
+            }
+        ]
+    },
+    {
+        "pokedex_id": 131,
+        "name": "Lapras",
+        "sprites": {
+            "front": "assets/pictures/Ice/lapras_front.png",
+            "back": "assets/pictures/Ice/lapras_back.png"
+        },
+        "type": "Ice",
+        "stat": {
+            "hp": 130,
+            "atk": 85,
+            "def": 80
+        },
+        "resistances": [
+            {
+                "name": "Normal",
+                "multiply": 1
+            },
+            {
+                "name": "Fighting",
+                "multiply": 2
+            },
+            {
+                "name": "Flying",
+                "multiply": 1
+            },
+            {
+                "name": "Poison",
+                "multiply": 1
+            },
+            {
+                "name": "Ground",
+                "multiply": 1
+            },
+            {
+                "name": "Rock",
+                "multiply": 2
+            },
+            {
+                "name": "Bug",
+                "multiply": 1
+            },
+            {
+                "name": "Ghost",
+                "multiply": 1
+            },
+            {
+                "name": "Steel",
+                "multiply": 1
+            },
+            {
+                "name": "Fire",
+                "multiply": 1
+            },
+            {
+                "name": "Water",
+                "multiply": 0
+            },
+            {
+                "name": "Grass",
+                "multiply": 2
+            },
+            {
+                "name": "Electric",
+                "multiply": 2
+            },
+            {
+                "name": "Psychic",
+                "multiply": 1
+            },
+            {
+                "name": "Ice",
+                "multiply": 1
+            },
+            {
+                "name": "Dragon",
+                "multiply": 1
+            },
+            {
+                "name": "Dark",
+                "multiply": 1
+            },
+            {
+                "name": "Fairy",
+                "multiply": 1
+            }
+        ]
+    },
+    {
+        "pokedex_id": 147,
+        "name": "Dratini",
+        "sprites": {
+            "front": "assets/pictures/Dragon/dratini_front.png",
+            "back": "assets/pictures/Dragon/dratini_back.png"
+        },
+        "type": "Dragon",
+        "stat": {
+            "hp": 41,
+            "atk": 64,
+            "def": 45
+        },
+        "resistances": [
+            {
+                "name": "Normal",
+                "multiply": 1
+            },
+            {
+                "name": "Fighting",
+                "multiply": 1
+            },
+            {
+                "name": "Flying",
+                "multiply": 1
+            },
+            {
+                "name": "Poison",
+                "multiply": 1
+            },
+            {
+                "name": "Ground",
+                "multiply": 1
+            },
+            {
+                "name": "Rock",
+                "multiply": 1
+            },
+            {
+                "name": "Bug",
+                "multiply": 1
+            },
+            {
+                "name": "Ghost",
+                "multiply": 1
+            },
+            {
+                "name": "Steel",
+                "multiply": 1
+            },
+            {
+                "name": "Fire",
+                "multiply": 0.5
+            },
+            {
+                "name": "Water",
+                "multiply": 0.5
+            },
+            {
+                "name": "Grass",
+                "multiply": 0.5
+            },
+            {
+                "name": "Electric",
+                "multiply": 0.5
+            },
+            {
+                "name": "Psychic",
+                "multiply": 1
+            },
+            {
+                "name": "Ice",
+                "multiply": 2
+            },
+            {
+                "name": "Dragon",
+                "multiply": 2
+            },
+            {
+                "name": "Dark",
+                "multiply": 1
+            },
+            {
+                "name": "Fairy",
+                "multiply": 2
+            }
+        ]
+    },
+    {
+        "pokedex_id": 148,
+        "name": "Dragonair",
+        "sprites": {
+            "front": "assets/pictures/Dragon/dragonair_front.png",
+            "back": "assets/pictures/Dragon/dragonair_back.png"
+        },
+        "type": "Dragon",
+        "stat": {
+            "hp": 61,
+            "atk": 84,
+            "def": 65
+        },
+        "resistances": [
+            {
+                "name": "Normal",
+                "multiply": 1
+            },
+            {
+                "name": "Fighting",
+                "multiply": 1
+            },
+            {
+                "name": "Flying",
+                "multiply": 1
+            },
+            {
+                "name": "Poison",
+                "multiply": 1
+            },
+            {
+                "name": "Ground",
+                "multiply": 1
+            },
+            {
+                "name": "Rock",
+                "multiply": 1
+            },
+            {
+                "name": "Bug",
+                "multiply": 1
+            },
+            {
+                "name": "Ghost",
+                "multiply": 1
+            },
+            {
+                "name": "Steel",
+                "multiply": 1
+            },
+            {
+                "name": "Fire",
+                "multiply": 0.5
+            },
+            {
+                "name": "Water",
+                "multiply": 0.5
+            },
+            {
+                "name": "Grass",
+                "multiply": 0.5
+            },
+            {
+                "name": "Electric",
+                "multiply": 0.5
+            },
+            {
+                "name": "Psychic",
+                "multiply": 1
+            },
+            {
+                "name": "Ice",
+                "multiply": 2
+            },
+            {
+                "name": "Dragon",
+                "multiply": 2
+            },
+            {
+                "name": "Dark",
+                "multiply": 1
+            },
+            {
+                "name": "Fairy",
+                "multiply": 2
+            }
+        ]
+    },
+    {
+        "pokedex_id": 149,
+        "name": "Dragonite",
+        "sprites": {
+            "front": "assets/pictures/Dragon/dragonite_front.png",
+            "back": "assets/pictures/Dragon/dragonite_back.png"
+        },
+        "type": "Dragon",
+        "stat": {
+            "hp": 91,
+            "atk": 134,
+            "def": 95
+        },
+        "resistances": [
+            {
+                "name": "Normal",
+                "multiply": 1
+            },
+            {
+                "name": "Fighting",
+                "multiply": 1
+            },
+            {
+                "name": "Flying",
+                "multiply": 1
+            },
+            {
+                "name": "Poison",
+                "multiply": 1
+            },
+            {
+                "name": "Ground",
+                "multiply": 1
+            },
+            {
+                "name": "Rock",
+                "multiply": 1
+            },
+            {
+                "name": "Bug",
+                "multiply": 1
+            },
+            {
+                "name": "Ghost",
+                "multiply": 1
+            },
+            {
+                "name": "Steel",
+                "multiply": 1
+            },
+            {
+                "name": "Fire",
+                "multiply": 0.5
+            },
+            {
+                "name": "Water",
+                "multiply": 0.5
+            },
+            {
+                "name": "Grass",
+                "multiply": 0.5
+            },
+            {
+                "name": "Electric",
+                "multiply": 0.5
+            },
+            {
+                "name": "Psychic",
+                "multiply": 1
+            },
+            {
+                "name": "Ice",
+                "multiply": 2
+            },
+            {
+                "name": "Dragon",
+                "multiply": 2
+            },
+            {
+                "name": "Dark",
+                "multiply": 1
+            },
+            {
+                "name": "Fairy",
+                "multiply": 2
+            }
+        ]
+    },
+    {
+        "pokedex_id": 150,
+        "name": "Mewtwo",
+        "sprites": {
+            "front": "assets/pictures/Psychic/mewtwo_front.png",
+            "back": "assets/pictures/Psychic/mewtwo_back.png"
+        },
+        "type": "Psychic",
+        "stat": {
+            "hp": 106,
+            "atk": 110,
+            "def": 90
+        },
+        "resistances": [
+            {
+                "name": "Normal",
+                "multiply": 1
+            },
+            {
+                "name": "Fighting",
+                "multiply": 1
+            },
+            {
+                "name": "Flying",
+                "multiply": 1
+            },
+            {
+                "name": "Poison",
+                "multiply": 1
+            },
+            {
+                "name": "Ground",
+                "multiply": 1
+            },
+            {
+                "name": "Rock",
+                "multiply": 1
+            },
+            {
+                "name": "Bug",
+                "multiply": 2
+            },
+            {
+                "name": "Ghost",
+                "multiply": 2
+            },
+            {
+                "name": "Steel",
+                "multiply": 1
+            },
+            {
+                "name": "Fire",
+                "multiply": 1
+            },
+            {
+                "name": "Water",
+                "multiply": 1
+            },
+            {
+                "name": "Grass",
+                "multiply": 1
+            },
+            {
+                "name": "Electric",
+                "multiply": 1
+            },
+            {
+                "name": "Psychic",
+                "multiply": 1
+            },
+            {
+                "name": "Ice",
+                "multiply": 1
+            },
+            {
+                "name": "Dragon",
+                "multiply": 1
+            },
+            {
+                "name": "Dark",
+                "multiply": 2
+            },
+            {
+                "name": "Fairy",
+                "multiply": 1
+            }
+        ]
+    },
+    {
+        "pokedex_id": 151,
+        "name": "Mew",
+        "sprites": {
+            "front": "assets/pictures/Psychic/mew_front.png",
+            "back": "assets/pictures/Psychic/mew_back.png"
+        },
+        "type": "Psychic",
+        "stat": {
+            "hp": 10,
+            "atk": 100,
+            "def": 100
+        },
+        "resistances": [
+            {
+                "name": "Normal",
+                "multiply": 1
+            },
+            {
+                "name": "Fighting",
+                "multiply": 0.5
+            },
+            {
+                "name": "Flying",
+                "multiply": 1
+            },
+            {
+                "name": "Poison",
+                "multiply": 1
+            },
+            {
+                "name": "Ground",
+                "multiply": 1
+            },
+            {
+                "name": "Rock",
+                "multiply": 1
+            },
+            {
+                "name": "Bug",
+                "multiply": 2
+            },
+            {
+                "name": "Ghost",
+                "multiply": 2
+            },
+            {
+                "name": "Steel",
+                "multiply": 1
+            },
+            {
+                "name": "Fire",
+                "multiply": 1
+            },
+            {
+                "name": "Water",
+                "multiply": 1
+            },
+            {
+                "name": "Grass",
+                "multiply": 1
+            },
+            {
+                "name": "Electric",
+                "multiply": 1
+            },
+            {
+                "name": "Psychic",
+                "multiply": 1
+            },
+            {
+                "name": "Ice",
+                "multiply": 1
+            },
+            {
+                "name": "Dragon",
+                "multiply": 1
+            },
+            {
+                "name": "Dark",
+                "multiply": 2
+            },
+            {
+                "name": "Fairy",
+                "multiply": 1
+            }
+        ]
+    },
+    {
+        "pokedex_id": 228,
+        "name": "Houndour",
+        "sprites": {
+            "front": "assets/pictures/Dark/houndour_front.png",
+            "back": "assets/pictures/Dark/houndour_back.png"
+        },
+        "type": "Dark",
+        "stat": {
+            "hp": 45,
+            "atk": 60,
+            "def": 30
+        },
+        "resistances": [
+            {
+                "name": "Normal",
+                "multiply": 1
+            },
+            {
+                "name": "Fighting",
+                "multiply": 2
+            },
+            {
+                "name": "Flying",
+                "multiply": 1
+            },
+            {
+                "name": "Poison",
+                "multiply": 1
+            },
+            {
+                "name": "Ground",
+                "multiply": 2
+            },
+            {
+                "name": "Rock",
+                "multiply": 2
+            },
+            {
+                "name": "Bug",
+                "multiply": 2
+            },
+            {
+                "name": "Ghost",
+                "multiply": 0.5
+            },
+            {
+                "name": "Steel",
+                "multiply": 0.5
+            },
+            {
+                "name": "Fire",
+                "multiply": 0.5
+            },
+            {
+                "name": "Water",
+                "multiply": 1
+            },
+            {
+                "name": "Grass",
+                "multiply": 0.5
+            },
+            {
+                "name": "Electric",
+                "multiply": 1
+            },
+            {
+                "name": "Psychic",
+                "multiply": 0
+            },
+            {
+                "name": "Ice",
+                "multiply": 0.5
+            },
+            {
+                "name": "Dragon",
+                "multiply": 1
+            },
+            {
+                "name": "Dark",
+                "multiply": 1
+            },
+            {
+                "name": "Fairy",
+                "multiply": 2
+            }
+        ]
+    },
+    {
+        "pokedex_id": 229,
+        "name": "Houndoom",
+        "sprites": {
+            "front": "assets/pictures/Dark/houndoom_front.png",
+            "back": "assets/pictures/Dark/houndoom_back.png"
+        },
+        "type": "Dark",
+        "stat": {
+            "hp": 75,
+            "atk": 90,
+            "def": 50
+        },
+        "resistances": [
+            {
+                "name": "Normal",
+                "multiply": 1
+            },
+            {
+                "name": "Fighting",
+                "multiply": 2
+            },
+            {
+                "name": "Flying",
+                "multiply": 1
+            },
+            {
+                "name": "Poison",
+                "multiply": 1
+            },
+            {
+                "name": "Ground",
+                "multiply": 2
+            },
+            {
+                "name": "Rock",
+                "multiply": 2
+            },
+            {
+                "name": "Bug",
+                "multiply": 2
+            },
+            {
+                "name": "Ghost",
+                "multiply": 0.5
+            },
+            {
+                "name": "Steel",
+                "multiply": 0.5
+            },
+            {
+                "name": "Fire",
+                "multiply": 0.5
+            },
+            {
+                "name": "Water",
+                "multiply": 1
+            },
+            {
+                "name": "Grass",
+                "multiply": 0.5
+            },
+            {
+                "name": "Electric",
+                "multiply": 1
+            },
+            {
+                "name": "Psychic",
+                "multiply": 0
+            },
+            {
+                "name": "Ice",
+                "multiply": 0.5
+            },
+            {
+                "name": "Dragon",
+                "multiply": 1
+            },
+            {
+                "name": "Dark",
+                "multiply": 1
+            },
+            {
+                "name": "Fairy",
+                "multiply": 2
+            }
+        ]
+    }    
+]
