@@ -36,7 +36,12 @@ class Window:
 
         pygame.display.set_caption("Pokemon") 
         self.screen = pygame.display.set_mode((self.screen_width, self.screen_height))
+        self.screen_menu = pygame.display.set_mode((self.screen_width, self.screen_height_total))
 
     def draw_text(self,text,font,text_col,x,y):
         img = font.render(text,True,text_col)
         self.screen.blit(img,(x,y))
+
+    #create a surface with the text image
+    def create_text_image(self, text, font, text_col):
+        return font.render(text, True, text_col)
