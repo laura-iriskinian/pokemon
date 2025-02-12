@@ -2640,7 +2640,7 @@
         ]
     },
     {
-        "pokedew_id": 95,
+        "pokedex_id": 95,
         "name": "Onix",
         "sprites":{
             "front": "assets/pictures/Rock/onix_front.png",
