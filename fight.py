@@ -3,11 +3,10 @@ import pygame
 
 class Fight():
     """class to print combat"""
-
     def __init__(self):
+        
         # background image
         self.window = Window() 
-
         self.background = pygame.image.load("assets/pictures/background.png").convert_alpha()
 
 

@@ -13,15 +13,15 @@ class Window:
 
         # text font 
         self.text_font_menu_battle = pygame.font.SysFont("Arial",30)
-
+        self.text_font_menu = pygame.font.SysFont("Arial", 25)
 
         # game window
         self.bottom_panel = 150
         self.screen_width = 800
         self.screen_height = 400 + self.bottom_panel
+        self.screen_height_total = 550
 
         # position y button game pannel
-        
         self.py_rectangle_top = (self.screen_height - self.bottom_panel)+3
         self.py_rectangle_middle = (self.screen_height - (self.bottom_panel - (self.bottom_panel/3)))
         self.py_rectangle_bottom = (self.screen_height - (self.bottom_panel/3))
@@ -34,10 +34,8 @@ class Window:
         self.sy_button = (self.bottom_panel/3)-3
         self.sx_button = (self.screen_width / 2)-6
 
-
         pygame.display.set_caption("Pokemon") 
         self.screen = pygame.display.set_mode((self.screen_width, self.screen_height))
-
 
     def draw_text(self,text,font,text_col,x,y):
         img = font.render(text,True,text_col)

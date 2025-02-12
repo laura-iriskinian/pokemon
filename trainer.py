@@ -15,7 +15,7 @@ class Trainer():
         self.rectangle_bottom = pygame.Rect(self.window.px_pannel_left, self.window.py_rectangle_bottom,self.window.sx_button,self.window.sy_button)
 
     def draw_panel_button(self,position):
-        """def to draw panel button : search in dicto the position"""
+        """def to draw panel button : search in dictionnary the position"""
 
         rectangle_button_position = {1 : self.rectangle_top, 
                                     2 : self.rectangle_midle, 

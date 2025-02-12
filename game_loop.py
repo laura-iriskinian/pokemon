@@ -4,12 +4,12 @@ from pygame.locals import *
 from fight import Fight
 from pokemon import Pokemon
 from trainer import Trainer
+from menu import Menu
 
 pygame.init()
 
 clock = pygame.time.Clock()
 fps = 60
-
 
 fight = Fight()
 pokemon = Pokemon()
