@@ -13,7 +13,8 @@ class Window:
 
         # text font 
         self.text_font_menu_battle = pygame.font.SysFont("Arial",30)
-        self.text_font_menu = pygame.font.SysFont("Arial", 25)        self.text_font_hp_opponent = pygame.font.SysFont("Arial",20,bold=True)
+        self.text_font_menu = pygame.font.SysFont("Arial", 25, bold=True)        
+        self.text_font_hp_opponent = pygame.font.SysFont("Arial",20,bold=True)
 
 
         # game window
