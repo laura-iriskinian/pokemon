@@ -20,8 +20,9 @@ run = True
 fight.draw_background_fight()
 
 # draw pokemon
-trainer.draw_pokemon_opponent_hp()
-trainer.draw_pokemons()
+trainer.pokemon_opponent[0].draw_pokemon_opponent_hp()
+trainer.pokemon_player.draw_pokemon_player()
+trainer.pokemon_opponent[0].draw_pokemon_opponent()
 
 # draw bottom panel
 fight.draw_panel()

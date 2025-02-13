@@ -4,12 +4,14 @@ from window import Window
 from pokemon import Pokemon
 from fight import Fight
 
-class Trainer(Pokemon):
+class Trainer():
     """class trainer : to select attack, menu, pokedex"""
     def __init__(self):
         super().__init__()
         self.window = Window()
         self.fight = Fight()
+        self.pokemon_player = Pokemon()
+        self.pokemon_opponent = [Pokemon()]
 
         # rectangle button to panel : (position x,position y,size x, size y)
         self.rectangle_top = pygame.Rect(self.window.px_pannel_left, self.window.py_rectangle_top, self.window.sx_button, self.window.sy_button)
@@ -32,9 +34,17 @@ class Trainer(Pokemon):
         pygame.draw.rect(self.window.screen, self.window.GREY, self.rectangle_button, 3)
 
     def trainer_attack(self):
-        self.attack()
+    # attack
+        self.pokemon_opponent[0].attack()
+
+        if self.pokemon_opponent[0].pokemon_opponent_life <=0:
+            self.pokemon_opponent.append(Pokemon())
+            del self.pokemon_opponent[0]
+
+        # reset 
         self.fight.draw_background_fight()
-        self.draw_pokemons()
+        self.pokemon_player.draw_pokemon_player()
+        self.pokemon_opponent[0].draw_pokemon_opponent()
         self.fight.draw_panel()
         self.draw_panel_button(1)
-        self.draw_pokemon_opponent_hp()
+        self.pokemon_opponent[0].draw_pokemon_opponent_hp()

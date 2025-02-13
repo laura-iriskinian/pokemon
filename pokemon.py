@@ -102,12 +102,10 @@ class Pokemon():
 
     def attack(self):
         resistance_multiplier = self.pokemon_opponent_resistance
-        raw_damage = self.pokemon_player_atk - self.pokemon_opponent_def
+        raw_damage = max(1,self.pokemon_player_atk - self.pokemon_opponent_def)
         damage = raw_damage * resistance_multiplier
 
         self.pokemon_opponent_life -= damage
-        # self.pokemon_life -=10
-
 
     def draw_pokemon_opponent_hp(self):
 
@@ -115,8 +113,7 @@ class Pokemon():
                             self.window.text_font_hp_opponent,
                             self.window.WHITE,560,25)
 
-
-    def draw_pokemons(self):
+    def draw_pokemon_player(self):
         """function to draw pokemons"""
 
         # pokemon player
@@ -124,6 +121,7 @@ class Pokemon():
         self.rect_pokemon_player_sprite.center = (250,335)
         self.window.screen.blit(self.pokemon_player_sprite,self.rect_pokemon_player_sprite)
 
+    def draw_pokemon_opponent(self):
 
         self.rect_pokemon_opponent_sprite = self.pokemon_opponent_sprite.get_rect()
         self.rect_pokemon_opponent_sprite.center = (650,160)
