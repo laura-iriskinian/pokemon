@@ -20,6 +20,8 @@ class Pokemon():
         self.pokemon_opponent_id = self.get_pokemon_opponent_id()
         self.pokemon_life = self.get_hp_opponent()
         self.pokemon_name = self.get_name_opponent()
+        self.pokemon_type = self.get_type()
+        self.pokemon_opponent_type = self.get_opponent_type()
 
     # def get_pokemon_player(self):
 
@@ -39,6 +41,16 @@ class Pokemon():
             if pokemon["pokedex_id"] == self.pokemon_opponent_id:
                 return pokemon["stat"]["hp"]
             
+    def get_type(self):
+        for pokemon in data:
+            if pokemon["pokedex_id"] == self.pokemon_id:
+                return pokemon["type"]
+            
+    def get_opponent_type(self):
+        for pokemon in data:
+            if pokemon["pokedex_id"] == self.pokemon_opponent_id:
+                return pokemon["type"]
+            
     def draw_hp_opponent_pokemon(self):
 
         self.window.draw_text(f"{self.pokemon_name} HP : {self.pokemon_life}",
@@ -54,10 +66,21 @@ class Pokemon():
         for pokemon in data:
             if pokemon["pokedex_id"] == self.pokemon_opponent_id:
                 return pokemon["stat"]["def"]
-
+            
+    def get_resistance(self):
+        for pokemon in data:
+            if pokemon["pokedex_id"] == self.pokemon_opponent_id:
+                for resistance in pokemon["resistances"]:
+                    if resistance["name"] == self.get_type():
+                        return resistance["multiply"]
+            
 
     def attack(self):
-        self.pokemon_life -= (self.get_attack() - self.get_defense_opponent())
+        resistance_multiplier = self.get_resistance()
+        raw_damage = self.get_attack() - self.get_defense_opponent()
+        damage = raw_damage * resistance_multiplier
+
+        self.pokemon_life -= damage
         # self.pokemon_life -=10
 
     def draw_pokemons(self):
