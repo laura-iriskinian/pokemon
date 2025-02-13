@@ -41,8 +41,9 @@ class Pokemon():
             
     def draw_hp_opponent_pokemon(self):
 
-
-        self.window.draw_text(f"{self.pokemon_name} HP : {self.pokemon_life}",self.window.text_font_hp_opponent,self.window.WHITE,580,30)
+        self.window.draw_text(f"{self.pokemon_name} HP : {self.pokemon_life}",
+                            self.window.text_font_hp_opponent,
+                            self.window.WHITE,560,25)
 
     def attack(self):
         self.pokemon_life-=10
@@ -59,7 +60,7 @@ class Pokemon():
                 break
 
         self.rect_pokemon_player = self.pokemon_player.get_rect()
-        self.rect_pokemon_player.center = (250,330)
+        self.rect_pokemon_player.center = (250,335)
         self.window.screen.blit(self.pokemon_player,self.rect_pokemon_player)
 
         for pokemon in data:
