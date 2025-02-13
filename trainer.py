@@ -18,10 +18,11 @@ class Trainer():
         self.rectangle_midle = pygame.Rect(self.window.px_pannel_left,self.window.py_rectangle_middle,self.window.sx_button,self.window.sy_button)
         self.rectangle_bottom = pygame.Rect(self.window.px_pannel_left, self.window.py_rectangle_bottom,self.window.sx_button,self.window.sy_button)
 
-    def draw_panel_button(self,position):
+    def select_fight_button(self,position):
         """def to draw panel button : search in dicto the position"""
 
-        rectangle_button_position = {1 : self.rectangle_top, 
+        rectangle_button_position = {0 : self.rectangle_bottom,
+                                    1 : self.rectangle_top, 
                                     2 : self.rectangle_midle, 
                                     3: self.rectangle_bottom, 
                                     4 :self.rectangle_bottom}
@@ -46,5 +47,5 @@ class Trainer():
         self.pokemon_player.draw_pokemon_player()
         self.pokemon_opponent[0].draw_pokemon_opponent()
         self.fight.draw_panel()
-        self.draw_panel_button(1)
+        self.select_fight_button(1)
         self.pokemon_opponent[0].draw_pokemon_opponent_hp()

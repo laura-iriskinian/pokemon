@@ -114,7 +114,7 @@ class Pokemon():
                             self.window.WHITE,560,25)
 
     def draw_pokemon_player(self):
-        """function to draw pokemons"""
+        """function to draw pokemon player"""
 
         # pokemon player
         self.rect_pokemon_player_sprite = self.pokemon_player_sprite.get_rect()
@@ -122,10 +122,10 @@ class Pokemon():
         self.window.screen.blit(self.pokemon_player_sprite,self.rect_pokemon_player_sprite)
 
     def draw_pokemon_opponent(self):
+        """function to draw pokemon opponent"""
 
         self.rect_pokemon_opponent_sprite = self.pokemon_opponent_sprite.get_rect()
         self.rect_pokemon_opponent_sprite.center = (650,160)
         self.window.screen.blit(self.pokemon_opponent_sprite,self.rect_pokemon_opponent_sprite)
-
 
     # def draw_life_pokemon(self):
