@@ -45,9 +45,20 @@ class Pokemon():
                             self.window.text_font_hp_opponent,
                             self.window.WHITE,560,25)
 
-    def attack(self):
-        self.pokemon_life-=10
+    def get_attack(self):
+        for pokemon in data:
+            if pokemon["pokedex_id"] == self.pokemon_id:
+                return pokemon["stat"]["atk"]
 
+    def get_defense_opponent(self):
+        for pokemon in data:
+            if pokemon["pokedex_id"] == self.pokemon_opponent_id:
+                return pokemon["stat"]["def"]
+
+
+    def attack(self):
+        self.pokemon_life -= (self.get_attack() - self.get_defense_opponent())
+        # self.pokemon_life -=10
 
     def draw_pokemons(self):
         """function to draw pokemon"""
