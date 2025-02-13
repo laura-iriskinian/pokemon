@@ -156,13 +156,13 @@ class Pokemon():
         self.pokemon_player_life -= damage
 
     def draw_pokemon_opponent_hp(self):
-
+        """draw HP to pokemon opponent"""
         self.window.draw_text(f"{self.pokemon_opponent_name} HP : {self.pokemon_opponent_life}",
                             self.window.text_font_hp_opponent,
                             self.window.WHITE,560,25)
         
     def draw_pokemon_player_hp(self):
-
+        """draw HP to pokemon player"""
         self.window.draw_text(f"{self.pokemon_player_name} HP : {self.pokemon_player_life}",
                             self.window.text_font_hp_opponent,
                             self.window.WHITE,160,200)

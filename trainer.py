@@ -7,7 +7,6 @@ from fight import Fight
 class Trainer():
     """class trainer : to select attack, menu, pokedex"""
     def __init__(self):
-        super().__init__()
         self.window = Window()
         self.fight = Fight()
         self.pokemon_player = Pokemon()
