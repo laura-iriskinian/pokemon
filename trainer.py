@@ -33,4 +33,8 @@ class Trainer(Pokemon):
 
     def trainer_attack(self):
         self.attack()
+        self.fight.draw_background_fight()
+        self.draw_pokemons()
+        self.fight.draw_panel()
+        self.draw_panel_button(1)
         self.draw_hp_opponent_pokemon()
