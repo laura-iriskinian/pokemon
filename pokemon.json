@@ -1059,10 +1059,10 @@
         "pokedex_id": 16,
         "name": "Pidgey",
         "sprites": {
-            "front": "assets/pictures/Flying/pidgey_front.png",
-            "back": "assets/pictures/Flying/pidgey_back.png"
+            "front": "assets/pictures/Normal/pidgey_front.png",
+            "back": "assets/pictures/Normal/pidgey_back.png"
         },
-        "type": "Flying",
+        "type": "Normal",
         "stat": {
             "hp": 40,
             "atk": 45,
@@ -1147,10 +1147,10 @@
         "pokedex_id": 17,
         "name": "Pidgeotto",
         "sprites": {
-            "front": "assets/pictures/Flying/pidgeotto_front.png",
-            "back": "assets/pictures/Flying/pidgeotto_back.png"
+            "front": "assets/pictures/Normal/pidgeotto_front.png",
+            "back": "assets/pictures/Normal/pidgeotto_back.png"
         },
-        "type": "Flying",
+        "type": "Normal",
         "stat": {
             "hp": 63,
             "atk": 60,
@@ -1235,10 +1235,10 @@
         "pokedex_id": 18,
         "name": "Pidgeot",
         "sprites": {
-            "front": "assets/pictures/Flying/pidgeot_front.png",
-            "back": "assets/pictures/Flying/pidgeot_back.png"
+            "front": "assets/pictures/Normal/pidgeot_front.png",
+            "back": "assets/pictures/Normal/pidgeot_back.png"
         },
-        "type": "Flying",
+        "type": "Normal",
         "stat": {
             "hp": 83,
             "atk": 80,

@@ -20,10 +20,13 @@ run = True
 # draw background
 fight.draw_background_fight()
 
+# draw pokemon
+trainer.draw_hp_opponent_pokemon()
+trainer.draw_pokemons()
+
 # draw bottom panel
 fight.draw_panel()
 trainer.draw_panel_button(position) 
-# draw pokemon
 
 def game():
     while run:
@@ -35,21 +38,19 @@ def game():
             if event.type == pygame.QUIT:
                 run = False
 
-            if event.type == KEYDOWN:
-                if event.key == K_DOWN:
-                    if position >= 1:
-                        position += 1
-                        fight.draw_panel()
-                        trainer.draw_panel_button(position) 
-                    if position == 4:
-                        position -=3
-                        fight.draw_panel()
-                        trainer.draw_panel_button(position) 
-                if event.key == K_RETURN:
-                    if trainer.rectangle_top.colliderect(trainer.rectangle_button):
-                        pokemon.draw_pokemons()
-                        fight.draw_panel()
-
+        if event.type == KEYDOWN:
+            if event.key == K_DOWN:
+                if position >= 1:
+                    position += 1
+                    fight.draw_panel()
+                    trainer.draw_panel_button(position) 
+                if position == 4:
+                    position -=3
+                    fight.draw_panel()
+                    trainer.draw_panel_button(position) 
+            if event.key == K_RETURN:
+                if trainer.rectangle_top.colliderect(trainer.rectangle_button):
+                    trainer.trainer_attack()
 
         pygame.display.update()
 
