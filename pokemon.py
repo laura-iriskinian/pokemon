@@ -30,7 +30,7 @@ class Pokemon():
         self.pokemon_opponent_name = self.get_pokemon_opponent_name()
         self.pokemon_opponent_type = self.get_pokemon_opponent_type()
         self.pokemon_opponent_def = self.get_pokemon_opponent_defense()
- 
+        self.pokemon_opponent_resistance = self.get_pokemon_opponent_resistance()
 
 
     # def get_pokemon_player(self):
@@ -84,7 +84,14 @@ class Pokemon():
         for pokemon in data:
             if pokemon["pokedex_id"] == self.pokemon_opponent_id:
                 return pokemon["stat"]["def"]
-
+            
+    def get_pokemon_opponent_resistance(self):
+        for pokemon in data:
+            if pokemon["pokedex_id"] == self.pokemon_opponent_id:
+                for resistance in pokemon["resistances"]:
+                    if resistance["name"] == self.pokemon_opponent_type:
+                        return resistance["multiply"]
+            
     def get_pokemon_opponent_type(self):
         for pokemon in data:
             if pokemon["pokedex_id"] == self.pokemon_opponent_id:
@@ -94,11 +101,13 @@ class Pokemon():
 # defs fight system :
 
     def attack(self):
-        self.pokemon_opponent_life -= (self.pokemon_player_atk - self.pokemon_opponent_def)
-        # self.pokemon_opponent_life -=10
+        resistance_multiplier = self.pokemon_opponent_resistance
+        raw_damage = self.pokemon_player_atk - self.pokemon_opponent_def
+        damage = raw_damage * resistance_multiplier
 
+        self.pokemon_opponent_life -= damage
+        # self.pokemon_life -=10
 
-# draw
 
     def draw_pokemon_opponent_hp(self):
 
@@ -116,7 +125,6 @@ class Pokemon():
         self.window.screen.blit(self.pokemon_player_sprite,self.rect_pokemon_player_sprite)
 
 
-        
         self.rect_pokemon_opponent_sprite = self.pokemon_opponent_sprite.get_rect()
         self.rect_pokemon_opponent_sprite.center = (650,160)
         self.window.screen.blit(self.pokemon_opponent_sprite,self.rect_pokemon_opponent_sprite)
