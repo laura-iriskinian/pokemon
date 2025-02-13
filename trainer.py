@@ -37,4 +37,4 @@ class Trainer(Pokemon):
         self.draw_pokemons()
         self.fight.draw_panel()
         self.draw_panel_button(1)
-        self.draw_hp_opponent_pokemon()
+        self.draw_pokemon_opponent_hp()
