@@ -36,11 +36,13 @@ class Trainer():
 
     def trainer_attack(self):
     # attack
-        self.pokemon_opponent[0].attack()
+        self.pokemon_opponent[0].player_attack()
 
         if self.pokemon_opponent[0].pokemon_opponent_life <=0:
             self.pokemon_opponent.append(Pokemon())
             del self.pokemon_opponent[0]
+
+        self.pokemon_player.opponent_attack()
 
         # reset 
         self.fight.draw_background_fight()
@@ -49,3 +51,5 @@ class Trainer():
         self.fight.draw_panel()
         self.select_fight_button(1)
         self.pokemon_opponent[0].draw_pokemon_opponent_hp()
+
+        self.pokemon_player.draw_pokemon_player_hp()

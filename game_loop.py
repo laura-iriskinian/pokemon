@@ -23,6 +23,7 @@ fight.draw_background_fight()
 trainer.pokemon_opponent[0].draw_pokemon_opponent_hp()
 trainer.pokemon_player.draw_pokemon_player()
 trainer.pokemon_opponent[0].draw_pokemon_opponent()
+trainer.pokemon_player.draw_pokemon_player_hp()
 
 # draw bottom panel
 fight.draw_panel()

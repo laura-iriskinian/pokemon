@@ -14,10 +14,15 @@ class Pokemon():
         # background image
         self.window = Window()
         # pokemon 
-        self.pokemon_id = 3
         self.pokemon_player = ""
+        self.pokemon_player_id = 3
         self.pokemon_player_sprite = self.get_pokemon_player_sprite()
 
+        self.pokemon_player_life = self.get_pokemon_player_hp()
+        self.pokemon_player_name = self.get_pokemon_player_name()
+        self.pokemon_player_type = self.get_pokemon_player_type()
+        self.pokemon_player_def = self.get_pokemon_player_defense()
+        self.pokemon_player_resistance = self.get_pokemon_player_resistance()
         self.pokemon_player_atk = self.get_pokemon_player_attack()
 
 
@@ -31,16 +36,15 @@ class Pokemon():
         self.pokemon_opponent_type = self.get_pokemon_opponent_type()
         self.pokemon_opponent_def = self.get_pokemon_opponent_defense()
         self.pokemon_opponent_resistance = self.get_pokemon_opponent_resistance()
+        self.pokemon_opponent_atk = self.get_pokemon_opponent_attack()
 
-
-    # def get_pokemon_player(self):
 
 # defs get players
 
     def get_pokemon_player_sprite(self):
 
         for pokemon in data:
-            if pokemon["pokedex_id"]==self.pokemon_id:
+            if pokemon["pokedex_id"]==self.pokemon_player_id:
                 sprite_path = pokemon["sprites"]["back"]
                 self.pokemon_player_sprite = pygame.image.load(sprite_path).convert_alpha()
                 self.pokemon_player_sprite = pygame.transform.scale(self.pokemon_player_sprite, (self.pokemon_player_sprite.get_width()*3, self.pokemon_player_sprite.get_height()*3))
@@ -49,8 +53,38 @@ class Pokemon():
 
     def get_pokemon_player_attack(self):
         for pokemon in data:
-            if pokemon["pokedex_id"] == self.pokemon_id:
+            if pokemon["pokedex_id"] == self.pokemon_player_id:
                 return pokemon["stat"]["atk"]
+
+    def get_pokemon_player_name(self):
+
+        for pokemon in data:
+            if pokemon["pokedex_id"] == self.pokemon_player_id:
+                return pokemon["name"]
+
+    def get_pokemon_player_hp(self):
+
+        for pokemon in data:
+            if pokemon["pokedex_id"] == self.pokemon_player_id:
+                return pokemon["stat"]["hp"]
+
+    def get_pokemon_player_defense(self):
+        for pokemon in data:
+            if pokemon["pokedex_id"] == self.pokemon_player_id:
+                return pokemon["stat"]["def"]
+            
+    def get_pokemon_player_resistance(self):
+        for pokemon in data:
+            if pokemon["pokedex_id"] == self.pokemon_player_id:
+                for resistance in pokemon["resistances"]:
+                    if resistance["name"] == self.pokemon_player_type:
+                        return resistance["multiply"]
+            
+    def get_pokemon_player_type(self):
+        for pokemon in data:
+            if pokemon["pokedex_id"] == self.pokemon_player_id:
+                return pokemon["type"]
+
 
 
 # defs get opponent
@@ -97,21 +131,43 @@ class Pokemon():
             if pokemon["pokedex_id"] == self.pokemon_opponent_id:
                 return pokemon["type"]
 
+    def get_pokemon_opponent_attack(self):
+        for pokemon in data:
+            if pokemon["pokedex_id"] == self.pokemon_opponent_id:
+                return pokemon["stat"]["atk"]
+
 
 # defs fight system :
 
-    def attack(self):
+    def player_attack(self):
+        """the player attack the opponent"""
         resistance_multiplier = self.pokemon_opponent_resistance
         raw_damage = max(1,self.pokemon_player_atk - self.pokemon_opponent_def)
         damage = raw_damage * resistance_multiplier
 
         self.pokemon_opponent_life -= damage
 
+    def opponent_attack(self):
+        """the opponent attack the player"""
+        resistance_multiplier = self.pokemon_player_resistance
+        raw_damage = max(1,self.pokemon_opponent_atk - self.pokemon_player_def)
+        damage = raw_damage * resistance_multiplier
+
+        self.pokemon_player_life -= damage
+
     def draw_pokemon_opponent_hp(self):
 
         self.window.draw_text(f"{self.pokemon_opponent_name} HP : {self.pokemon_opponent_life}",
                             self.window.text_font_hp_opponent,
                             self.window.WHITE,560,25)
+        
+    def draw_pokemon_player_hp(self):
+
+        self.window.draw_text(f"{self.pokemon_player_name} HP : {self.pokemon_player_life}",
+                            self.window.text_font_hp_opponent,
+                            self.window.WHITE,160,200)
+
+
 
     def draw_pokemon_player(self):
         """function to draw pokemon player"""
