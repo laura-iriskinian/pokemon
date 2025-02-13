@@ -40,6 +40,7 @@ class Window:
         self.screen = pygame.display.set_mode((self.screen_width, self.screen_height))
         self.screen_menu = pygame.display.set_mode((self.screen_width, self.screen_height_total))
 
+    #draw text on screen
     def draw_text(self,text,font,text_col,x,y):
         img = font.render(text,True,text_col)
         self.screen.blit(img,(x,y))

@@ -2,19 +2,7 @@ import pygame
 from pygame.locals import *
 from window import Window
 from game_loop import *
-
-class Button:
-    def __init__(self, x, y, image, window):
-        
-        self.image = image
-        self.rect = self.image.get_rect()
-        self.rect.topleft = (x, y)
-        self.window = window
-    
-    #draw button on the screen
-    def draw_button(self):
-        self.window.screen_menu.blit(self.image, (self.rect.x, self.rect.y))
-
+from button import Button
 
 class Menu:
     #first menu
@@ -50,38 +38,36 @@ class Menu:
                 pygame.draw.rect(self.window.screen, self.window.GREY, button.rect, 3)
       
 
-# # class Second_menu(Menu):
-# #     def __init__(self):
-# #         super().__init__(self)
+class Second_menu(Menu):
+    def __init__(self):
+        super().__init__(self)
 
-# #          #Load button images:
-# #         self.new_game_img = self.window.create_text_image("New game", self.window.text_font_menu, self.window.BLACK)
-# #         self.pokedex_img = self.window.create_text_image("Pokedex", self.window.text_font_menu, self.window.BLACK)
-# #         self.resume_game_img = self.window.create_text_image("Resume game", self.window.text_font_menu, self.window.BLACK)
-#         # self.add_pokemon_img = self.window.create_text_image("Add pokemon", self.window.text_font_menu, self.window.BLACK)
+#          #Load button images:
+        self.resume_game_img = self.window.create_text_image("Resume game", self.window.text_font_menu, self.window.BLACK)
+        self.pokedex_img = self.window.create_text_image("Pokedex", self.window.text_font_menu, self.window.BLACK)
+        self.add_pokemon_img = self.window.create_text_image("Add pokemon", self.window.text_font_menu, self.window.BLACK)
+        self.new_game_img = self.window.create_text_image("New game", self.window.text_font_menu, self.window.BLACK)
 
-# #         #Create Button objects
-# #         self.new_game_button = Button(100,100,self.new_game_img, self.window)
-# #         self.pokedex_button = Button(530,100,self.pokedex_img, self.window)
-# #         self.resume_game_button = Button(530,100,self.resume_game_img, self.window)
-#         # self.add_pokemon_button = Button(530,100,self.add_pokemon_img, self.window)
+#         #Create Button objects
+        self.resume_game_button = Button(530,100,self.resume_game_img, self.window)
+        self.pokedex_button = Button(530,100,self.pokedex_img, self.window)
+        self.add_pokemon_button = Button(530,100,self.add_pokemon_img, self.window)
+        self.new_game_button = Button(100,100,self.new_game_img, self.window)
 
-# #     def draw_buttons(self):
-#         self.resume_game_button.draw_button()
-# #         self.pokedex_button.draw_button()
-# #         
-#         self.add_pokemon_button.draw_button()
-#         self.new_game_button.draw_button()
+    def draw_buttons(self):
+        self.resume_game_button.draw_button()
+        self.pokedex_button.draw_button()
+        self.add_pokemon_button.draw_button()
+        self.new_game_button.draw_button()
 
-#  #draw a rectangle around the currently selected button
-#     def select_menu_button(self):
-#         buttons = (self.resume_game_button, self.pokedex_button, self.add_pokemon_button, self.new_game_button)
-#         for position, button in enumerate(buttons, 1):
-#             #check if button is selected
-#             if position == self.selected_position:  
-#                 #draw the rectangle around it
-#                 pygame.draw.rect(self.window.screen, self.window.GREY, button.rect, 3)
-
+    #Draw a rectangle around the selected button
+    def select_menu_button(self):
+        buttons = (self.resume_game_button, self.pokedex_button, self.add_pokemon_button, self.new_game_button)
+        for position, button in enumerate(buttons, 1):
+            #check if button is selected
+            if position == self.selected_position:  
+                #draw the rectangle around it
+                pygame.draw.rect(self.window.screen, self.window.GREY, button.rect, 3)
 
 
 pygame.init()

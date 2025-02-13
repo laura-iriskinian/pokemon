@@ -1,20 +1,7 @@
 import pygame
 from pygame.locals import *
 from window import Window
-# from game_loop import *
-
-class Button:
-    def __init__(self, x, y, image, window):
-        
-        self.image = image
-        self.rect = self.image.get_rect()
-        self.rect.topleft = (x, y)
-        self.window = window
-    
-    #draw button on the screen
-    def draw_button(self):
-        self.window.screen_menu.blit(self.image, (self.rect.x, self.rect.y))
-
+from button import Button
 
 class Menu:
     #first menu
@@ -55,21 +42,20 @@ class Second_menu(Menu):
         super().__init__(self)
 
 #          #Load button images:
-        self.new_game_img = self.window.create_text_image("New game", self.window.text_font_menu, self.window.BLACK)
-        self.pokedex_img = self.window.create_text_image("Pokedex", self.window.text_font_menu, self.window.BLACK)
         self.resume_game_img = self.window.create_text_image("Resume game", self.window.text_font_menu, self.window.BLACK)
+        self.pokedex_img = self.window.create_text_image("Pokedex", self.window.text_font_menu, self.window.BLACK)
         self.add_pokemon_img = self.window.create_text_image("Add pokemon", self.window.text_font_menu, self.window.BLACK)
+        self.new_game_img = self.window.create_text_image("New game", self.window.text_font_menu, self.window.BLACK)
 
 #         #Create Button objects
-        self.new_game_button = Button(100,100,self.new_game_img, self.window)
-        self.pokedex_button = Button(530,100,self.pokedex_img, self.window)
         self.resume_game_button = Button(530,100,self.resume_game_img, self.window)
+        self.pokedex_button = Button(530,100,self.pokedex_img, self.window)
         self.add_pokemon_button = Button(530,100,self.add_pokemon_img, self.window)
+        self.new_game_button = Button(100,100,self.new_game_img, self.window)
 
     def draw_buttons(self):
         self.resume_game_button.draw_button()
         self.pokedex_button.draw_button()
-#         
         self.add_pokemon_button.draw_button()
         self.new_game_button.draw_button()
 
