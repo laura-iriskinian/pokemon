@@ -1,9 +1,9 @@
-from window import Window
+from models.window import Window
 import pygame
 import json
 import random
 
-with open("pokemon.json", "r", encoding = "utf-8") as file:
+with open("models/pokemon.json", "r", encoding = "utf-8") as file:
     data = json.load(file)
 
 
