@@ -1,4 +1,4 @@
-from window import Window
+from models.window import Window
 import pygame
 
 class Fight():
