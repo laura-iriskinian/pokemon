@@ -1,8 +1,8 @@
 import pygame
 from pygame.locals import *
-from window import Window
-from pokemon import Pokemon
-from fight import Fight
+from models.window import Window
+from models.pokemon import Pokemon
+from models.fight import Fight
 
 class Trainer():
     """class trainer : to select attack, menu, pokedex"""
