@@ -1,10 +1,10 @@
 import pygame
 from pygame.locals import *
 from models.button import Button
-from models.menu import Menu
+from models.player_menu import Player_menu
 from models.window import Window
 
-class Second_menu(Menu):
+class Game_menu(Player_menu):
     def __init__(self):
         super().__init__()
 
@@ -39,3 +39,40 @@ class Second_menu(Menu):
         if event.type == KEYDOWN:
             if event.key == K_DOWN:
                 self.selected_position = (self.selected_position % 4) +1  
+
+    def start_game_menu(self):
+
+        while self.run:
+
+            #set the scene
+            self.draw_background()
+            self.draw_buttons()
+            self.select_menu_button()
+
+            #handle events
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    self.run = False
+                #handle events based on the type of menu
+                self.handle_events(event)
+
+                if event.type == KEYDOWN and event.key == K_RETURN:
+                    if self.selected_position == 1 :
+                        self.current_state = "game"
+                        return self.current_state
+                    else:
+                        self.current_state = "game_menu"
+                        return self.current_state
+                    
+                    # elif event.key == K_RETURN:
+                        # if menu.selected_position == 1:
+                        #     sign_in()
+                        # if menu.selected_button == 2:
+                        #     game()
+
+
+            pygame.display.update()
+
+
+        pygame.quit()
+

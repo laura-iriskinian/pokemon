@@ -3,13 +3,15 @@ from pygame.locals import *
 from models.window import Window
 from models.button import Button
 
-class Menu:
+class Player_menu():
     #first menu
     def __init__(self):
 
         self.window = Window()
         self.background = pygame.image.load("assets/pictures/menu.jpg")
         self.selected_position = 1
+        self.run = True
+        self.current_state = ""
         
         #Load button images:
         self.sign_in_img = self.window.create_text_image("Sign in", self.window.text_font_menu, self.window.BLACK)
@@ -44,6 +46,41 @@ class Menu:
                 self.selected_position = (self.selected_position % 2) +1 
         pygame.display.update()
                 
+
+    def start_player_menu(self):
+
+        while self.run:
+
+            #set the scene
+            self.draw_background()
+            self.draw_buttons()
+            self.select_menu_button()
+
+            #handle events
+            for event in pygame.event.get():
+                # if event.type == pygame.QUIT:
+                #     self.run = False
+                #handle events based on the type of menu
+                self.handle_events(event)
+
+                if event.type == KEYDOWN and event.key == K_RETURN:
+                    if self.selected_position == 1 :
+                        self.current_state = "game_menu"
+                        return self.current_state
+                    else:
+                        self.current_state = "menu"
+                        return self.current_state
+                    
+                    # elif event.key == K_RETURN:
+                        # if menu.selected_position == 1:
+                        #     sign_in()
+                        # if menu.selected_button == 2:
+                        #     game()
+
+
+            pygame.display.update()
+
+        pygame.quit()
 
 
 def Create_player():

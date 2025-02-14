@@ -48,3 +48,4 @@ class Window:
     #create a surface with the text image
     def create_text_image(self, text, font, text_col):
         return font.render(text, True, text_col)
+    
