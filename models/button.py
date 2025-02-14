@@ -1,4 +1,4 @@
-from window import Window
+from models.window import Window
 
 class Button:
     def __init__(self, x, y, image, window):

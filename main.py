@@ -1,6 +1,8 @@
 from models.game import Game
 
+from models.menu import Menu
+
 if __name__ == "__main__":
 
-    g = Game()
-    g.game()
+    g = Menu()
+    g.menu_loop()
