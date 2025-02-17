@@ -10,7 +10,7 @@ with open("models/pokemon.json", "r", encoding = "utf-8") as file:
 class Pokemon():
     """class to init pokemon, caract and draw"""
 
-    def __init__(self):
+    def __init__(self, level = 1):
         # background image
         self.window = Window()
         # pokemon 
@@ -24,6 +24,9 @@ class Pokemon():
         self.pokemon_player_def = self.get_pokemon_player_defense()
         self.pokemon_player_resistance = self.get_pokemon_player_resistance()
         self.pokemon_player_atk = self.get_pokemon_player_attack()
+        self.level = level
+        self.xp = 0
+        self.xp_to_next_level = 15
 
 
         # pokemon opponent
@@ -84,6 +87,19 @@ class Pokemon():
         for pokemon in data:
             if pokemon["pokedex_id"] == self.pokemon_player_id:
                 return pokemon["type"]
+            
+    def gain_xp(self, amount):
+        self.xp += amount
+        while self.xp >= self.xp_to_next_level:
+            self.level_up()
+
+    def level_up(self):
+        self.level += 1
+        self.xp -= self.xp_to_next_level
+        self.xp_to_next_level = int(self.xp_to_next_level * 1.2)
+    
+    def win_battle(self):
+        self.gain_xp(5)
 
 
 
@@ -166,6 +182,12 @@ class Pokemon():
         self.window.draw_text(f"{self.pokemon_player_name} HP : {self.pokemon_player_life}",
                             self.window.text_font_hp_opponent,
                             self.window.WHITE,160,200)
+        
+    def draw_pokemon_xp(self):
+        """Draw XP pokemon player"""
+        self.window.draw_text(f"{self.pokemon_player_name} XP : {self.pokemon_xp}",
+                            self.window.text_font_hp_opponent,
+                            self.window.WHITE, 160, 180)
 
 
 
