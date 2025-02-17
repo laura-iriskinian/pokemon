@@ -10,5 +10,5 @@ class Button:
     
     #draw button on the screen
     def draw_button(self):
-        
-        self.window.screen_menu.blit(self.image, (self.rect.x, self.rect.y))
+
+        self.window.screen.blit(self.image, (self.rect.x, self.rect.y))
