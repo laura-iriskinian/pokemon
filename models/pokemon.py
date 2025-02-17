@@ -97,7 +97,11 @@ class Pokemon():
 # defs get opponent
 
     def get_pokemon_opponent_id(self):
-        available_ids = [pokemon["pokedex_id"] for pokemon in data]
+
+        available_ids = []
+        for pokemon in data:
+                if pokemon["active"] == True:
+                    available_ids.append(pokemon["pokedex_id"])
         return random.choice(available_ids)
 
     def get_pokemon_opponent_sprite(self):

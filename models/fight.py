@@ -189,6 +189,7 @@ class Fight():
                     if self.selected_position == 1 :
                         return "fight"  
                     else:
+                        self.selected_position = 1
                         return "player_menu"
         return "lose_game"
 
