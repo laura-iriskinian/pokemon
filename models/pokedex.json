@@ -1,20 +1,19 @@
 [
     {
         "players": [
-
             {
-            "player_name": "player1",
-                {
-                    "pokedex_id": 1 {
+                "player_name": "player1",
+                "pokedex": [
+                    {
+                        "pokedex_id": 1,
                         "name": "Bulbasaur",
-                        "sprites":{
+                        "sprites": {
                             "front": "assets/pictures/Grass/bulbasaur_front.png"
-                            },
+                        },
                         "xp": 50
-                        }
-                }
-            }    
+                    }
+                ]
+            }
         ]
     }
-
 ]
