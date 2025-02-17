@@ -20,6 +20,9 @@ class Game_menu(Player_menu):
         self.add_pokemon_button = Button(100,200,self.add_pokemon_img, self.window)
         self.new_game_button = Button(100,250,self.new_game_img, self.window)
 
+        self.buttons = (self.resume_game_button, self.pokedex_button, self.add_pokemon_button, self.new_game_button)
+        self.total_buttons = len(self.buttons)
+
     def draw_buttons(self):
         self.resume_game_button.draw_button()
         self.pokedex_button.draw_button()
@@ -28,21 +31,38 @@ class Game_menu(Player_menu):
 
     #Draw a rectangle around the selected button
     def select_menu_button(self):
-        buttons = (self.resume_game_button, self.pokedex_button, self.add_pokemon_button, self.new_game_button)
-        for position, button in enumerate(buttons, 1):
+        for position, button in enumerate(self.buttons, 1):
             #check if button is selected
             if position == self.selected_position:  
                 #draw the rectangle around it
                 pygame.draw.rect(self.window.screen, self.window.GREY, button.rect, 3)
     
-    def handle_events(self, event):   
-        if event.type == KEYDOWN:
-            if event.key == K_DOWN:
-                self.selected_position = (self.selected_position % 4) +1  
+    def handle_events(self):   
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+
+            #handle events based on the type of menu
+
+            if event.type == KEYDOWN:
+                if event.key == K_DOWN:
+                    self.selected_position = (self.selected_position % self.total_buttons) +1  
+                if event.key == K_UP:
+                    self.selected_position = (self.selected_position - 2) % self.total_buttons + 1
+
+
+                if event.key == K_RETURN:
+                    if self.selected_position == 1 :
+                        return "fight"  
+                    
+                    else:
+                        return "game_menu"
+
+
+        return "game_menu"
 
     def start_game_menu(self):
-
-        # while self.run:
 
             #set the scene
             self.draw_background()
@@ -50,29 +70,8 @@ class Game_menu(Player_menu):
             self.select_menu_button()
 
             #handle events
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                    pygame.quit()
-                #handle events based on the type of menu
-                self.handle_events(event)
 
-                if event.type == KEYDOWN and event.key == K_RETURN:
-                    if self.selected_position == 1 :
-                        self.current_state = "fight"
-                        return self.current_state
-                    else:
-                        self.current_state = "game_menu"
-                        return self.current_state
-                    
-                    # elif event.key == K_RETURN:
-                        # if menu.selected_position == 1:
-                        #     sign_in()
-                        # if menu.selected_button == 2:
-                        #     game()
+            new_state = self.handle_events()
+            return new_state
 
-
-        #     pygame.display.update()
-
-
-        # pygame.quit()
 
