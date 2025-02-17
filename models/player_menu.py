@@ -58,9 +58,6 @@ class Player_menu():
 
             #handle events
             for event in pygame.event.get():
-                # if event.type == pygame.QUIT:
-                #     self.run = False
-                #handle events based on the type of menu
                 self.handle_events(event)
 
                 if event.type == KEYDOWN and event.key == K_RETURN:
@@ -70,12 +67,7 @@ class Player_menu():
                     else:
                         self.current_state = "menu"
                         return self.current_state
-                    
-                    # elif event.key == K_RETURN:
-                        # if menu.selected_position == 1:
-                        #     sign_in()
-                        # if menu.selected_button == 2:
-                        #     game()
+                
 
 
             pygame.display.update()
