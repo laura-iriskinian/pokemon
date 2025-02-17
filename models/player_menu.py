@@ -21,6 +21,11 @@ class Player_menu():
         self.sign_in_button = Button(100,100,self.sign_in_img, self.window)
         self.new_player_button = Button(530,100,self.new_player_img, self.window)
 
+        #Player information
+        self.request_player_name_img = self.window.create_text_image("Enter your name: ", self.window.text_font_menu, self.window.BLACK)
+        self.request_player_name_button = Button(100,100, self.request_player_name_img, self.window)
+        self.player_name = ""
+
     def draw_background(self):
         """method to draw background"""
         self.window.screen_menu.blit(self.background,(0,0))
@@ -65,7 +70,7 @@ class Player_menu():
                         self.current_state = "game_menu"
                         return self.current_state
                     else:
-                        self.current_state = "menu"
+                        self.current_state = "player_menu"
                         return self.current_state
                 
 
@@ -75,5 +80,9 @@ class Player_menu():
         pygame.quit()
 
 
-def Create_player():
+def Create_player(self):
     """Function to create a new player and assign basic pokedex"""
+    self.draw_background()
+    self.request_player_name_button.draw_button()
+
+
