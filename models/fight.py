@@ -76,6 +76,7 @@ class Fight():
                 if event.key == K_RETURN:
                     if self.selected_position == 1 :
                         self.trainer_attack()
+
                     else:
                         return "fight"
         return "fight"
@@ -95,6 +96,8 @@ class Fight():
         # opponent attack
         self.pokemon_player.opponent_attack()
 
+        pygame.time.delay(1000)
+        pygame.display.update()
         # reset background
         self.draw_background_fight()
 
@@ -108,6 +111,8 @@ class Fight():
         # text lifes
         self.pokemon_opponent[0].draw_pokemon_opponent_hp()
         self.pokemon_player.draw_pokemon_player_hp()
+
+
 
 
 

@@ -10,11 +10,12 @@ class Window:
         self.GREY = (128,128,128)
         self.WHITE = (255,255,255)
         self.BLACK = (0,0,0)
+        self.RED = (255, 0, 0)
 
         # text font 
         self.text_font_menu_battle = pygame.font.SysFont("Arial",30)
         self.text_font_menu = pygame.font.SysFont("Arial", 25, bold=True)        
-        self.text_font_hp_opponent = pygame.font.SysFont("Arial",20,bold=True)
+        self.text_font_battle = pygame.font.SysFont("Arial",20,bold=True)
 
 
         # game window

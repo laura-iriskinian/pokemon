@@ -39,6 +39,11 @@ class Pokemon():
         self.pokemon_opponent_atk = self.get_pokemon_opponent_attack()
 
 
+        self.damage = ""
+        self.target = ""
+
+
+
 # defs get players
 
     def get_pokemon_player_sprite(self):
@@ -73,17 +78,19 @@ class Pokemon():
             if pokemon["pokedex_id"] == self.pokemon_player_id:
                 return pokemon["stat"]["def"]
             
+    def get_pokemon_player_type(self):
+        for pokemon in data:
+            if pokemon["pokedex_id"] == self.pokemon_player_id:
+                return pokemon["type"]
+
     def get_pokemon_player_resistance(self):
         for pokemon in data:
             if pokemon["pokedex_id"] == self.pokemon_player_id:
                 for resistance in pokemon["resistances"]:
                     if resistance["name"] == self.pokemon_player_type:
                         return resistance["multiply"]
-            
-    def get_pokemon_player_type(self):
-        for pokemon in data:
-            if pokemon["pokedex_id"] == self.pokemon_player_id:
-                return pokemon["type"]
+
+
 
 
 
@@ -119,17 +126,19 @@ class Pokemon():
             if pokemon["pokedex_id"] == self.pokemon_opponent_id:
                 return pokemon["stat"]["def"]
             
+    def get_pokemon_opponent_type(self):
+        for pokemon in data:
+            if pokemon["pokedex_id"] == self.pokemon_opponent_id:
+                return pokemon["type"]
+
     def get_pokemon_opponent_resistance(self):
         for pokemon in data:
             if pokemon["pokedex_id"] == self.pokemon_opponent_id:
                 for resistance in pokemon["resistances"]:
                     if resistance["name"] == self.pokemon_opponent_type:
                         return resistance["multiply"]
-            
-    def get_pokemon_opponent_type(self):
-        for pokemon in data:
-            if pokemon["pokedex_id"] == self.pokemon_opponent_id:
-                return pokemon["type"]
+
+
 
     def get_pokemon_opponent_attack(self):
         for pokemon in data:
@@ -141,30 +150,73 @@ class Pokemon():
 
     def player_attack(self):
         """the player attack the opponent"""
-        resistance_multiplier = self.pokemon_opponent_resistance
-        raw_damage = max(1,self.pokemon_player_atk - self.pokemon_opponent_def)
-        damage = raw_damage * resistance_multiplier
+        if random.random() > 0.1:   
+            resistance_multiplier = self.pokemon_opponent_resistance
+            raw_damage = max(1,self.pokemon_player_atk - self.pokemon_opponent_def)
+            damage = raw_damage * resistance_multiplier
 
-        self.pokemon_opponent_life -= damage
+            self.pokemon_opponent_life -= damage
+            self.draw_damage(damage,self.pokemon_opponent_name)
+        else:
+            damage = 0
+            self.draw_damage(damage,self.pokemon_opponent_name)
+
 
     def opponent_attack(self):
         """the opponent attack the player"""
-        resistance_multiplier = self.pokemon_player_resistance
-        raw_damage = max(1,self.pokemon_opponent_atk - self.pokemon_player_def)
-        damage = raw_damage * resistance_multiplier
+        if random.random() > 0.1:   
+            resistance_multiplier = self.pokemon_player_resistance
+            raw_damage = max(1,self.pokemon_opponent_atk - self.pokemon_player_def)
+            damage = raw_damage * resistance_multiplier
 
-        self.pokemon_player_life -= damage
+            self.pokemon_player_life -= damage
+            self.draw_damage(damage,self.pokemon_player_name)
+        else:
+            damage = 0
+            self.draw_damage(damage,self.pokemon_player_name)
+
+
+    def draw_damage(self, damage, target):
+        """Display the damage dealt on the screen for a short time"""
+
+        if damage >= 1:
+            if target == self.pokemon_opponent_name:
+                position = ((self.window.screen_width/2)-50, 25)
+                damage_text = self.window.text_font_battle.render(
+                    f"{self.pokemon_opponent_name} : - {damage} HP", 
+                    True, self.window.RED)
+            else:
+                position = ((self.window.screen_width/2), 300)
+                damage_text = self.window.text_font_battle.render(
+                    f"{self.pokemon_player_name} : - {damage} HP", 
+                    True, self.window.RED)
+        else : 
+            if target == self.pokemon_opponent_name:
+                position = ((self.window.screen_width/2)-200, 25)
+                damage_text = self.window.text_font_battle.render(
+                    f"ATTACK MISS | {self.pokemon_opponent_name} : - {damage} HP", 
+                    True, self.window.RED)
+            else:
+                position = ((self.window.screen_width/2), 300)
+                damage_text = self.window.text_font_battle.render(
+                    f"ATTACK MISS | {self.pokemon_player_name} : - {damage} HP", 
+                    True, self.window.RED)
+
+        self.window.screen.blit(damage_text, position)
+        pygame.display.update()
+
+
 
     def draw_pokemon_opponent_hp(self):
         """draw HP to pokemon opponent"""
         self.window.draw_text(f"{self.pokemon_opponent_name} HP : {self.pokemon_opponent_life}",
-                            self.window.text_font_hp_opponent,
+                            self.window.text_font_battle,
                             self.window.WHITE,560,25)
         
     def draw_pokemon_player_hp(self):
         """draw HP to pokemon player"""
         self.window.draw_text(f"{self.pokemon_player_name} HP : {self.pokemon_player_life}",
-                            self.window.text_font_hp_opponent,
+                            self.window.text_font_battle,
                             self.window.WHITE,160,200)
 
 
