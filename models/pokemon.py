@@ -15,7 +15,7 @@ class Pokemon():
         self.window = Window()
         # pokemon 
         self.pokemon_player = ""
-        self.pokemon_player_id = 3
+        self.pokemon_player_id = 1
         self.pokemon_player_sprite = self.get_pokemon_player_sprite()
 
         self.pokemon_player_life = self.get_pokemon_player_hp()

@@ -23,6 +23,7 @@ class Window:
         self.screen_width = 800
         self.screen_height = 400 + self.bottom_panel
         self.screen_height_total = 550
+        self.screen_middle_x = self.screen_width/2
 
         # position y button game pannel
         self.py_rectangle_top = (self.screen_height - self.bottom_panel)+3
