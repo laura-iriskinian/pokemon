@@ -42,7 +42,7 @@ class Game_menu(Player_menu):
 
     def start_game_menu(self):
 
-        while self.run:
+        # while self.run:
 
             #set the scene
             self.draw_background()
@@ -52,13 +52,13 @@ class Game_menu(Player_menu):
             #handle events
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
-                    self.run = False
+                    pygame.quit()
                 #handle events based on the type of menu
                 self.handle_events(event)
 
                 if event.type == KEYDOWN and event.key == K_RETURN:
                     if self.selected_position == 1 :
-                        self.current_state = "game"
+                        self.current_state = "fight"
                         return self.current_state
                     else:
                         self.current_state = "game_menu"
@@ -71,8 +71,8 @@ class Game_menu(Player_menu):
                         #     game()
 
 
-            pygame.display.update()
+        #     pygame.display.update()
 
 
-        pygame.quit()
+        # pygame.quit()
 
