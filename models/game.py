@@ -49,6 +49,12 @@ class Game():
             if self.current_state == "player_menu":
                 self.current_state = self.player_menu.start_player_menu()
 
+            if self.current_state == "connect_player":
+                self.current_state = self.player_menu.connect_player()
+                
+            if self.current_state == "create_player":
+                self.current_state = self.player_menu.create_player()
+
             if self.current_state == "game_menu":
                 self.current_state = self.game_menu.start_game_menu()
 
