@@ -1,15 +1,17 @@
 import pygame
 from pygame.locals import *
+import json
+import time
 from models.window import Window
 from models.button import Button
 # from models.pokemon import Pokemon
-import json
+
 
 # with open("models/pokemon.json", "r", encoding = "utf-8") as file:
 #     data = json.load(file)
 
-# with open("models/pokedex.json", "r", encoding = "utf-8") as file:
-#     player_pokedex = json.load(file)
+with open("models/pokedex.json", "r", encoding = "utf-8") as file:
+    pokedex = json.load(file)
 
 class Create_player_menu():
     def __init__(self):
@@ -44,6 +46,7 @@ class Create_player_menu():
             #handle events
             self.handle_events_create_player()
             pygame.display.update()
+            
 
     def handle_events_create_player(self):
         """method to handle events on the create player screen"""
@@ -58,49 +61,37 @@ class Create_player_menu():
                     self.current_state = "player_menu"
                 
                 elif event.key == K_RETURN:
-                    if len(self.player_name) > 2:  
-                        self.player_name += event.unicode
+                    if self.player_name and len(self.player_name) > 2:  
                         self.create_player()
-                    self.typing = False
-                                    
+
                 elif event.key == K_BACKSPACE:  
                     self.player_name = self.player_name[:-1]
-                elif len(self.player_name) < 12: 
+                elif len(self.player_name) < 20: 
                     self.player_name += event.unicode
                 
             
     def create_player(self):
         """Function to create a new player and assign basic pokedex"""
-            # get player name
-        self.player_name = input("").strip()
-        if not self.player_name.strip():
-            print("You must enter a name")
-            return
-
+        self.typing = False
         # load existing pokedex
         with open("models/pokedex.json", "r", encoding="utf-8") as file:
-                player_pokedex = json.load(file)
+                pokedex = json.load(file)
 
         # check if player already exists in pokedex
-        for player in player_pokedex:
+        for player in pokedex:
             if player["player_name"] == self.player_name:
                 print(f"Player '{self.player_name}' already exists!")
                 return
 
         # create new empty pokedex
         new_player = {
-            "player_name": self.player_name,
-            "pokedex": [] 
-        }
+            "player_name": self.player_name, 'pokedex': [{'pokedex_id': 1, 'name': 'Bulbasaur', 'sprites': {'front': 'assets/pictures/Grass/bulbasaur_front.png'}, 'xp': 50}]}
 
         # add new player to pokedex
-        player_pokedex.append(new_player)
+        pokedex.append(new_player)
 
         # save new player to pokedex
         with open("models/pokedex.json", "w", encoding="utf-8") as file:
-            json.dump(player_pokedex, file, indent=4, ensure_ascii=False)
+            json.dump(pokedex, file, indent=4, ensure_ascii=False)
 
         print(f"Player '{self.player_name}' has been created successfully!")
-        self.time.wait(2)
-
-        return "game_menu"
