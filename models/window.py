@@ -10,11 +10,12 @@ class Window:
         self.GREY = (128,128,128)
         self.WHITE = (255,255,255)
         self.BLACK = (0,0,0)
+        self.RED = (255, 0, 0)
 
         # text font 
         self.text_font_menu_battle = pygame.font.SysFont("Arial",30)
         self.text_font_menu = pygame.font.SysFont("Arial", 25, bold=True)        
-        self.text_font_hp_opponent = pygame.font.SysFont("Arial",20,bold=True)
+        self.text_font_battle = pygame.font.SysFont("Arial",20,bold=True)
 
 
         # game window
@@ -22,6 +23,7 @@ class Window:
         self.screen_width = 800
         self.screen_height = 400 + self.bottom_panel
         self.screen_height_total = 550
+        self.screen_middle_x = self.screen_width/2
 
         # position y button game pannel
         self.py_rectangle_top = (self.screen_height - self.bottom_panel)+3
