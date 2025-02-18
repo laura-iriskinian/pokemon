@@ -70,7 +70,7 @@ class Player_menu():
                 elif event.key == K_RETURN: 
 
                     if self.selected_position == 1 : # Sign in
-                        return "game_menu" 
+                        return "player_menu" 
                         
                     elif self.selected_position == 2 : # New player
                         return "create_player"                   

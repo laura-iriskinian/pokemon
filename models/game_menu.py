@@ -51,6 +51,8 @@ class Game_menu(Player_menu):
                 if event.key == K_UP:
                     self.selected_position = (self.selected_position - 2) % self.total_buttons + 1
 
+                if event.key == K_ESCAPE:
+                    return "player_menu"
 
                 if event.key == K_RETURN:
                     if self.selected_position == 1 :
