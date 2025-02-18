@@ -26,9 +26,9 @@ class Create_player_menu():
         self.player_name = "" 
         self.input_box = pygame.Rect(100, 200, 300, 50) 
         self.typing = False
-        self.error_msg_player_exists_img = self.window.create_text_image("This player already exists. Type again or press ESC to go to previous menu", self.window.text_font_menu, self.window.BLACK)
-        self.error_msg_player_exists_button = Button(100,300, self.request_player_name_img, self.window)
-        self.player_added_img = self.window.create_text_image(f"Player '{self.player_name}' created successfully!", self.window.text_font_menu, self.window.BLACK)
+        self.error_msg_player_exists_img = self.window.create_text_image("This player already exists. \nType again or press ESC to go to previous menu", self.window.text_font_menu, self.window.BLACK)
+        self.error_msg_player_exists_button = Button(100,280, self.error_msg_player_exists_img, self.window)
+        self.player_added_img = self.window.create_text_image(f"New player created successfully!", self.window.text_font_menu, self.window.BLACK)
         self.player_added_button = Button(100,300, self.player_added_img, self.window)
 
     def draw_background(self):
@@ -87,6 +87,8 @@ class Create_player_menu():
             if player["player_name"] == self.player_name:
                 # print(f"Player '{self.player_name}' already exists!")
                 self.error_msg_player_exists_button.draw_button()
+                pygame.display.update()
+                time.sleep(3)
                 self.player_name = "" 
                 self.start_create_player()
             else: pass    
@@ -103,7 +105,6 @@ class Create_player_menu():
             json.dump(pokedex, file, indent=4, ensure_ascii=False)
 
         self.player_added_button.draw_button()
-        time.sleep(3)
         pygame.display.update()
-        # print(f"Player '{self.player_name}' has been created successfully!")
+        time.sleep(3)
         self.player_name = ""

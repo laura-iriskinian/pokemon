@@ -115,5 +115,31 @@
                 "xp": 50
             }
         ]
+    },
+    {
+        "player_name": "lkjnbfghj",
+        "pokedex": [
+            {
+                "pokedex_id": 1,
+                "name": "Bulbasaur",
+                "sprites": {
+                    "front": "assets/pictures/Grass/bulbasaur_front.png"
+                },
+                "xp": 50
+            }
+        ]
+    },
+    {
+        "player_name": "kdjlsmmx,c",
+        "pokedex": [
+            {
+                "pokedex_id": 1,
+                "name": "Bulbasaur",
+                "sprites": {
+                    "front": "assets/pictures/Grass/bulbasaur_front.png"
+                },
+                "xp": 50
+            }
+        ]
     }
 ]
