@@ -40,8 +40,16 @@ class Game():
             if self.current_state == "game_menu":
                 self.current_state = self.game_menu.start_game_menu()
 
+            if self.current_state == "add_pokemon":
+                self.current_state = self.game_menu.start_add_pokemon()
+            
             if self.current_state == "fight":
                 self.current_state = self.fight.start_fight()
+
+            if self.current_state == "lose_game":
+                self.current_state = self.fight.lose_fight()
+
+
 
                 
             pygame.display.update()

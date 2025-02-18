@@ -50,5 +50,31 @@
                 "xp": 50
             }
         ]
+    },
+    {
+        "player_name": "jojo",
+        "pokedex": [
+            {
+                "pokedex_id": 1,
+                "name": "Bulbasaur",
+                "sprites": {
+                    "front": "assets/pictures/Grass/bulbasaur_front.png"
+                },
+                "xp": 50
+            }
+        ]
+    },
+    {
+        "player_name": "lucas",
+        "pokedex": [
+            {
+                "pokedex_id": 1,
+                "name": "Bulbasaur",
+                "sprites": {
+                    "front": "assets/pictures/Grass/bulbasaur_front.png"
+                },
+                "xp": 50
+            }
+        ]
     }
 ]

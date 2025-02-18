@@ -2685,78 +2685,78 @@
         "resistances": [
             {
                 "name": "Normal",
-                "multiplier": 0.5
+                "multiply": 0.5
             },
             {
                 "name": "Grass",
-                "multiplier": 4
+                "multiply": 4
             },
             {
                 "name": "Fire",
-                "multiplier": 0.5
+                "multiply": 0.5
             },
             {
                 "name": "Water",
-                "multiplier": 4
+                "multiply": 4
             },
             {
                 "name": "Electric",
-                "multiplier": 0
+                "multiply": 0
             },
             {
                 "name": "Ice",
-                "multiplier": 2
+                "multiply": 2
             },
             {
                 "name": "Fighting",
-                "multiplier": 2
+                "multiply": 2
             },
             {
                 "name": "Poison",
-                "multiplier": 0.25
+                "multiply": 0.25
             },
             {
                 "name": "Ground",
-                "multiplier": 2
+                "multiply": 2
             },
             {
                 "name": "Flying",
-                "multiplier": 0.5
+                "multiply": 0.5
             },
             {
                 "name": "Psychic",
-                "multiplier": 1
+                "multiply": 1
             },
             {
                 "name": "Bug",
-                "multiplier": 1
+                "multiply": 1
             },
             {
                 "name": "Rock",
-                "multiplier": 1
+                "multiply": 1
             },
             {
                 "name": "Ghost",
-                "multiplier": 1
+                "multiply": 1
             },
             {
                 "name": "Dragon",
-                "multiplier": 1
+                "multiply": 1
             },
             {
                 "name": "Dark",
-                "multiplier": 1
+                "multiply": 1
             },
             {
                 "name": "Steel",
-                "multiplier": 2
+                "multiply": 2
             },
             {
                 "name": "Fairy",
-                "multiplier": 1
+                "multiply": 1
             }
         ],
-        "active": true
+        "active": false
     },
     {
         "pokedex_id": 104,
