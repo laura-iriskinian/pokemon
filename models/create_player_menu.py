@@ -43,10 +43,11 @@ class Create_player_menu():
             self.draw_background()
             self.request_player_name_button.draw_button()
             self.draw_text_input()        
-            #handle events
+            #handle events 
             self.handle_events_create_player()
-            pygame.display.update()
-            
+            pygame.display.update() 
+        return "game_menu"    
+                      
 
     def handle_events_create_player(self):
         """method to handle events on the create player screen"""
@@ -61,14 +62,16 @@ class Create_player_menu():
                     self.current_state = "player_menu"
                 
                 elif event.key == K_RETURN:
-                    if self.player_name and len(self.player_name) > 2:  
+                    if self.player_name and len(self.player_name) > 1:  
                         self.create_player()
+                    else: print("name too short")
 
                 elif event.key == K_BACKSPACE:  
                     self.player_name = self.player_name[:-1]
                 elif len(self.player_name) < 20: 
                     self.player_name += event.unicode
-                
+                  
+        return "game_menu"      
             
     def create_player(self):
         """Function to create a new player and assign basic pokedex"""
