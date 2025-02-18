@@ -63,13 +63,13 @@ class Fight():
         pygame.draw.rect(self.window.screen, self.window.BLACK, bar_rect, 2)
 
         xp_ratio = self.pokemon_player.xp / self.pokemon_player.xp_to_next_level
-        fill_width = int(398*xp_ratio)
+        fill_width = int(200*xp_ratio)
         if fill_width > 0:
             fill_rect = pygame.Rect(161, 161, fill_width, 7)
             pygame.draw.rect(self.window.screen, self.window.BLUE, fill_rect)
 
     def draw_stats(self):
-        xp_text = self.window.text_font_hp_opponent.render(f"XP: {self.pokemon_player.xp}/{self.pokemon_player.xp_to_next_level}", True, self.window.WHITE)
+        xp_text = self.window.text_font_hp_opponent.render(f"XP: {self.pokemon_player.xp}/{self.pokemon_player.xp_to_next_level} Level : {self.pokemon_player.level}", True, self.window.WHITE)
         self.window.screen.blit(xp_text, (160, 180))
         
 

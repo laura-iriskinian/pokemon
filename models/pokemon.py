@@ -6,6 +6,31 @@ import random
 with open("models/pokemon.json", "r", encoding = "utf-8") as file:
     data = json.load(file)
 
+evolutions = {
+    1: {"evolves_to": 2, "level_required": 5},
+    2: {"evolves_to": 3, "level_required": 10},
+    4: {"evolves_to": 5, "level_required": 5},
+    5: {"evolves_to": 6, "level_required": 10},
+    7: {"evolves_to": 8, "level_required": 5},
+    8: {"evolves_to": 9, "level_required": 10},
+    10: {"evolves_to": 11, "level_required": 5},
+    11: {"evolves_to": 12, "level_required": 10},
+    16: {"evolves_to": 17, "level_required": 5},
+    17: {"evolves_to": 18, "level_required": 10},
+    23: {"evolves_to": 24, "level_required": 5},
+    25: {"evolves_to": 26, "level_required": 5},
+    35: {"evolves_to": 36, "level_required": 5},
+    66: {"evolves_to": 67, "level_required": 5},
+    67: {"evolves_to": 68, "level_required": 10},
+    81: {"evolves_to": 82, "level_required": 5},
+    92: {"evolves_to": 93, "level_required": 5},
+    93: {"evolves_to": 94, "level_required": 10},
+    104: {"evolves_to": 105, "level_required": 5},
+    147: {"evolves_to": 148, "level_required": 5},
+    148: {"evolves_to": 149, "level_required": 10},
+    228: {"evolves_to": 229, "level_required": 5}
+}
+
 
 class Pokemon():
     """class to init pokemon, caract and draw"""
@@ -15,7 +40,7 @@ class Pokemon():
         self.window = Window()
         # pokemon 
         self.pokemon_player = ""
-        self.pokemon_player_id = 3
+        self.pokemon_player_id = 4
         self.pokemon_player_sprite = self.get_pokemon_player_sprite()
 
         self.pokemon_player_life = self.get_pokemon_player_hp()
@@ -97,9 +122,31 @@ class Pokemon():
         self.level += 1
         self.xp -= self.xp_to_next_level
         self.xp_to_next_level = int(self.xp_to_next_level * 1.2)
+
+        self.try_evolve()
+
+    def try_evolve(self):
+        if self.pokemon_player_id in evolutions:
+            evolution = evolutions[self.pokemon_player_id]
+
+            if self.level >= evolution["level_required"]:
+                new_pokemon_id = evolution["evolves_to"]
+                self.pokemon_player_id = new_pokemon_id
+
+                for pokemon in data:
+                    if pokemon["pokedex_id"] == new_pokemon_id:
+                        self.pokemon_player_name = pokemon["name"]
+                        self.pokemon_player_atk = pokemon["stat"]["atk"]
+                        self.pokemon_player_life = pokemon["stat"]["hp"]
+                        self.pokemon_player_def = pokemon["stat"]["def"]
+                        self.pokemon_player_type = pokemon["type"]
+                        self.pokemon_player_sprite = pygame.image.load(pokemon["sprites"]["back"]).convert_alpha()
+                        self.pokemon_player_sprite = pygame.transform.scale(self.pokemon_player_sprite, (self.pokemon_player_sprite.get_width() * 3, self.pokemon_player_sprite.get_height() * 3))
+                        break
     
     def win_battle(self):
         self.gain_xp(5)
+
 
 
 

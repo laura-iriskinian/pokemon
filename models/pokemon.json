@@ -2,6 +2,7 @@
     {
         "pokedex_id": 1,
         "name": "Bulbasaur",
+        "status": "base",
         "sprites":{
             "front": "assets/pictures/Grass/bulbasaur_front.png",
             "back": "assets/pictures/Grass/bulbasaur_back.png"
@@ -90,6 +91,7 @@
     {
         "pokedex_id": 2,
         "name": "Ivysaur",
+        "status": "lvl.1",
         "sprites":{
             "front": "assets/pictures/Grass/ivysaur_front.png",
             "back": "assets/pictures/Grass/ivysaur_back.png"
@@ -178,6 +180,7 @@
     {
         "pokedex_id": 3,
         "name": "Venusaur",
+        "status": "lvl.2",
         "sprites":{
             "front": "assets/pictures/Grass/venusaur_front.png",
             "back": "assets/pictures/Grass/venusaur_back.png"
@@ -266,6 +269,7 @@
     {
         "pokedex_id": 4,
         "name": "Charmander",
+        "status": "base",
         "sprites":{
             "front": "assets/pictures/Fire/charmander_front.png",
             "back": "assets/pictures/Fire/charmander_back.png"
@@ -354,6 +358,7 @@
     {
         "pokedex_id": 5,
         "name": "Charmeleon",
+        "status": "lvl.1",
         "sprites":{
             "front": "assets/pictures/Fire/charmeleon_front.png",
             "back": "assets/pictures/Fire/charmeleon_back.png"
@@ -442,6 +447,7 @@
     {
         "pokedex_id": 6,
         "name": "Charizard",
+        "status": "lvl.2",
         "sprites":{
             "front": "assets/pictures/Fire/charizard_front.png",
             "back": "assets/pictures/Fire/charizard_back.png"
@@ -530,6 +536,7 @@
     {
         "pokedex_id": 7,
         "name": "Squirtle",
+        "status": "base",
         "sprites":{
             "front": "assets/pictures/Water/squirtle_front.png",
             "back": "assets/pictures/Water/squirtle_back.png"
@@ -618,6 +625,7 @@
     {
         "pokedex_id": 8,
         "name": "Wartortle",
+        "status": "lvl.1",
         "sprites":{
             "front": "assets/pictures/Water/wartortle_front.png",
             "back": "assets/pictures/Water/wartortle_back.png"
@@ -706,6 +714,7 @@
     {
         "pokedex_id": 9,
         "name": "Blastoise",
+        "status": "lvl.2",
         "sprites":{
             "front": "assets/pictures/Water/blastoise_front.png",
             "back": "assets/pictures/Water/blastoise_back.png"
@@ -794,6 +803,7 @@
     {
         "pokedex_id": 10,
         "name": "Caterpie",
+        "status": "base",
         "sprites": {
             "front": "assets/pictures/Bug/caterpie_front.png",
             "back": "assets/pictures/Bug/caterpie_back.png"
@@ -882,6 +892,7 @@
     {
         "pokedex_id": 11,
         "name": "Metapod",
+        "status": "lvl.1",
         "sprites": {
             "front": "assets/pictures/Bug/metapod_front.png",
             "back": "assets/pictures/Bug/metapod_back.png"
@@ -970,6 +981,7 @@
     {
         "pokedex_id": 12,
         "name": "Butterfree",
+        "status": "lvl.2",
         "sprites": {
             "front": "assets/pictures/Bug/butterfree_front.png",
             "back": "assets/pictures/Bug/butterfree_back.png"
@@ -1058,6 +1070,7 @@
     {
         "pokedex_id": 16,
         "name": "Pidgey",
+        "status": "base",
         "sprites": {
             "front": "assets/pictures/Normal/pidgey_front.png",
             "back": "assets/pictures/Normal/pidgey_back.png"
@@ -1146,6 +1159,7 @@
     {
         "pokedex_id": 17,
         "name": "Pidgeotto",
+        "status": "lvl.1",
         "sprites": {
             "front": "assets/pictures/Normal/pidgeotto_front.png",
             "back": "assets/pictures/Normal/pidgeotto_back.png"
@@ -1234,6 +1248,7 @@
     {
         "pokedex_id": 18,
         "name": "Pidgeot",
+        "status": "lvl.2",
         "sprites": {
             "front": "assets/pictures/Normal/pidgeot_front.png",
             "back": "assets/pictures/Normal/pidgeot_back.png"
@@ -1322,6 +1337,7 @@
     {
         "pokedex_id": 23,
         "name": "Ekans",
+        "status": "base",
         "sprites": {
             "front": "assets/pictures/Poison/ekans_front.png",
             "back": "assets/pictures/Poison/ekans_back.png"
@@ -1410,6 +1426,7 @@
     {
         "pokedex_id": 24,
         "name": "Arbok",
+        "status": "lvl.1",
         "sprites": {
             "front": "assets/pictures/Poison/arbok_front.png",
             "back": "assets/pictures/Poison/arbok_back.png"
@@ -1498,6 +1515,7 @@
     {
         "pokedex_id": 25,
         "name": "Pikachu",
+        "status": "base",
         "sprites": {
             "front": "assets/pictures/Electric/pikachu_front.png",
             "back": "assets/pictures/Electric/pikachu_back.png"
@@ -1586,6 +1604,7 @@
     {
         "pokedex_id": 26,
         "name": "Raichu",
+        "status": "lvl.1",
         "sprites": {
             "front": "assets/pictures/Electric/raichu_front.png",
             "back": "assets/pictures/Electric/raichu_back.png"
@@ -1674,6 +1693,7 @@
     {
         "pokedex_id": 35,
         "name": "Clefairy",
+        "status": "base",
         "sprites": {
             "front": "assets/pictures/Fairy/clefairy_front.png",
             "back": "assets/pictures/Fairy/clefairy_back.png"
@@ -1762,6 +1782,7 @@
     {
         "pokedex_id": 36,
         "name": "Clefable",
+        "status": "lvl.1",
         "sprites": {
             "front": "assets/pictures/Fairy/clefable_front.png",
             "back": "assets/pictures/Fairy/clefable_back.png"
@@ -1850,6 +1871,7 @@
     {
         "pokedex_id": 66,
         "name": "Machop",
+        "status": "base",
         "sprites": {
             "front": "assets/pictures/Fighting/machop_front.png",
             "back": "assets/pictures/Fighting/machop_back.png"
@@ -1938,6 +1960,7 @@
     {
         "pokedex_id": 67,
         "name": "Machoke",
+        "status": "lvl.1",
         "sprites": {
             "front": "assets/pictures/Fighting/machoke_front.png",
             "back": "assets/pictures/Fighting/machoke_back.png"
@@ -2026,6 +2049,7 @@
     {
         "pokedex_id": 68,
         "name": "Machamp",
+        "status": "lvl.2",
         "sprites": {
             "front": "assets/pictures/Fighting/machamp_front.png",
             "back": "assets/pictures/Fighting/machamp_back.png"
@@ -2114,6 +2138,7 @@
     {
         "pokedex_id": 81,
         "name": "Magnemite",
+        "status": "base",
         "sprites": {
             "front": "assets/pictures/Steel/magnemite_front.png",
             "back": "assets/pictures/Steel/magnemite_back.png"
@@ -2202,6 +2227,7 @@
     {
         "pokedex_id": 82,
         "name": "Magneton",
+        "status": "lvl.1",
         "sprites": {
             "front": "assets/pictures/Steel/magneton_front.png",
             "back": "assets/pictures/Steel/magneton_back.png"
@@ -2290,6 +2316,7 @@
     {
         "pokedex_id": 83,
         "name": "Farfetch'd",
+        "status": "base",
         "sprites": {
             "front": "assets/pictures/Flying/farfetchd_front.png",
             "back": "assets/pictures/Flying/farfetchd_back.png"
@@ -2378,6 +2405,7 @@
     {
         "pokedex_id": 92,
         "name": "Gastly",
+        "status": "base",
         "sprites": {
             "front": "assets/pictures/Ghost/gastly_front.png",
             "back": "assets/pictures/Ghost/gastly_back.png"
@@ -2466,6 +2494,7 @@
     {
         "pokedex_id": 93,
         "name": "Haunter",
+        "status": "lvl.1",
         "sprites": {
             "front": "assets/pictures/Ghost/haunter_front.png",
             "back": "assets/pictures/Ghost/haunter_back.png"
@@ -2554,6 +2583,7 @@
     {
         "pokedex_id": 94,
         "name": "Gengar",
+        "status": "lvl.2",
         "sprites": {
             "front": "assets/pictures/Ghost/gengar_front.png",
             "back": "assets/pictures/Ghost/gengar_back.png"
@@ -2642,6 +2672,7 @@
     {
         "pokedex_id": 95,
         "name": "Onix",
+        "status": "base",
         "sprites":{
             "front": "assets/pictures/Rock/onix_front.png",
             "back": "assets/pictures/Rock/onix_back.png"
@@ -2730,6 +2761,7 @@
     {
         "pokedex_id": 104,
         "name": "Cubone",
+        "status": "base",
         "sprites": {
             "front": "assets/pictures/Ground/cubone_front.png",
             "back": "assets/pictures/Ground/cubone_back.png"
@@ -2818,6 +2850,7 @@
     {
         "pokedex_id": 105,
         "name": "Marowak",
+        "status": "lvl.1",
         "sprites": {
             "front": "assets/pictures/Ground/marowak_front.png",
             "back": "assets/pictures/Ground/marowak_back.png"
@@ -2906,6 +2939,7 @@
     {
         "pokedex_id": 131,
         "name": "Lapras",
+        "status": "base",
         "sprites": {
             "front": "assets/pictures/Ice/lapras_front.png",
             "back": "assets/pictures/Ice/lapras_back.png"
@@ -2994,6 +3028,7 @@
     {
         "pokedex_id": 147,
         "name": "Dratini",
+        "status": "base",
         "sprites": {
             "front": "assets/pictures/Dragon/dratini_front.png",
             "back": "assets/pictures/Dragon/dratini_back.png"
@@ -3082,6 +3117,7 @@
     {
         "pokedex_id": 148,
         "name": "Dragonair",
+        "status": "lvl.1",
         "sprites": {
             "front": "assets/pictures/Dragon/dragonair_front.png",
             "back": "assets/pictures/Dragon/dragonair_back.png"
@@ -3170,6 +3206,7 @@
     {
         "pokedex_id": 149,
         "name": "Dragonite",
+        "status": "lvl.2",
         "sprites": {
             "front": "assets/pictures/Dragon/dragonite_front.png",
             "back": "assets/pictures/Dragon/dragonite_back.png"
@@ -3258,6 +3295,7 @@
     {
         "pokedex_id": 150,
         "name": "Mewtwo",
+        "status": "base",
         "sprites": {
             "front": "assets/pictures/Psychic/mewtwo_front.png",
             "back": "assets/pictures/Psychic/mewtwo_back.png"
@@ -3346,6 +3384,7 @@
     {
         "pokedex_id": 151,
         "name": "Mew",
+        "status": "base",
         "sprites": {
             "front": "assets/pictures/Psychic/mew_front.png",
             "back": "assets/pictures/Psychic/mew_back.png"
@@ -3434,6 +3473,7 @@
     {
         "pokedex_id": 228,
         "name": "Houndour",
+        "status": "base",
         "sprites": {
             "front": "assets/pictures/Dark/houndour_front.png",
             "back": "assets/pictures/Dark/houndour_back.png"
@@ -3522,6 +3562,7 @@
     {
         "pokedex_id": 229,
         "name": "Houndoom",
+        "status": "lvl.1",
         "sprites": {
             "front": "assets/pictures/Dark/houndoom_front.png",
             "back": "assets/pictures/Dark/houndoom_back.png"
@@ -3606,5 +3647,5 @@
                 "multiply": 2
             }
         ]
-    }    
+    }   
 ]
