@@ -43,7 +43,22 @@ class Pokemon():
         self.target = ""
 
 
+        self.pokemon_sprites_list = self.get_pokemon_sprite()
+        # self.pokemon_active_list = []
 
+    def get_pokemon_sprite(self):
+        self.pokemon_sprites_list = []
+        for pokemon in data:
+                self.pokemon_sprites_list.append(pokemon["sprites"]["front"])
+        return self.pokemon_sprites_list
+
+    # def get_pokemon_inactive(self):
+        
+    #     for pokemon in data:
+    #         if pokemon["active"] == False:
+    #             self.pokemon_inactive_list.append(pokemon["sprites"]["front"])
+    #     return self.pokemon_inactive_list
+    
 # defs get players
 
     def get_pokemon_player_sprite(self):
