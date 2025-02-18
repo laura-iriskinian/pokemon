@@ -1,0 +1,54 @@
+[
+    {
+        "player_name": "player1",
+        "pokedex": [
+            {
+                "pokedex_id": 1,
+                "name": "Bulbasaur",
+                "sprites": {
+                    "front": "assets/pictures/Grass/bulbasaur_front.png"
+                },
+                "xp": 50
+            }
+        ]
+    },
+    {
+        "player_name": "Elo",
+        "pokedex": [
+            {
+                "pokedex_id": 1,
+                "name": "Bulbasaur",
+                "sprites": {
+                    "front": "assets/pictures/Grass/bulbasaur_front.png"
+                },
+                "xp": 50
+            }
+        ]
+    },
+    {
+        "player_name": "gssf",
+        "pokedex": [
+            {
+                "pokedex_id": 1,
+                "name": "Bulbasaur",
+                "sprites": {
+                    "front": "assets/pictures/Grass/bulbasaur_front.png"
+                },
+                "xp": 50
+            }
+        ]
+    },
+    {
+        "player_name": "ljjh",
+        "pokedex": [
+            {
+                "pokedex_id": 1,
+                "name": "Bulbasaur",
+                "sprites": {
+                    "front": "assets/pictures/Grass/bulbasaur_front.png"
+                },
+                "xp": 50
+            }
+        ]
+    }
+]

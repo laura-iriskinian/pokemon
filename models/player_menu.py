@@ -12,8 +12,6 @@ class Player_menu():
         self.selected_position = 1
         self.current_state = "player_menu"
 
-
-
         #Load button images:
         self.sign_in_img = self.window.create_text_image("Sign in", self.window.text_font_menu, self.window.BLACK)
         self.new_player_img = self.window.create_text_image("New Player", self.window.text_font_menu, self.window.BLACK)
@@ -43,46 +41,40 @@ class Player_menu():
                 #draw the rectangle around it
                 pygame.draw.rect(self.window.screen, self.window.GREY, button.rect, 3)
 
-    def handle_events(self):   
-        """method to handle menu events"""
-
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                pygame.quit()
-
-            if event.type == KEYDOWN:
-                if event.key == K_RIGHT:
-                    self.selected_position = (self.selected_position % 2) +1 
-                if event.key == K_LEFT:
-                    self.selected_position = (self.selected_position - 2) % self.total_buttons + 1 
-
-                if event.key == K_RETURN:
-                    if self.selected_position == 1 :
-                        return "game_menu"  
-                    else:
-                        return "player_menu"
-        return "player_menu"
-
-
     def start_player_menu(self):
 
         #set the scene
         self.draw_background()
         self.draw_buttons()
         self.select_menu_button()
+        #handle events
         new_state = self.handle_events()
         return new_state
-        #handle events
+    
+    def handle_events(self):   
+        """method to handle menu events"""
 
+        for event in pygame.event.get():
+            
+            if event.type == pygame.QUIT:
+                pygame.quit()
 
-                    
-                    # elif event.key == K_RETURN:
-                        # if menu.selected_position == 1:
-                        #     sign_in()
-                        # if menu.selected_button == 2:
-                        #     game()
+            elif event.type == KEYDOWN:
+                
+                if event.key == K_RIGHT:
+                    self.selected_position = (self.selected_position % 2) +1 
+                
+                elif event.key == K_LEFT:
+                    self.selected_position = (self.selected_position - 2) % self.total_buttons + 1 
+                
+                elif event.key == K_RETURN: 
 
+                    if self.selected_position == 1 : # Sign in
+                        return "game_menu" 
+                        
+                    elif self.selected_position == 2 : # New player
+                        return "create_player"                   
+                
+        return "player_menu"
 
-
-# def Create_player():
-#     """Function to create a new player and assign basic pokedex"""
+   
