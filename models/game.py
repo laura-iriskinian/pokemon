@@ -43,9 +43,6 @@ class Game():
             if self.current_state == "fight":
                 self.current_state = self.fight.start_fight()
 
-            if self.current_state == "lose_game":
-                self.current_state = self.fight.lose_fight()
-
                 
             pygame.display.update()
 
