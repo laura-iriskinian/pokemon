@@ -2,7 +2,14 @@ import pygame
 from pygame.locals import *
 from models.window import Window
 from models.button import Button
+# from models.pokemon import Pokemon
 import json
+
+with open("models/pokemon.json", "r", encoding = "utf-8") as file:
+    data = json.load(file)
+
+with open("models/pokedex.json", "r", encoding = "utf-8") as file:
+    player_pokedex = json.load(file)
 
 class Create_player_menu():
     def __init__(self):
@@ -30,9 +37,11 @@ class Create_player_menu():
     def start_create_player(self):
         #set the scene
         self.typing = True
-        self.player_menu.draw_background()
+        self.draw_background()
         self.request_player_name_button.draw_button()
         self.draw_text_input()
+        # pygame.draw.rect(self.window.screen, self.window.WHITE, self.input_box, 2)
+        # self.window.draw_text(self.player_name, self.window.text_font_menu, self.window.BLACK, 110, 210)
     
         #handle events
         new_state = self.handle_events_create_player()
@@ -49,17 +58,22 @@ class Create_player_menu():
 
             elif event.type == KEYDOWN:
                 print("ok")
-                if event.key == K_BACKSPACE:  
-                    self.player_name = self.player_name[:-1]
+                if event.key == K_ESCAPE:
+                    self.current_state = "player_menu"
+                
                 elif event.key == K_RETURN:
-                    self.typing = False
-                    return "game_menu"
-                else:
                     if len(self.player_name) < 12:  
                         self.player_name += event.unicode
+                    self.create_player()
+                    self.typing = False
+                    return "game_menu"
                 
-        return "create player"
-    
+                elif event.key == K_BACKSPACE:  
+                    self.player_name = self.player_name[:-1]
+                elif event.key >= pygame.K_a and event.key <= pygame.K_z:
+                    player_input += chr(event.key)
+                
+            
     def create_player(self):
         """Function to create a new player and assign basic pokedex"""
             # get player name
