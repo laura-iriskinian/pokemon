@@ -2,6 +2,14 @@ import pygame
 from pygame.locals import *
 from models.window import Window
 from models.button import Button
+from models.pokemon import Pokemon
+import json
+
+with open("models/pokemon.json", "r", encoding = "utf-8") as file:
+    data = json.load(file)
+
+# with open("models/pokedex.json", "r", encoding = "utf-8") as file:
+#     player_pokedex = json.load(file)
 
 class Player_menu():
     #first menu
