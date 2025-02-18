@@ -18,7 +18,7 @@ class Create_player_menu():
         self.window = Window()
         self.background = pygame.image.load("assets/pictures/menu.jpg")
         self.selected_position = 1
-        self.current_state = "create player"
+        self.current_state = "create_player"
 
         #Player information
         self.request_player_name_img = self.window.create_text_image("Enter your name: ", self.window.text_font_menu, self.window.BLACK)
