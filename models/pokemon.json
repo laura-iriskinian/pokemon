@@ -3686,6 +3686,7 @@
                 "name": "Fairy",
                 "multiply": 2
             }
-        ]
+        ],
+        "active": false
     }   
 ]

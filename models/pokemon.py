@@ -9,7 +9,7 @@ with open("models/pokemon.json", "r", encoding = "utf-8") as file:
 evolutions = {
     1: {"evolves_to": 2, "level_required": 5},
     2: {"evolves_to": 3, "level_required": 10},
-    4: {"evolves_to": 5, "level_required": 2},
+    4: {"evolves_to": 5, "level_required": 5},
     5: {"evolves_to": 6, "level_required": 10},
     7: {"evolves_to": 8, "level_required": 5},
     8: {"evolves_to": 9, "level_required": 10},
@@ -40,7 +40,7 @@ class Pokemon():
         self.window = Window()
         # pokemon 
         self.pokemon_player = ""
-        self.pokemon_player_id = 1
+        self.pokemon_player_id = 5
         self.pokemon_player_sprite = self.get_pokemon_player_sprite()
 
         self.pokemon_player_life = self.get_pokemon_player_hp()

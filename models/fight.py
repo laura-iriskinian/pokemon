@@ -58,20 +58,6 @@ class Fight():
             if position == self.selected_position:  
                 #draw the rectangle around it
                 pygame.draw.rect(self.window.screen, self.window.GREY, button, 3)
-
-    def draw_xp_bar(self):
-        bar_rect = pygame.Rect(160, 160, 200, 10)
-        pygame.draw.rect(self.window.screen, self.window.BLACK, bar_rect, 2)
-
-        xp_ratio = self.pokemon_player.xp / self.pokemon_player.xp_to_next_level
-        fill_width = int(200*xp_ratio)
-        if fill_width > 0:
-            fill_rect = pygame.Rect(161, 161, fill_width, 7)
-            pygame.draw.rect(self.window.screen, self.window.BLUE, fill_rect)
-
-    def draw_stats(self):
-        xp_text = self.window.text_font_hp_opponent.render(f"XP: {self.pokemon_player.xp}/{self.pokemon_player.xp_to_next_level} Level : {self.pokemon_player.level}", True, self.window.WHITE)
-        self.window.screen.blit(xp_text, (160, 180))
         
 
     def handle_events_battle(self):   
@@ -114,7 +100,7 @@ class Fight():
             self.pokemon_player.pokemon_player_life = self.pokemon_player.get_pokemon_player_hp()
             return "lose_game"
 
-        pygame.time.delay(1000)
+        pygame.time.delay(500)
         pygame.display.update()
 
         # reset background
@@ -132,6 +118,20 @@ class Fight():
         self.pokemon_player.draw_pokemon_player_hp()
 
         return "fight"
+    
+    def draw_xp_bar(self):
+        bar_rect = pygame.Rect(160, 160, 200, 10)
+        pygame.draw.rect(self.window.screen, self.window.BLACK, bar_rect, 2)
+
+        xp_ratio = self.pokemon_player.xp / self.pokemon_player.xp_to_next_level
+        fill_width = int(200*xp_ratio)
+        if fill_width > 0:
+            fill_rect = pygame.Rect(161, 161, fill_width, 7)
+            pygame.draw.rect(self.window.screen, self.window.BLUE, fill_rect)
+
+    def draw_stats(self):
+        xp_text = self.window.text_font_battle.render(f"XP: {self.pokemon_player.xp}/{self.pokemon_player.xp_to_next_level} Level : {self.pokemon_player.level}", True, self.window.WHITE)
+        self.window.screen.blit(xp_text, (160, 180))
 
     def start_fight(self):
 
