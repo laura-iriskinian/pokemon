@@ -2,12 +2,8 @@
     {
         "pokedex_id": 1,
         "name": "Bulbasaur",
-<<<<<<< HEAD
         "status": "base",
         "sprites":{
-=======
-        "sprites": {
->>>>>>> 69ced7e9e7322d2ee6ce0e6493b06eb0f0b60383
             "front": "assets/pictures/Grass/bulbasaur_front.png",
             "back": "assets/pictures/Grass/bulbasaur_back.png"
         },
@@ -96,12 +92,8 @@
     {
         "pokedex_id": 2,
         "name": "Ivysaur",
-<<<<<<< HEAD
         "status": "lvl.1",
         "sprites":{
-=======
-        "sprites": {
->>>>>>> 69ced7e9e7322d2ee6ce0e6493b06eb0f0b60383
             "front": "assets/pictures/Grass/ivysaur_front.png",
             "back": "assets/pictures/Grass/ivysaur_back.png"
         },
@@ -190,12 +182,8 @@
     {
         "pokedex_id": 3,
         "name": "Venusaur",
-<<<<<<< HEAD
         "status": "lvl.2",
         "sprites":{
-=======
-        "sprites": {
->>>>>>> 69ced7e9e7322d2ee6ce0e6493b06eb0f0b60383
             "front": "assets/pictures/Grass/venusaur_front.png",
             "back": "assets/pictures/Grass/venusaur_back.png"
         },
@@ -284,12 +272,8 @@
     {
         "pokedex_id": 4,
         "name": "Charmander",
-<<<<<<< HEAD
         "status": "base",
         "sprites":{
-=======
-        "sprites": {
->>>>>>> 69ced7e9e7322d2ee6ce0e6493b06eb0f0b60383
             "front": "assets/pictures/Fire/charmander_front.png",
             "back": "assets/pictures/Fire/charmander_back.png"
         },
@@ -378,12 +362,8 @@
     {
         "pokedex_id": 5,
         "name": "Charmeleon",
-<<<<<<< HEAD
         "status": "lvl.1",
         "sprites":{
-=======
-        "sprites": {
->>>>>>> 69ced7e9e7322d2ee6ce0e6493b06eb0f0b60383
             "front": "assets/pictures/Fire/charmeleon_front.png",
             "back": "assets/pictures/Fire/charmeleon_back.png"
         },
@@ -472,12 +452,8 @@
     {
         "pokedex_id": 6,
         "name": "Charizard",
-<<<<<<< HEAD
         "status": "lvl.2",
         "sprites":{
-=======
-        "sprites": {
->>>>>>> 69ced7e9e7322d2ee6ce0e6493b06eb0f0b60383
             "front": "assets/pictures/Fire/charizard_front.png",
             "back": "assets/pictures/Fire/charizard_back.png"
         },
@@ -566,12 +542,8 @@
     {
         "pokedex_id": 7,
         "name": "Squirtle",
-<<<<<<< HEAD
         "status": "base",
         "sprites":{
-=======
-        "sprites": {
->>>>>>> 69ced7e9e7322d2ee6ce0e6493b06eb0f0b60383
             "front": "assets/pictures/Water/squirtle_front.png",
             "back": "assets/pictures/Water/squirtle_back.png"
         },
@@ -660,12 +632,8 @@
     {
         "pokedex_id": 8,
         "name": "Wartortle",
-<<<<<<< HEAD
         "status": "lvl.1",
         "sprites":{
-=======
-        "sprites": {
->>>>>>> 69ced7e9e7322d2ee6ce0e6493b06eb0f0b60383
             "front": "assets/pictures/Water/wartortle_front.png",
             "back": "assets/pictures/Water/wartortle_back.png"
         },
@@ -754,12 +722,8 @@
     {
         "pokedex_id": 9,
         "name": "Blastoise",
-<<<<<<< HEAD
         "status": "lvl.2",
         "sprites":{
-=======
-        "sprites": {
->>>>>>> 69ced7e9e7322d2ee6ce0e6493b06eb0f0b60383
             "front": "assets/pictures/Water/blastoise_front.png",
             "back": "assets/pictures/Water/blastoise_back.png"
         },
@@ -2738,12 +2702,8 @@
     {
         "pokedex_id": 95,
         "name": "Onix",
-<<<<<<< HEAD
         "status": "base",
         "sprites":{
-=======
-        "sprites": {
->>>>>>> 69ced7e9e7322d2ee6ce0e6493b06eb0f0b60383
             "front": "assets/pictures/Rock/onix_front.png",
             "back": "assets/pictures/Rock/onix_back.png"
         },
@@ -3726,12 +3686,6 @@
                 "name": "Fairy",
                 "multiply": 2
             }
-<<<<<<< HEAD
         ]
     }   
-=======
-        ],
-        "active": false
-    }
->>>>>>> 69ced7e9e7322d2ee6ce0e6493b06eb0f0b60383
 ]
