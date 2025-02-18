@@ -1,5 +1,6 @@
 from models.window import Window
 from models.pokemon import Pokemon
+from models.button import Button
 
 import pygame
 from pygame.locals import *
@@ -49,7 +50,7 @@ class Fight():
         """function to drawing background"""
         self.window.screen.blit(self.background,(0,0))
 
-    def select_menu_button(self):
+    def select_menu_button_battle(self):
         """method to show which button is selected"""
 
         for position, button in enumerate(self.buttons, 1):
@@ -73,8 +74,8 @@ class Fight():
         self.window.screen.blit(xp_text, (160, 180))
         
 
-    def handle_events(self):   
-        """method to handle menu events"""
+    def handle_events_battle(self):   
+        """method to handle menu battle events"""
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -88,13 +89,14 @@ class Fight():
 
                 if event.key == K_RETURN:
                     if self.selected_position == 1 :
-                        self.trainer_attack()
+                        return self.trainer_attack()
+
                     else:
                         return "fight"
         return "fight"
 
     def trainer_attack(self):
-        """link with handle_events = player attack and opponent attack"""
+        """link with handle_events_battle = player attack and opponent attack"""
         # player attack 
         self.pokemon_opponent[0].player_attack()
 
@@ -103,9 +105,17 @@ class Fight():
             self.pokemon_player.win_battle()
             self.pokemon_opponent.append(Pokemon())
             del self.pokemon_opponent[0]
+        
 
         # opponent attack
         self.pokemon_player.opponent_attack()
+
+        if self.pokemon_player.pokemon_player_life <= 0:
+            self.pokemon_player.pokemon_player_life = self.pokemon_player.get_pokemon_player_hp()
+            return "lose_game"
+
+        pygame.time.delay(1000)
+        pygame.display.update()
 
         # reset background
         self.draw_background_fight()
@@ -121,6 +131,7 @@ class Fight():
         self.pokemon_opponent[0].draw_pokemon_opponent_hp()
         self.pokemon_player.draw_pokemon_player_hp()
 
+        return "fight"
 
     def start_fight(self):
 
@@ -137,8 +148,74 @@ class Fight():
 
         # draw bottom panel 
         self.draw_panel()
-        self.select_menu_button()
+        self.select_menu_button_battle()
 
         # select action
-        new_state = self.handle_events()
+        new_state = self.handle_events_battle()
+        return new_state
+
+
+    def draw_lose_buttons(self):
+        """method to draw button on screen"""
+
+        self.retry = self.window.create_text_image("Retry", self.window.text_font_menu, self.window.BLACK)
+        self.return_to_menu = self.window.create_text_image("Return to menu", self.window.text_font_menu, self.window.BLACK)
+
+        self.retry = Button(self.window.screen_middle_x-200,200,self.retry, self.window)
+        self.return_to_menu = Button(self.window.screen_middle_x+100,200,self.return_to_menu, self.window)
+
+
+        self.window.draw_text("You lose",self.window.text_font_menu_battle,self.window.RED,self.window.screen_middle_x-50,250)
+        self.retry.draw_button()
+        self.return_to_menu.draw_button()
+
+
+    def select_menu_button_lose(self):
+        """method to show which button is selected"""
+
+        buttons_lose = (self.retry,self.return_to_menu)
+
+        for position, button in enumerate(buttons_lose, 1):
+            #check if button is selected
+            if position == self.selected_position:  
+                #draw the rectangle around it
+                pygame.draw.rect(self.window.screen, self.window.GREY, button, 3)
+
+
+    def handle_events_lose(self):   
+        """method to handle menu events"""
+
+        buttons_lose = (self.retry,self.return_to_menu)
+        total_lose_buttons = len(buttons_lose)
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+
+            if event.type == KEYDOWN:
+                if event.key == K_RIGHT:
+                    self.selected_position = (self.selected_position % 2) +1 
+                if event.key == K_LEFT:
+                    self.selected_position = (self.selected_position - 2) % total_lose_buttons + 1 
+
+                if event.key == K_RETURN:
+                    if self.selected_position == 1 :
+                        return "fight"  
+                    else:
+                        self.selected_position = 1
+                        return "player_menu"
+        return "lose_game"
+
+
+    def lose_fight(self):
+
+        # draw background
+        self.draw_background_fight()
+        self.draw_panel()
+
+        # draw bottom panel 
+        self.draw_lose_buttons()
+        self.select_menu_button_lose()
+
+        new_state = self.handle_events_lose()
         return new_state

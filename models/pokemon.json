@@ -2,18 +2,22 @@
     {
         "pokedex_id": 1,
         "name": "Bulbasaur",
+<<<<<<< HEAD
         "status": "base",
         "sprites":{
+=======
+        "sprites": {
+>>>>>>> 69ced7e9e7322d2ee6ce0e6493b06eb0f0b60383
             "front": "assets/pictures/Grass/bulbasaur_front.png",
             "back": "assets/pictures/Grass/bulbasaur_back.png"
         },
         "type": "Grass",
-        "stat":{
+        "stat": {
             "hp": 45,
             "atk": 49,
             "def": 49
         },
-        "resistances":[
+        "resistances": [
             {
                 "name": "Normal",
                 "multiply": 1
@@ -25,11 +29,11 @@
             {
                 "name": "Fire",
                 "multiply": 2
-            }, 
+            },
             {
                 "name": "Water",
                 "multiply": 0.5
-            }, 
+            },
             {
                 "name": "Electric",
                 "multiply": 0.5
@@ -37,7 +41,7 @@
             {
                 "name": "Ice",
                 "multiply": 2
-            }, 
+            },
             {
                 "name": "Fight",
                 "multiply": 0.5
@@ -86,23 +90,28 @@
                 "name": "Fairy",
                 "multiply": 0.5
             }
-        ]
+        ],
+        "active": true
     },
     {
         "pokedex_id": 2,
         "name": "Ivysaur",
+<<<<<<< HEAD
         "status": "lvl.1",
         "sprites":{
+=======
+        "sprites": {
+>>>>>>> 69ced7e9e7322d2ee6ce0e6493b06eb0f0b60383
             "front": "assets/pictures/Grass/ivysaur_front.png",
             "back": "assets/pictures/Grass/ivysaur_back.png"
         },
         "type": "Grass",
-        "stat":{
+        "stat": {
             "hp": 60,
             "atk": 62,
             "def": 63
         },
-        "resistances":[
+        "resistances": [
             {
                 "name": "Normal",
                 "multiply": 1
@@ -114,11 +123,11 @@
             {
                 "name": "Fire",
                 "multiply": 2
-            }, 
+            },
             {
                 "name": "Water",
                 "multiply": 0.5
-            }, 
+            },
             {
                 "name": "Electric",
                 "multiply": 0.5
@@ -126,7 +135,7 @@
             {
                 "name": "Ice",
                 "multiply": 2
-            }, 
+            },
             {
                 "name": "Fight",
                 "multiply": 0.5
@@ -175,23 +184,28 @@
                 "name": "Fairy",
                 "multiply": 0.5
             }
-        ]
+        ],
+        "active": false
     },
     {
         "pokedex_id": 3,
         "name": "Venusaur",
+<<<<<<< HEAD
         "status": "lvl.2",
         "sprites":{
+=======
+        "sprites": {
+>>>>>>> 69ced7e9e7322d2ee6ce0e6493b06eb0f0b60383
             "front": "assets/pictures/Grass/venusaur_front.png",
             "back": "assets/pictures/Grass/venusaur_back.png"
         },
         "type": "Grass",
-        "stat":{
+        "stat": {
             "hp": 80,
             "atk": 82,
             "def": 83
         },
-        "resistances":[
+        "resistances": [
             {
                 "name": "Normal",
                 "multiply": 1
@@ -203,11 +217,11 @@
             {
                 "name": "Fire",
                 "multiply": 2
-            }, 
+            },
             {
                 "name": "Water",
                 "multiply": 0.5
-            }, 
+            },
             {
                 "name": "Electric",
                 "multiply": 0.5
@@ -215,7 +229,7 @@
             {
                 "name": "Ice",
                 "multiply": 2
-            }, 
+            },
             {
                 "name": "Fight",
                 "multiply": 0.5
@@ -264,23 +278,28 @@
                 "name": "Fairy",
                 "multiply": 0.5
             }
-        ]
+        ],
+        "active": false
     },
     {
         "pokedex_id": 4,
         "name": "Charmander",
+<<<<<<< HEAD
         "status": "base",
         "sprites":{
+=======
+        "sprites": {
+>>>>>>> 69ced7e9e7322d2ee6ce0e6493b06eb0f0b60383
             "front": "assets/pictures/Fire/charmander_front.png",
             "back": "assets/pictures/Fire/charmander_back.png"
         },
         "type": "Fire",
-        "stat":{
+        "stat": {
             "hp": 39,
             "atk": 52,
             "def": 43
         },
-        "resistances":[
+        "resistances": [
             {
                 "name": "Normal",
                 "multiply": 1
@@ -292,11 +311,11 @@
             {
                 "name": "Fire",
                 "multiply": 1
-            }, 
+            },
             {
                 "name": "Water",
                 "multiply": 2
-            }, 
+            },
             {
                 "name": "Electric",
                 "multiply": 1
@@ -304,7 +323,7 @@
             {
                 "name": "Ice",
                 "multiply": 0.5
-            }, 
+            },
             {
                 "name": "Fight",
                 "multiply": 1
@@ -353,23 +372,28 @@
                 "name": "Fairy",
                 "multiply": 0.5
             }
-        ]
+        ],
+        "active": true
     },
     {
         "pokedex_id": 5,
         "name": "Charmeleon",
+<<<<<<< HEAD
         "status": "lvl.1",
         "sprites":{
+=======
+        "sprites": {
+>>>>>>> 69ced7e9e7322d2ee6ce0e6493b06eb0f0b60383
             "front": "assets/pictures/Fire/charmeleon_front.png",
             "back": "assets/pictures/Fire/charmeleon_back.png"
         },
         "type": "Fire",
-        "stat":{
+        "stat": {
             "hp": 58,
             "atk": 64,
             "def": 58
         },
-        "resistances":[
+        "resistances": [
             {
                 "name": "Normal",
                 "multiply": 1
@@ -381,11 +405,11 @@
             {
                 "name": "Fire",
                 "multiply": 1
-            }, 
+            },
             {
                 "name": "Water",
                 "multiply": 2
-            }, 
+            },
             {
                 "name": "Electric",
                 "multiply": 1
@@ -393,7 +417,7 @@
             {
                 "name": "Ice",
                 "multiply": 0.5
-            }, 
+            },
             {
                 "name": "Fight",
                 "multiply": 1
@@ -442,23 +466,28 @@
                 "name": "Fairy",
                 "multiply": 0.5
             }
-        ]
+        ],
+        "active": false
     },
     {
         "pokedex_id": 6,
         "name": "Charizard",
+<<<<<<< HEAD
         "status": "lvl.2",
         "sprites":{
+=======
+        "sprites": {
+>>>>>>> 69ced7e9e7322d2ee6ce0e6493b06eb0f0b60383
             "front": "assets/pictures/Fire/charizard_front.png",
             "back": "assets/pictures/Fire/charizard_back.png"
         },
         "type": "Fire",
-        "stat":{
+        "stat": {
             "hp": 78,
             "atk": 84,
             "def": 78
         },
-        "resistances":[
+        "resistances": [
             {
                 "name": "Normal",
                 "multiply": 1
@@ -470,11 +499,11 @@
             {
                 "name": "Fire",
                 "multiply": 1
-            }, 
+            },
             {
                 "name": "Water",
                 "multiply": 2
-            }, 
+            },
             {
                 "name": "Electric",
                 "multiply": 1
@@ -482,7 +511,7 @@
             {
                 "name": "Ice",
                 "multiply": 0.5
-            }, 
+            },
             {
                 "name": "Fight",
                 "multiply": 1
@@ -531,23 +560,28 @@
                 "name": "Fairy",
                 "multiply": 0.5
             }
-        ]
+        ],
+        "active": false
     },
     {
         "pokedex_id": 7,
         "name": "Squirtle",
+<<<<<<< HEAD
         "status": "base",
         "sprites":{
+=======
+        "sprites": {
+>>>>>>> 69ced7e9e7322d2ee6ce0e6493b06eb0f0b60383
             "front": "assets/pictures/Water/squirtle_front.png",
             "back": "assets/pictures/Water/squirtle_back.png"
         },
         "type": "Water",
-        "stat":{
+        "stat": {
             "hp": 44,
             "atk": 48,
             "def": 65
         },
-        "resistances":[
+        "resistances": [
             {
                 "name": "Normal",
                 "multiply": 1
@@ -559,11 +593,11 @@
             {
                 "name": "Fire",
                 "multiply": 0.5
-            }, 
+            },
             {
                 "name": "Water",
                 "multiply": 1
-            }, 
+            },
             {
                 "name": "Electric",
                 "multiply": 2
@@ -571,7 +605,7 @@
             {
                 "name": "Ice",
                 "multiply": 0.5
-            }, 
+            },
             {
                 "name": "Fight",
                 "multiply": 1
@@ -620,23 +654,28 @@
                 "name": "Fairy",
                 "multiply": 1
             }
-        ]
+        ],
+        "active": true
     },
     {
         "pokedex_id": 8,
         "name": "Wartortle",
+<<<<<<< HEAD
         "status": "lvl.1",
         "sprites":{
+=======
+        "sprites": {
+>>>>>>> 69ced7e9e7322d2ee6ce0e6493b06eb0f0b60383
             "front": "assets/pictures/Water/wartortle_front.png",
             "back": "assets/pictures/Water/wartortle_back.png"
         },
         "type": "Water",
-        "stat":{
+        "stat": {
             "hp": 59,
             "atk": 63,
             "def": 80
         },
-        "resistances":[
+        "resistances": [
             {
                 "name": "Normal",
                 "multiply": 1
@@ -648,11 +687,11 @@
             {
                 "name": "Fire",
                 "multiply": 0.5
-            }, 
+            },
             {
                 "name": "Water",
                 "multiply": 1
-            }, 
+            },
             {
                 "name": "Electric",
                 "multiply": 2
@@ -660,7 +699,7 @@
             {
                 "name": "Ice",
                 "multiply": 0.5
-            }, 
+            },
             {
                 "name": "Fight",
                 "multiply": 1
@@ -709,23 +748,28 @@
                 "name": "Fairy",
                 "multiply": 1
             }
-        ]
+        ],
+        "active": false
     },
     {
         "pokedex_id": 9,
         "name": "Blastoise",
+<<<<<<< HEAD
         "status": "lvl.2",
         "sprites":{
+=======
+        "sprites": {
+>>>>>>> 69ced7e9e7322d2ee6ce0e6493b06eb0f0b60383
             "front": "assets/pictures/Water/blastoise_front.png",
             "back": "assets/pictures/Water/blastoise_back.png"
         },
         "type": "Water",
-        "stat":{
+        "stat": {
             "hp": 44,
             "atk": 48,
             "def": 65
         },
-        "resistances":[
+        "resistances": [
             {
                 "name": "Normal",
                 "multiply": 1
@@ -737,11 +781,11 @@
             {
                 "name": "Fire",
                 "multiply": 0.5
-            }, 
+            },
             {
                 "name": "Water",
                 "multiply": 1
-            }, 
+            },
             {
                 "name": "Electric",
                 "multiply": 2
@@ -749,7 +793,7 @@
             {
                 "name": "Ice",
                 "multiply": 0.5
-            }, 
+            },
             {
                 "name": "Fight",
                 "multiply": 1
@@ -798,7 +842,8 @@
                 "name": "Fairy",
                 "multiply": 1
             }
-        ]
+        ],
+        "active": false
     },
     {
         "pokedex_id": 10,
@@ -887,7 +932,8 @@
                 "name": "Fairy",
                 "multiply": 1
             }
-        ]
+        ],
+        "active": true
     },
     {
         "pokedex_id": 11,
@@ -976,7 +1022,8 @@
                 "name": "Fairy",
                 "multiply": 1
             }
-        ]
+        ],
+        "active": true
     },
     {
         "pokedex_id": 12,
@@ -1065,7 +1112,8 @@
                 "name": "Fairy",
                 "multiply": 1
             }
-        ]
+        ],
+        "active": true
     },
     {
         "pokedex_id": 16,
@@ -1154,7 +1202,8 @@
                 "name": "Fairy",
                 "multiply": 1
             }
-        ]
+        ],
+        "active": true
     },
     {
         "pokedex_id": 17,
@@ -1243,7 +1292,8 @@
                 "name": "Fairy",
                 "multiply": 1
             }
-        ]
+        ],
+        "active": false
     },
     {
         "pokedex_id": 18,
@@ -1332,7 +1382,8 @@
                 "name": "Fairy",
                 "multiply": 1
             }
-        ]
+        ],
+        "active": false
     },
     {
         "pokedex_id": 23,
@@ -1421,7 +1472,8 @@
                 "name": "Fairy",
                 "multiply": 1
             }
-        ]
+        ],
+        "active": false
     },
     {
         "pokedex_id": 24,
@@ -1510,7 +1562,8 @@
                 "name": "Fairy",
                 "multiply": 1
             }
-        ]
+        ],
+        "active": false
     },
     {
         "pokedex_id": 25,
@@ -1599,7 +1652,8 @@
                 "name": "Fairy",
                 "multiply": 1
             }
-        ]
+        ],
+        "active": false
     },
     {
         "pokedex_id": 26,
@@ -1688,7 +1742,8 @@
                 "name": "Fairy",
                 "multiply": 1
             }
-        ]
+        ],
+        "active": false
     },
     {
         "pokedex_id": 35,
@@ -1777,7 +1832,8 @@
                 "name": "Fairy",
                 "multiply": 1
             }
-        ]
+        ],
+        "active": true
     },
     {
         "pokedex_id": 36,
@@ -1866,7 +1922,8 @@
                 "name": "Fairy",
                 "multiply": 1
             }
-        ]
+        ],
+        "active": false
     },
     {
         "pokedex_id": 66,
@@ -1955,7 +2012,8 @@
                 "name": "Fairy",
                 "multiply": 2
             }
-        ]
+        ],
+        "active": false
     },
     {
         "pokedex_id": 67,
@@ -2044,7 +2102,8 @@
                 "name": "Fairy",
                 "multiply": 2
             }
-        ]
+        ],
+        "active": false
     },
     {
         "pokedex_id": 68,
@@ -2133,7 +2192,8 @@
                 "name": "Fairy",
                 "multiply": 2
             }
-        ]
+        ],
+        "active": false
     },
     {
         "pokedex_id": 81,
@@ -2222,7 +2282,8 @@
                 "name": "Fairy",
                 "multiply": 0.5
             }
-        ]
+        ],
+        "active": true
     },
     {
         "pokedex_id": 82,
@@ -2311,7 +2372,8 @@
                 "name": "Fairy",
                 "multiply": 0.5
             }
-        ]
+        ],
+        "active": false
     },
     {
         "pokedex_id": 83,
@@ -2400,7 +2462,8 @@
                 "name": "Fairy",
                 "multiply": 1
             }
-        ]
+        ],
+        "active": false
     },
     {
         "pokedex_id": 92,
@@ -2489,7 +2552,8 @@
                 "name": "Fairy",
                 "multiply": 1
             }
-        ]
+        ],
+        "active": true
     },
     {
         "pokedex_id": 93,
@@ -2578,7 +2642,8 @@
                 "name": "Fairy",
                 "multiply": 1
             }
-        ]
+        ],
+        "active": false
     },
     {
         "pokedex_id": 94,
@@ -2667,96 +2732,102 @@
                 "name": "Fairy",
                 "multiply": 1
             }
-        ]
+        ],
+        "active": false
     },
     {
         "pokedex_id": 95,
         "name": "Onix",
+<<<<<<< HEAD
         "status": "base",
         "sprites":{
+=======
+        "sprites": {
+>>>>>>> 69ced7e9e7322d2ee6ce0e6493b06eb0f0b60383
             "front": "assets/pictures/Rock/onix_front.png",
             "back": "assets/pictures/Rock/onix_back.png"
         },
         "type": "Rock",
-        "stat":{
+        "stat": {
             "hp": 35,
             "atk": 45,
             "def": 160
         },
-        "resistances":[
+        "resistances": [
             {
                 "name": "Normal",
-                "multiplier": 0.5
+                "multiply": 0.5
             },
             {
-                "name": "Plante",
-                "multiplier": 4
+                "name": "Grass",
+                "multiply": 4
             },
             {
-                "name": "Feu",
-                "multiplier": 0.5
+                "name": "Fire",
+                "multiply": 0.5
             },
             {
-                "name": "Eau",
-                "multiplier": 4
+                "name": "Water",
+                "multiply": 4
             },
             {
-                "name": "Électrik",
-                "multiplier": 0
+                "name": "Electric",
+                "multiply": 0
             },
             {
-                "name": "Glace",
-                "multiplier": 2
+                "name": "Ice",
+                "multiply": 2
             },
             {
-                "name": "Combat",
-                "multiplier": 2
+                "name": "Fighting",
+                "multiply": 2
             },
             {
                 "name": "Poison",
-                "multiplier": 0.25
+                "multiply": 0.25
             },
             {
-                "name": "Sol",
-                "multiplier": 2
+                "name": "Ground",
+                "multiply": 2
             },
             {
-                "name": "Vol",
-                "multiplier": 0.5
+                "name": "Flying",
+                "multiply": 0.5
             },
             {
-                "name": "Psy",
-                "multiplier": 1
+                "name": "Psychic",
+                "multiply": 1
             },
             {
-                "name": "Insecte",
-                "multiplier": 1
+                "name": "Bug",
+                "multiply": 1
             },
             {
-                "name": "Roche",
-                "multiplier": 1
+                "name": "Rock",
+                "multiply": 1
             },
             {
-                "name": "Spectre",
-                "multiplier": 1
+                "name": "Ghost",
+                "multiply": 1
             },
             {
                 "name": "Dragon",
-                "multiplier": 1
+                "multiply": 1
             },
             {
-                "name": "Ténèbres",
-                "multiplier": 1
+                "name": "Dark",
+                "multiply": 1
             },
             {
-                "name": "Acier",
-                "multiplier": 2
+                "name": "Steel",
+                "multiply": 2
             },
             {
-                "name": "Fée",
-                "multiplier": 1
+                "name": "Fairy",
+                "multiply": 1
             }
-        ]
+        ],
+        "active": false
     },
     {
         "pokedex_id": 104,
@@ -2845,7 +2916,8 @@
                 "name": "Fairy",
                 "multiply": 1
             }
-        ]
+        ],
+        "active": true
     },
     {
         "pokedex_id": 105,
@@ -2934,7 +3006,8 @@
                 "name": "Fairy",
                 "multiply": 1
             }
-        ]
+        ],
+        "active": false
     },
     {
         "pokedex_id": 131,
@@ -3023,7 +3096,8 @@
                 "name": "Fairy",
                 "multiply": 1
             }
-        ]
+        ],
+        "active": false
     },
     {
         "pokedex_id": 147,
@@ -3112,7 +3186,8 @@
                 "name": "Fairy",
                 "multiply": 2
             }
-        ]
+        ],
+        "active": false
     },
     {
         "pokedex_id": 148,
@@ -3201,7 +3276,8 @@
                 "name": "Fairy",
                 "multiply": 2
             }
-        ]
+        ],
+        "active": false
     },
     {
         "pokedex_id": 149,
@@ -3290,7 +3366,8 @@
                 "name": "Fairy",
                 "multiply": 2
             }
-        ]
+        ],
+        "active": false
     },
     {
         "pokedex_id": 150,
@@ -3379,7 +3456,8 @@
                 "name": "Fairy",
                 "multiply": 1
             }
-        ]
+        ],
+        "active": false
     },
     {
         "pokedex_id": 151,
@@ -3468,7 +3546,8 @@
                 "name": "Fairy",
                 "multiply": 1
             }
-        ]
+        ],
+        "active": false
     },
     {
         "pokedex_id": 228,
@@ -3557,7 +3636,8 @@
                 "name": "Fairy",
                 "multiply": 2
             }
-        ]
+        ],
+        "active": false
     },
     {
         "pokedex_id": 229,
@@ -3646,6 +3726,12 @@
                 "name": "Fairy",
                 "multiply": 2
             }
+<<<<<<< HEAD
         ]
     }   
+=======
+        ],
+        "active": false
+    }
+>>>>>>> 69ced7e9e7322d2ee6ce0e6493b06eb0f0b60383
 ]
