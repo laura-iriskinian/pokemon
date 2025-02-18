@@ -28,6 +28,8 @@ class Create_player_menu():
         self.typing = False
         self.error_msg_player_exists_img = self.window.create_text_image("This player already exists. Type again or press ESC to go to previous menu", self.window.text_font_menu, self.window.BLACK)
         self.error_msg_player_exists_button = Button(100,300, self.request_player_name_img, self.window)
+        self.player_added_img = self.window.create_text_image(f"Player '{self.player_name}' created successfully!", self.window.text_font_menu, self.window.BLACK)
+        self.player_added_button = Button(100,300, self.player_added_img, self.window)
 
     def draw_background(self):
         """method to draw background"""
@@ -100,5 +102,8 @@ class Create_player_menu():
         with open("models/pokedex.json", "w", encoding="utf-8") as file:
             json.dump(pokedex, file, indent=4, ensure_ascii=False)
 
-        print(f"Player '{self.player_name}' has been created successfully!")
+        self.player_added_button.draw_button()
+        time.sleep(3)
+        pygame.display.update()
+        # print(f"Player '{self.player_name}' has been created successfully!")
         self.player_name = ""

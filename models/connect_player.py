@@ -1,7 +1,6 @@
 import pygame
 from pygame.locals import *
 import json
-import time
 from models.window import Window
 from models.button import Button
 # from models.pokemon import Pokemon

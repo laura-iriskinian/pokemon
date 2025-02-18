@@ -24,5 +24,96 @@
                 "xp": 50
             }
         ]
+    },
+    {
+        "player_name": "dfgv",
+        "pokedex": [
+            {
+                "pokedex_id": 1,
+                "name": "Bulbasaur",
+                "sprites": {
+                    "front": "assets/pictures/Grass/bulbasaur_front.png"
+                },
+                "xp": 50
+            }
+        ]
+    },
+    {
+        "player_name": "jdkkslcx!:",
+        "pokedex": [
+            {
+                "pokedex_id": 1,
+                "name": "Bulbasaur",
+                "sprites": {
+                    "front": "assets/pictures/Grass/bulbasaur_front.png"
+                },
+                "xp": 50
+            }
+        ]
+    },
+    {
+        "player_name": "hhhhhh",
+        "pokedex": [
+            {
+                "pokedex_id": 1,
+                "name": "Bulbasaur",
+                "sprites": {
+                    "front": "assets/pictures/Grass/bulbasaur_front.png"
+                },
+                "xp": 50
+            }
+        ]
+    },
+    {
+        "player_name": "kjml,ndsrr",
+        "pokedex": [
+            {
+                "pokedex_id": 1,
+                "name": "Bulbasaur",
+                "sprites": {
+                    "front": "assets/pictures/Grass/bulbasaur_front.png"
+                },
+                "xp": 50
+            }
+        ]
+    },
+    {
+        "player_name": "klsdnc",
+        "pokedex": [
+            {
+                "pokedex_id": 1,
+                "name": "Bulbasaur",
+                "sprites": {
+                    "front": "assets/pictures/Grass/bulbasaur_front.png"
+                },
+                "xp": 50
+            }
+        ]
+    },
+    {
+        "player_name": "grhjkty",
+        "pokedex": [
+            {
+                "pokedex_id": 1,
+                "name": "Bulbasaur",
+                "sprites": {
+                    "front": "assets/pictures/Grass/bulbasaur_front.png"
+                },
+                "xp": 50
+            }
+        ]
+    },
+    {
+        "player_name": "htrbgf",
+        "pokedex": [
+            {
+                "pokedex_id": 1,
+                "name": "Bulbasaur",
+                "sprites": {
+                    "front": "assets/pictures/Grass/bulbasaur_front.png"
+                },
+                "xp": 50
+            }
+        ]
     }
-    ]
+]
