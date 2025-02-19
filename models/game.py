@@ -49,9 +49,6 @@ class Game():
             if self.current_state == "lose_game":
                 self.current_state = self.fight.lose_fight()
 
-
-
-                
             pygame.display.update()
 
         pygame.quit()
