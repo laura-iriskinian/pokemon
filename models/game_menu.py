@@ -20,18 +20,18 @@ class Game_menu():
         self.selected_position_add_pokemon = 0
 
         #Load button images:
-        self.resume_game_img = self.window.create_text_image("Resume game", self.window.text_font_menu, self.window.BLACK)
-        self.pokedex_img = self.window.create_text_image("Pokedex", self.window.text_font_menu, self.window.BLACK)
+        self.start_fight_img = self.window.create_text_image("Start fight", self.window.text_font_menu, self.window.BLACK)
+        self.pokedex_img = self.window.create_text_image("My pokedex", self.window.text_font_menu, self.window.BLACK)
         self.add_pokemon_img = self.window.create_text_image("Add pokemon", self.window.text_font_menu, self.window.BLACK)
-        self.new_game_img = self.window.create_text_image("New game", self.window.text_font_menu, self.window.BLACK)
+        self.reset_pokedex_img = self.window.create_text_image("Reset pokedex", self.window.text_font_menu, self.window.BLACK)
 
         #Create Button objects
-        self.resume_game_button = Button(100,100,self.resume_game_img, self.window)
+        self.start_fight_button = Button(100,100,self.start_fight_img, self.window)
         self.pokedex_button = Button(100,150,self.pokedex_img, self.window)
         self.add_pokemon_button = Button(100,200,self.add_pokemon_img, self.window)
-        self.new_game_button = Button(100,250,self.new_game_img, self.window)
+        self.reset_pokedex_button = Button(100,250,self.reset_pokedex_img, self.window)
 
-        self.buttons = (self.resume_game_button, self.pokedex_button, self.add_pokemon_button, self.new_game_button)
+        self.buttons = (self.start_fight_button, self.pokedex_button, self.add_pokemon_button, self.reset_pokedex_button)
         self.total_buttons = len(self.buttons)
 
     def draw_background(self):
@@ -40,10 +40,10 @@ class Game_menu():
 
 
     def draw_buttons(self):
-        self.resume_game_button.draw_button()
+        self.start_fight_button.draw_button()
         self.pokedex_button.draw_button()
         self.add_pokemon_button.draw_button()
-        self.new_game_button.draw_button()
+        self.reset_pokedex_button.draw_button()
 
     #Draw a rectangle around the selected button
     def select_menu_button(self):
@@ -182,7 +182,7 @@ class Game_menu():
                 pygame.draw.rect(self.window.screen, self.window.GREY, sprite, 3)
 
 
-    def handle_envent_add_pokemon(self):
+    def handle_event_add_pokemon(self):
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -226,6 +226,6 @@ class Game_menu():
 
 
 
-        new_state = self.handle_envent_add_pokemon()
+        new_state = self.handle_event_add_pokemon()
         return new_state
 

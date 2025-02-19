@@ -17,17 +17,16 @@ class Player_menu():
 
         self.window = Window()
         self.background = pygame.image.load("assets/pictures/menu.jpg")
-        self.selected_position = 1
         self.current_state = "player_menu"
 
         #Load button images:
         self.sign_in_img = self.window.create_text_image("Sign in", self.window.text_font_menu, self.window.BLACK)
         self.new_player_img = self.window.create_text_image("New Player", self.window.text_font_menu, self.window.BLACK)
-
         #Create Button objects
         self.sign_in_button = Button(100,100,self.sign_in_img, self.window)
         self.new_player_button = Button(530,100,self.new_player_img, self.window)
-
+        #selection
+        self.selected_position = 1
         self.buttons = (self.sign_in_button, self.new_player_button)
         self.total_buttons = len(self.buttons)
 
