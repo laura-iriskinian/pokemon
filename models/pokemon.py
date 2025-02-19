@@ -70,6 +70,7 @@ class Pokemon():
         self.damage = ""
         self.target = ""
 
+        self.position_pokemon = ""
 
         self.pokemon_availability_sprite_list = self.get_pokemon_availability_sprite_list()
 
@@ -86,25 +87,18 @@ class Pokemon():
                     self.pokemon_availability_sprite_list.append(pokemon_sprite_img)
         return self.pokemon_availability_sprite_list
 
+    def availability_pokemon(self,position_pokemon):
 
 
+        if data["pokemon"][position_pokemon]["active"] == True:
+            data["pokemon"][position_pokemon]["active"] = False
+        else : 
+            data["pokemon"][position_pokemon]["active"] = True
 
-
-        # Mettre à jour la donnée "active" en fonction de l'attaque
-        for pokemon in data:
-            if pokemon["stat"]["atk"] < 53:
-                pokemon["active"] = True
-            else:
-                pokemon["active"] = False
-
-        # Sauvegarder les modifications dans le fichier JSON
-        with open("pokemon.json", "w", encoding="utf-8") as file:
+        with open("models/pokemon.json", "w", encoding="utf-8") as file:
             json.dump(data, file, ensure_ascii=False, indent=4)
 
-        print("Fichier JSON mis à jour avec succès !")
-
-
-
+        self.get_pokemon_availability_sprite_list()
 
 
 # defs get players
@@ -154,7 +148,7 @@ class Pokemon():
                         return resistance["multiply"]
             
     def get_pokemon_player_type(self):
-        for pokemon in data:
+        for pokemon in data["pokemon"]:
             if pokemon["pokedex_id"] == self.pokemon_player_id:
                 return pokemon["type"]
             

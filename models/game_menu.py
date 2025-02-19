@@ -203,7 +203,10 @@ class Game_menu():
 
                 if event.key == K_RETURN:
                     if  self.selected_position_add_pokemon in self.position_pokemon_sprite:
-                        return "add_pokemon" 
+                        self.pokemon.availability_pokemon(self.selected_position_add_pokemon)
+                        # self.draw_background_add_pokemon()
+                        # pygame.display.update()
+                        return "add_pokemon"
                     if self.selected_position_add_pokemon == 3:
                         return "add_pokemon"
                     else:
