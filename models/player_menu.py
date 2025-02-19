@@ -17,6 +17,7 @@ class Player_menu():
 
         self.window = Window()
         self.background = pygame.image.load("assets/pictures/menu.jpg")
+        self.selected_position = 1
         self.current_state = "player_menu"
 
         #Load button images:
@@ -83,5 +84,3 @@ class Player_menu():
                         return "create_player"                   
                 
         return "player_menu"
-
-   
