@@ -75,6 +75,7 @@ class Pokemon():
         self.pokemon_availability_sprite_list = self.get_pokemon_availability_sprite_list()
 
 
+
     def get_pokemon_availability_sprite_list(self):
         self.pokemon_availability_sprite_list = []
         for pokemon in data["pokemon"]:
@@ -88,7 +89,6 @@ class Pokemon():
         return self.pokemon_availability_sprite_list
 
     def availability_pokemon(self,position_pokemon):
-
 
         if data["pokemon"][position_pokemon]["active"] == True:
             data["pokemon"][position_pokemon]["active"] = False

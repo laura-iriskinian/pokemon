@@ -6,6 +6,7 @@ from models.player_menu import Player_menu
 from models.game_menu import Game_menu
 from models.create_player_menu import Create_player_menu
 from models.connect_player import Connect_player
+from models.add_pokemon import Add_pokemon
 
 pygame.init()
 clock = pygame.time.Clock()
@@ -20,6 +21,7 @@ class Game():
         self.connect_player = Connect_player()
         self.game_menu = Game_menu()
         self.fight = Fight()
+        self.add_pokemon = Add_pokemon()
         self.run = True
         self.current_state = "player_menu"
 
@@ -43,7 +45,7 @@ class Game():
                 self.current_state = self.game_menu.start_game_menu()
 
             if self.current_state == "add_pokemon":
-                self.current_state = self.game_menu.start_add_pokemon()
+                self.current_state = self.add_pokemon.start_add_pokemon()
             
             if self.current_state == "fight":
                 self.current_state = self.fight.start_fight()

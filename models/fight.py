@@ -90,6 +90,8 @@ class Fight():
 
     def trainer_attack(self):
         """link with handle_events_battle = player attack and opponent attack"""
+
+
         # player attack 
         self.pokemon_opponent[0].player_attack()
 
@@ -142,6 +144,7 @@ class Fight():
 
     def start_fight(self):
 
+
         # draw background
         self.draw_background_fight()
 
@@ -156,6 +159,9 @@ class Fight():
         # draw bottom panel 
         self.draw_panel()
         self.select_menu_button_battle()
+
+
+
 
         # select action
         new_state = self.handle_events_battle()
