@@ -72,6 +72,8 @@ class Pokemon():
 
         self.position_pokemon = ""
 
+        self.pokemon_starter_list = self.get_pokemon_starter_list()
+
         self.pokemon_availability_sprite_list = self.get_pokemon_availability_sprite_list()
 
 
@@ -87,6 +89,21 @@ class Pokemon():
                 else:
                     self.pokemon_availability_sprite_list.append(pokemon_sprite_img)
         return self.pokemon_availability_sprite_list
+    
+    def get_pokemon_starter_list(self):
+        self.pokemon_starter_list = []
+        for pokemon in data["pokemon"]:
+            pokemon_sprite = pokemon["sprites"]["front"]
+            pokemon_sprite_img = pygame.image.load(pokemon_sprite).convert_alpha()
+            if pokemon["name"] == "Bulbasaur":
+                self.pokemon_starter_list.append(pokemon_sprite_img)
+            elif pokemon["name"] == "Charmander":
+                self.pokemon_starter_list.append(pokemon_sprite_img)
+            elif pokemon["name"] == "Squirtle":
+                self.pokemon_starter_list.append(pokemon_sprite_img)
+        return self.pokemon_starter_list
+
+
 
     def availability_pokemon(self,position_pokemon):
 
