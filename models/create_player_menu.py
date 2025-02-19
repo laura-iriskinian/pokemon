@@ -10,9 +10,6 @@ from models.button import Button
 # with open("models/pokemon.json", "r", encoding = "utf-8") as file:
 #     data = json.load(file)
 
-with open("models/pokedex.json", "r", encoding = "utf-8") as file:
-    pokedex = json.load(file)
-
 class Create_player_menu():
     def __init__(self):
         self.window = Window()
@@ -89,7 +86,7 @@ class Create_player_menu():
                 pokedex = json.load(file)
 
         # check if player already exists in pokedex
-        for player in pokedex:
+        for player in pokedex["players"]:
             if player["player_name"] == self.player_name:
                 # print(f"Player '{self.player_name}' already exists!")
                 self.error_msg_player_exists_button.draw_button()
@@ -112,5 +109,5 @@ class Create_player_menu():
 
         self.player_added_button.draw_button()
         pygame.display.update()
-        time.sleep(3)
+        time.sleep(2)
         self.player_name = ""
