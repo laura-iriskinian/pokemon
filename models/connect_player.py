@@ -37,9 +37,18 @@ class Connect_player():
         """method to draw background"""
         self.window.screen.blit(self.background,(0,0))
 
-    def draw_player_choice(self):
-        with open("models/pokedex.json", "r", encoding = "utf-8") as file:
-            pokedex = json.load(file)
+    def get_pokedex_players(self):
+        self.player_list = []
+        for player_name in pokedex["players"]:
+            self.player_list.append(player_name["player_name"])
+            return self.player_list
+        
+
+    def draw_player_list(self):
+        for self.player_name in self.player_list:
+            self.player_name_img = self.window.create_text_image(self.player_name, self.window.text_font_battle, self.window.BLACK)
+            self.player_name_button = Button()
+
 
 
     def draw_background_select_pokemon(self):

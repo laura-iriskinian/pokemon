@@ -80,7 +80,7 @@ class Create_player_menu():
                 pokedex = json.load(file)
 
         # check if player already exists in pokedex
-        for player in pokedex:
+        for player in pokedex["players"]:
             if player["player_name"] == self.player_name:
                 # print(f"Player '{self.player_name}' already exists!")
                 self.error_msg_player_exists_button.draw_button()
