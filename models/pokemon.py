@@ -178,7 +178,7 @@ class Pokemon():
                 new_pokemon_id = evolution["evolves_to"]
                 self.pokemon_player_id = new_pokemon_id
 
-                for pokemon in data:
+                for pokemon in data["pokemon"]:
                     if pokemon["pokedex_id"] == new_pokemon_id:
                         self.pokemon_player_name = pokemon["name"]
                         self.pokemon_player_atk = pokemon["stat"]["atk"]
