@@ -13,7 +13,6 @@ class Game_menu():
         self.current_state = "game_menu"
         self.pokemon = Pokemon()
 
-
         #Load button images:
         self.resume_game_img = self.window.create_text_image("Resume game", self.window.text_font_menu, self.window.BLACK)
         self.pokedex_img = self.window.create_text_image("Pokedex", self.window.text_font_menu, self.window.BLACK)
@@ -70,6 +69,8 @@ class Game_menu():
                 if event.key == K_UP:
                     self.selected_position = (self.selected_position - 2) % self.total_buttons + 1
 
+                if event.key == K_ESCAPE:
+                    return "player_menu"
 
                 if event.key == K_RETURN:
                     if self.selected_position == 1 :
@@ -201,7 +202,8 @@ class Game_menu():
 
                 if event.key == K_RETURN:
                     if  self.selected_position_add_pokemon in self.position_pokemon_sprite:
-                        return "add_pokemon" 
+                        self.pokemon.availability_pokemon(self.selected_position_add_pokemon)
+                        return "add_pokemon"
                     if self.selected_position_add_pokemon == 3:
                         return "add_pokemon"
                     else:

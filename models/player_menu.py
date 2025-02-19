@@ -2,6 +2,14 @@ import pygame
 from pygame.locals import *
 from models.window import Window
 from models.button import Button
+from models.pokemon import Pokemon
+import json
+
+with open("models/pokemon.json", "r", encoding = "utf-8") as file:
+    data = json.load(file)
+
+# with open("models/pokedex.json", "r", encoding = "utf-8") as file:
+#     player_pokedex = json.load(file)
 
 class Player_menu():
     #first menu
@@ -15,11 +23,11 @@ class Player_menu():
         #Load button images:
         self.sign_in_img = self.window.create_text_image("Sign in", self.window.text_font_menu, self.window.BLACK)
         self.new_player_img = self.window.create_text_image("New Player", self.window.text_font_menu, self.window.BLACK)
-
         #Create Button objects
         self.sign_in_button = Button(100,100,self.sign_in_img, self.window)
         self.new_player_button = Button(530,100,self.new_player_img, self.window)
-
+        #selection
+        self.selected_position = 1
         self.buttons = (self.sign_in_button, self.new_player_button)
         self.total_buttons = len(self.buttons)
 
@@ -76,5 +84,3 @@ class Player_menu():
                         return "create_player"                   
                 
         return "player_menu"
-
-   
