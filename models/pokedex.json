@@ -259,6 +259,32 @@
                     "xp": 50
                 }
             ]
+        },
+        {
+            "player_name": "toto",
+            "pokedex": [
+                {
+                    "pokedex_id": 1,
+                    "name": "Bulbasaur",
+                    "sprites": {
+                        "front": "assets/pictures/Grass/bulbasaur_front.png"
+                    },
+                    "xp": 50
+                }
+            ]
+        },
+        {
+            "player_name": "lolo",
+            "pokedex": [
+                {
+                    "pokedex_id": 1,
+                    "name": "Bulbasaur",
+                    "sprites": {
+                        "front": "assets/pictures/Grass/bulbasaur_front.png"
+                    },
+                    "xp": 50
+                }
+            ]
         }
-    ]    
+    ]
 }

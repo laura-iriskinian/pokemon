@@ -13,7 +13,6 @@ class Game_menu():
         self.current_state = "game_menu"
         self.pokemon = Pokemon()
 
-
         #Load button images:
         self.resume_game_img = self.window.create_text_image("Resume game", self.window.text_font_menu, self.window.BLACK)
         self.pokedex_img = self.window.create_text_image("Pokedex", self.window.text_font_menu, self.window.BLACK)
