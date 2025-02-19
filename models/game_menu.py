@@ -14,11 +14,6 @@ class Game_menu():
         self.pokemon = Pokemon()
 
 
-        self.buttons_add_pokemon = []
-        self.total_buttons_add_pokemon = len(self.pokemon.pokemon_sprites_list)+1
-        self.position_pokemon_sprite = self.get_position_pokemon_list()
-        self.selected_position_add_pokemon = 0
-
         #Load button images:
         self.resume_game_img = self.window.create_text_image("Resume game", self.window.text_font_menu, self.window.BLACK)
         self.pokedex_img = self.window.create_text_image("Pokedex", self.window.text_font_menu, self.window.BLACK)
@@ -31,8 +26,15 @@ class Game_menu():
         self.add_pokemon_button = Button(100,200,self.add_pokemon_img, self.window)
         self.new_game_button = Button(100,250,self.new_game_img, self.window)
 
+        # button for game_menu
         self.buttons = (self.resume_game_button, self.pokedex_button, self.add_pokemon_button, self.new_game_button)
         self.total_buttons = len(self.buttons)
+
+        #  button for add_pokemon
+        self.buttons_add_pokemon = []
+        self.total_buttons_add_pokemon = len(self.pokemon.pokemon_availability_sprite_list)+1
+        self.position_pokemon_sprite = self.get_position_pokemon_list()
+        self.selected_position_add_pokemon = 0
 
     def draw_background(self):
         """method to draw background"""
@@ -103,7 +105,7 @@ class Game_menu():
 
     def get_position_pokemon_list(self):
         self.position_pokemon_sprite = []
-        for position,sprite in enumerate(self.pokemon.pokemon_sprites_list):
+        for position,sprite in enumerate(self.pokemon.pokemon_availability_sprite_list):
             self.position_pokemon_sprite.append(position)
 
         return self.position_pokemon_sprite
@@ -112,63 +114,58 @@ class Game_menu():
         
 # line 1
         position_x = 60
-        for position_list, sprite in enumerate(self.pokemon.pokemon_sprites_list):
+        for position_list, sprite in enumerate(self.pokemon.pokemon_availability_sprite_list):
             if position_list <= 8:
-                pokemon_sprite = pygame.image.load(sprite).convert_alpha()
 
-                rect_pokemon_sprite = pokemon_sprite.get_rect()
+                rect_pokemon_sprite = sprite.get_rect()
                 rect_pokemon_sprite.center = (position_x,100)
 
                 self.buttons_add_pokemon.append(rect_pokemon_sprite)
-                self.window.screen.blit(pokemon_sprite,rect_pokemon_sprite)
+                self.window.screen.blit(sprite,rect_pokemon_sprite)
                 position_x += 83
 # line 2
         position_x = 60
-        for position_list, sprite in enumerate(self.pokemon.pokemon_sprites_list):
+        for position_list, sprite in enumerate(self.pokemon.pokemon_availability_sprite_list):
             if position_list >= 9 and position_list <= 17:
-                pokemon_sprite = pygame.image.load(sprite).convert_alpha()
 
-                rect_pokemon_sprite = pokemon_sprite.get_rect()
+                rect_pokemon_sprite = sprite.get_rect()
                 rect_pokemon_sprite.center = (position_x,190)
 
                 self.buttons_add_pokemon.append(rect_pokemon_sprite)
-                self.window.screen.blit(pokemon_sprite,rect_pokemon_sprite)
+                self.window.screen.blit(sprite,rect_pokemon_sprite)
                 position_x += 83
 # line 3
         position_x = 60
-        for position_list, sprite in enumerate(self.pokemon.pokemon_sprites_list):
+        for position_list, sprite in enumerate(self.pokemon.pokemon_availability_sprite_list):
             if position_list >= 18 and position_list <= 26:
-                pokemon_sprite = pygame.image.load(sprite).convert_alpha()
 
-                rect_pokemon_sprite = pokemon_sprite.get_rect()
+                rect_pokemon_sprite = sprite.get_rect()
                 rect_pokemon_sprite.center = (position_x,290)
 
                 self.buttons_add_pokemon.append(rect_pokemon_sprite)
-                self.window.screen.blit(pokemon_sprite,rect_pokemon_sprite)
+                self.window.screen.blit(sprite,rect_pokemon_sprite)
                 position_x += 83
 # line 4
         position_x = 60
-        for position_list, sprite in enumerate(self.pokemon.pokemon_sprites_list):
+        for position_list, sprite in enumerate(self.pokemon.pokemon_availability_sprite_list):
             if position_list >= 27 and position_list <= 35:
-                pokemon_sprite = pygame.image.load(sprite).convert_alpha()
 
-                rect_pokemon_sprite = pokemon_sprite.get_rect()
+                rect_pokemon_sprite = sprite.get_rect()
                 rect_pokemon_sprite.center = (position_x,390)
 
                 self.buttons_add_pokemon.append(rect_pokemon_sprite)
-                self.window.screen.blit(pokemon_sprite,rect_pokemon_sprite)
+                self.window.screen.blit(sprite,rect_pokemon_sprite)
                 position_x += 83
 # line 5
         position_x = 60
-        for position_list, sprite in enumerate(self.pokemon.pokemon_sprites_list):
+        for position_list, sprite in enumerate(self.pokemon.pokemon_availability_sprite_list):
             if position_list >= 35 and position_list <= 41:
-                pokemon_sprite = pygame.image.load(sprite).convert_alpha()
 
-                rect_pokemon_sprite = pokemon_sprite.get_rect()
+                rect_pokemon_sprite = sprite.get_rect()
                 rect_pokemon_sprite.center = (position_x,490)
 
                 self.buttons_add_pokemon.append(rect_pokemon_sprite)
-                self.window.screen.blit(pokemon_sprite,rect_pokemon_sprite)
+                self.window.screen.blit(sprite,rect_pokemon_sprite)
                 position_x += 83
 
         return self.buttons_add_pokemon
@@ -204,12 +201,15 @@ class Game_menu():
 
                 if event.key == K_RETURN:
                     if  self.selected_position_add_pokemon in self.position_pokemon_sprite:
-
                         return "add_pokemon" 
                     if self.selected_position_add_pokemon == 3:
                         return "add_pokemon"
                     else:
                         return "game_menu"
+                
+                if event.key == K_ESCAPE:
+                    return "game_menu"
+                
         return "add_pokemon"
 
     # def activate_pokemon(self,position):

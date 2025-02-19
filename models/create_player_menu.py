@@ -18,7 +18,7 @@ class Create_player_menu():
         self.window = Window()
         self.background = pygame.image.load("assets/pictures/menu.jpg")
         self.selected_position = 1
-        self.current_state = "create player"
+        self.current_state = "create_player"
 
         #Player information
         self.request_player_name_img = self.window.create_text_image("Enter your name: ", self.window.text_font_menu, self.window.BLACK)
@@ -44,10 +44,10 @@ class Create_player_menu():
             self.request_player_name_button.draw_button()
             self.draw_text_input()        
             #handle events 
-            self.handle_events_create_player()
+            new_state = self.handle_events_create_player()
             pygame.display.update() 
-        return "game_menu"    
-                      
+        return new_state
+
 
     def handle_events_create_player(self):
         """method to handle events on the create player screen"""
@@ -57,21 +57,25 @@ class Create_player_menu():
                 pygame.quit()
 
             elif event.type == KEYDOWN:
+
                 if event.key == K_ESCAPE:
-                    self.typing = False
+                    
                     self.current_state = "player_menu"
+                    self.typing = False
+                    return self.current_state
                 
                 elif event.key == K_RETURN:
                     if self.player_name and len(self.player_name) > 1:  
                         self.create_player()
+                        return "game_menu"
                     else: print("name too short")
 
                 elif event.key == K_BACKSPACE:  
                     self.player_name = self.player_name[:-1]
                 elif len(self.player_name) < 20: 
                     self.player_name += event.unicode
-                  
-        return "game_menu"      
+
+        return "create_player"      
             
     def create_player(self):
         """Function to create a new player and assign basic pokedex"""
@@ -98,3 +102,5 @@ class Create_player_menu():
             json.dump(pokedex, file, indent=4, ensure_ascii=False)
 
         print(f"Player '{self.player_name}' has been created successfully!")
+
+

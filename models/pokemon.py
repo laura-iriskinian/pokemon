@@ -43,22 +43,42 @@ class Pokemon():
         self.target = ""
 
 
-        self.pokemon_sprites_list = self.get_pokemon_sprite()
-        # self.pokemon_active_list = []
+        self.pokemon_availability_sprite_list = self.get_pokemon_availability_sprite_list()
 
-    def get_pokemon_sprite(self):
-        self.pokemon_sprites_list = []
+
+    def get_pokemon_availability_sprite_list(self):
+        self.pokemon_availability_sprite_list = []
         for pokemon in data:
-                self.pokemon_sprites_list.append(pokemon["sprites"]["front"])
-        return self.pokemon_sprites_list
+                pokemon_sprite = pokemon["sprites"]["front"]
+                pokemon_sprite_img = pygame.image.load(pokemon_sprite).convert_alpha()
+                if pokemon["active"] == False:
+                    pokemon_sprite_img.set_alpha(128)
+                    self.pokemon_availability_sprite_list.append(pokemon_sprite_img)
+                else:
+                    self.pokemon_availability_sprite_list.append(pokemon_sprite_img)
+        return self.pokemon_availability_sprite_list
 
-    # def get_pokemon_inactive(self):
-        
-    #     for pokemon in data:
-    #         if pokemon["active"] == False:
-    #             self.pokemon_inactive_list.append(pokemon["sprites"]["front"])
-    #     return self.pokemon_inactive_list
-    
+
+
+
+
+        # Mettre à jour la donnée "active" en fonction de l'attaque
+        for pokemon in data:
+            if pokemon["stat"]["atk"] < 53:
+                pokemon["active"] = True
+            else:
+                pokemon["active"] = False
+
+        # Sauvegarder les modifications dans le fichier JSON
+        with open("pokemon.json", "w", encoding="utf-8") as file:
+            json.dump(data, file, ensure_ascii=False, indent=4)
+
+        print("Fichier JSON mis à jour avec succès !")
+
+
+
+
+
 # defs get players
 
     def get_pokemon_player_sprite(self):
@@ -187,7 +207,7 @@ class Pokemon():
             resistance_multiplier = self.pokemon_player_resistance
             raw_damage = max(1,self.pokemon_opponent_atk - self.pokemon_player_def)
             damage = raw_damage * resistance_multiplier
-
+            print(resistance_multiplier)
             self.pokemon_player_life -= damage
             self.draw_damage(damage,self.pokemon_player_name)
         else:
