@@ -101,7 +101,7 @@ class Create_player_menu():
             "player_name": self.player_name, 'pokedex': [{'pokedex_id': 1, 'name': 'Bulbasaur', 'sprites': {'front': 'assets/pictures/Grass/bulbasaur_front.png'}, 'xp': 50}]}
 
         # add new player to pokedex
-        pokedex.append(new_player)
+        pokedex["players"].append(new_player)
 
         # save new player to pokedex
         with open("models/pokedex.json", "w", encoding="utf-8") as file:

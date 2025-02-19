@@ -2,6 +2,7 @@ from models.window import Window
 from models.pokemon import Pokemon
 from models.button import Button
 
+import random
 import pygame
 from pygame.locals import *
 
@@ -75,10 +76,16 @@ class Fight():
 
                 if event.key == K_RETURN:
                     if self.selected_position == 1 :
-                        return self.trainer_attack()
-
+                        self.trainer_attack()
+                    if self.selected_position == 2 :
+                        if random.random() > 0.1:
+                            return "game_menu"
+                        else:
+                            self.pokemon_player.opponent_attack()
+                            pygame.time.delay(500)
                     else:
                         return "fight"
+                    
         return "fight"
 
     def trainer_attack(self):
