@@ -1,4 +1,5 @@
-[
+{
+"pokemon":[
     {
         "pokedex_id": 1,
         "name": "Bulbasaur",
@@ -3690,3 +3691,4 @@
         "active": false
     }   
 ]
+}

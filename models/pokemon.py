@@ -71,27 +71,47 @@ class Pokemon():
         self.target = ""
 
 
-        self.pokemon_sprites_list = self.get_pokemon_sprite()
-        # self.pokemon_active_list = []
+        self.pokemon_availability_sprite_list = self.get_pokemon_availability_sprite_list()
 
-    def get_pokemon_sprite(self):
-        self.pokemon_sprites_list = []
+
+    def get_pokemon_availability_sprite_list(self):
+        self.pokemon_availability_sprite_list = []
+        for pokemon in data["pokemon"]:
+                pokemon_sprite = pokemon["sprites"]["front"]
+                pokemon_sprite_img = pygame.image.load(pokemon_sprite).convert_alpha()
+                if pokemon["active"] == False:
+                    pokemon_sprite_img.set_alpha(128)
+                    self.pokemon_availability_sprite_list.append(pokemon_sprite_img)
+                else:
+                    self.pokemon_availability_sprite_list.append(pokemon_sprite_img)
+        return self.pokemon_availability_sprite_list
+
+
+
+
+
+        # Mettre à jour la donnée "active" en fonction de l'attaque
         for pokemon in data:
-                self.pokemon_sprites_list.append(pokemon["sprites"]["front"])
-        return self.pokemon_sprites_list
+            if pokemon["stat"]["atk"] < 53:
+                pokemon["active"] = True
+            else:
+                pokemon["active"] = False
 
-    # def get_pokemon_inactive(self):
-        
-    #     for pokemon in data:
-    #         if pokemon["active"] == False:
-    #             self.pokemon_inactive_list.append(pokemon["sprites"]["front"])
-    #     return self.pokemon_inactive_list
-    
+        # Sauvegarder les modifications dans le fichier JSON
+        with open("pokemon.json", "w", encoding="utf-8") as file:
+            json.dump(data, file, ensure_ascii=False, indent=4)
+
+        print("Fichier JSON mis à jour avec succès !")
+
+
+
+
+
 # defs get players
 
     def get_pokemon_player_sprite(self):
 
-        for pokemon in data:
+        for pokemon in data["pokemon"]:
             if pokemon["pokedex_id"]==self.pokemon_player_id:
                 sprite_path = pokemon["sprites"]["back"]
                 self.pokemon_player_sprite = pygame.image.load(sprite_path).convert_alpha()
@@ -100,34 +120,34 @@ class Pokemon():
 
 
     def get_pokemon_player_attack(self):
-        for pokemon in data:
+        for pokemon in data["pokemon"]:
             if pokemon["pokedex_id"] == self.pokemon_player_id:
                 return pokemon["stat"]["atk"]
 
     def get_pokemon_player_name(self):
 
-        for pokemon in data:
+        for pokemon in data["pokemon"]:
             if pokemon["pokedex_id"] == self.pokemon_player_id:
                 return pokemon["name"]
 
     def get_pokemon_player_hp(self):
 
-        for pokemon in data:
+        for pokemon in data["pokemon"]:
             if pokemon["pokedex_id"] == self.pokemon_player_id:
                 return pokemon["stat"]["hp"]
 
     def get_pokemon_player_defense(self):
-        for pokemon in data:
+        for pokemon in data["pokemon"]:
             if pokemon["pokedex_id"] == self.pokemon_player_id:
                 return pokemon["stat"]["def"]
             
     def get_pokemon_player_type(self):
-        for pokemon in data:
+        for pokemon in data["pokemon"]:
             if pokemon["pokedex_id"] == self.pokemon_player_id:
                 return pokemon["type"]
 
     def get_pokemon_player_resistance(self):
-        for pokemon in data:
+        for pokemon in data["pokemon"]:
             if pokemon["pokedex_id"] == self.pokemon_player_id:
                 for resistance in pokemon["resistances"]:
                     if resistance["name"] == self.pokemon_player_type:
@@ -158,7 +178,7 @@ class Pokemon():
                 new_pokemon_id = evolution["evolves_to"]
                 self.pokemon_player_id = new_pokemon_id
 
-                for pokemon in data:
+                for pokemon in data["pokemon"]:
                     if pokemon["pokedex_id"] == new_pokemon_id:
                         self.pokemon_player_name = pokemon["name"]
                         self.pokemon_player_atk = pokemon["stat"]["atk"]
@@ -180,14 +200,14 @@ class Pokemon():
     def get_pokemon_opponent_id(self):
 
         available_ids = []
-        for pokemon in data:
+        for pokemon in data["pokemon"]:
                 if pokemon["active"] == True:
                     available_ids.append(pokemon["pokedex_id"])
         return random.choice(available_ids)
 
     def get_pokemon_opponent_sprite(self):
 
-        for pokemon in data:
+        for pokemon in data["pokemon"]:
             if pokemon["pokedex_id"] == self.pokemon_opponent_id:
                 sprite_path_opponent = pokemon["sprites"]["front"]
                 self.pokemon_opponent_sprite = pygame.image.load(sprite_path_opponent).convert_alpha()
@@ -196,28 +216,28 @@ class Pokemon():
 
     def get_pokemon_opponent_name(self):
 
-        for pokemon in data:
+        for pokemon in data["pokemon"]:
             if pokemon["pokedex_id"] == self.pokemon_opponent_id:
                 return pokemon["name"]
 
     def get_pokemon_opponent_hp(self):
 
-        for pokemon in data:
+        for pokemon in data["pokemon"]:
             if pokemon["pokedex_id"] == self.pokemon_opponent_id:
                 return pokemon["stat"]["hp"]
 
     def get_pokemon_opponent_defense(self):
-        for pokemon in data:
+        for pokemon in data["pokemon"]:
             if pokemon["pokedex_id"] == self.pokemon_opponent_id:
                 return pokemon["stat"]["def"]
             
     def get_pokemon_opponent_type(self):
-        for pokemon in data:
+        for pokemon in data["pokemon"]:
             if pokemon["pokedex_id"] == self.pokemon_opponent_id:
                 return pokemon["type"]
 
     def get_pokemon_opponent_resistance(self):
-        for pokemon in data:
+        for pokemon in data["pokemon"]:
             if pokemon["pokedex_id"] == self.pokemon_opponent_id:
                 for resistance in pokemon["resistances"]:
                     if resistance["name"] == self.pokemon_opponent_type:
@@ -226,7 +246,7 @@ class Pokemon():
 
 
     def get_pokemon_opponent_attack(self):
-        for pokemon in data:
+        for pokemon in data["pokemon"]:
             if pokemon["pokedex_id"] == self.pokemon_opponent_id:
                 return pokemon["stat"]["atk"]
 
@@ -253,7 +273,7 @@ class Pokemon():
             resistance_multiplier = self.pokemon_player_resistance
             raw_damage = max(1,self.pokemon_opponent_atk - self.pokemon_player_def)
             damage = raw_damage * resistance_multiplier
-
+            print(resistance_multiplier)
             self.pokemon_player_life -= damage
             self.draw_damage(damage,self.pokemon_player_name)
         else:
