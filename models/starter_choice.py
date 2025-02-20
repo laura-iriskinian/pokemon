@@ -85,7 +85,7 @@ class Starter_choice():
             pokedex_data = json.load(file)
 
         new_pokemon = {
-        "pokemon id" : pokemon_id,
+        "pokemon id" : pokemon.pokemon_id,
         "name" : pokemon.get_pokemon_name(),
         "sprite" : pokemon.get_pokemon_sprite(),
         "xp" : 0,
@@ -93,11 +93,11 @@ class Starter_choice():
     }
     
         for player in pokedex_data["players"]:
-            if player["player_name"] == "player1":
+            # if player["player_name"] == "player1":
                 
-                # Vérifie si "pokedex" est une liste, sinon la transforme en liste
-                if not isinstance(player["pokedex"], list):
-                    player["pokedex"] = [player["pokedex"]]
+            #     # Vérifie si "pokedex" est une liste, sinon la transforme en liste
+            #     if not isinstance(player["pokedex"], list):
+            #         player["pokedex"] = [player["pokedex"]]
                 
                 # Ajoute le nouveau Pokémon à la liste
                 player["pokedex"].append(new_pokemon)

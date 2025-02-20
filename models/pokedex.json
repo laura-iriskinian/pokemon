@@ -18,25 +18,11 @@
                     "selected": false
                 },
                 {
-                    "pokemon id": 16,
-                    "name": "Pidgey",
-                    "sprite": "assets/pictures/Normal/pidgey_front.png",
+                    "pokemon id": 4,
+                    "name": "Charmander",
+                    "sprite": "assets/pictures/Fire/charmander_front.png",
                     "xp": 0,
-                    "selected": false
-                },
-                {
-                    "pokemon id": 16,
-                    "name": "Pidgey",
-                    "sprite": "assets/pictures/Normal/pidgey_front.png",
-                    "xp": 0,
-                    "selected": false
-                },
-                {
-                    "pokemon id": 16,
-                    "name": "Pidgey",
-                    "sprite": "assets/pictures/Normal/pidgey_front.png",
-                    "xp": 0,
-                    "selected": false
+                    "selected": true
                 },
                 {
                     "pokemon id": 4,
@@ -46,72 +32,37 @@
                     "selected": true
                 },
                 {
-                    "pokemon id": 1,
-                    "name": "Bulbasaur",
-                    "sprite": "assets/pictures/Grass/bulbasaur_front.png",
+                    "pokemon id": 7,
+                    "name": "Squirtle",
+                    "sprite": "assets/pictures/Water/squirtle_front.png",
                     "xp": 0,
                     "selected": true
                 },
                 {
-                    "pokemon id": 1,
-                    "name": "Bulbasaur",
-                    "sprite": "assets/pictures/Grass/bulbasaur_front.png",
+                    "pokemon id": 7,
+                    "name": "Squirtle",
+                    "sprite": "assets/pictures/Water/squirtle_front.png",
                     "xp": 0,
                     "selected": true
                 },
                 {
-                    "pokemon id": 1,
-                    "name": "Bulbasaur",
-                    "sprite": "assets/pictures/Grass/bulbasaur_front.png",
+                    "pokemon id": 7,
+                    "name": "Squirtle",
+                    "sprite": "assets/pictures/Water/squirtle_front.png",
                     "xp": 0,
                     "selected": true
                 },
                 {
-                    "pokemon id": 1,
-                    "name": "Bulbasaur",
-                    "sprite": "assets/pictures/Grass/bulbasaur_front.png",
+                    "pokemon id": 4,
+                    "name": "Charmander",
+                    "sprite": "assets/pictures/Fire/charmander_front.png",
                     "xp": 0,
                     "selected": true
                 },
                 {
-                    "pokemon id": 1,
-                    "name": "Bulbasaur",
-                    "sprite": "assets/pictures/Grass/bulbasaur_front.png",
-                    "xp": 0,
-                    "selected": true
-                },
-                {
-                    "pokemon id": 1,
-                    "name": "Bulbasaur",
-                    "sprite": "assets/pictures/Grass/bulbasaur_front.png",
-                    "xp": 0,
-                    "selected": true
-                },
-                {
-                    "pokemon id": 1,
-                    "name": "Bulbasaur",
-                    "sprite": "assets/pictures/Grass/bulbasaur_front.png",
-                    "xp": 0,
-                    "selected": true
-                },
-                {
-                    "pokemon id": 1,
-                    "name": "Bulbasaur",
-                    "sprite": "assets/pictures/Grass/bulbasaur_front.png",
-                    "xp": 0,
-                    "selected": true
-                },
-                {
-                    "pokemon id": 1,
-                    "name": "Bulbasaur",
-                    "sprite": "assets/pictures/Grass/bulbasaur_front.png",
-                    "xp": 0,
-                    "selected": true
-                },
-                {
-                    "pokemon id": 1,
-                    "name": "Bulbasaur",
-                    "sprite": "assets/pictures/Grass/bulbasaur_front.png",
+                    "pokemon id": 4,
+                    "name": "Charmander",
+                    "sprite": "assets/pictures/Fire/charmander_front.png",
                     "xp": 0,
                     "selected": true
                 }
@@ -127,6 +78,20 @@
                         "front": "assets/pictures/Grass/bulbasaur_front.png"
                     },
                     "xp": 50
+                },
+                {
+                    "pokemon id": 4,
+                    "name": "Charmander",
+                    "sprite": "assets/pictures/Fire/charmander_front.png",
+                    "xp": 0,
+                    "selected": true
+                },
+                {
+                    "pokemon id": 4,
+                    "name": "Charmander",
+                    "sprite": "assets/pictures/Fire/charmander_front.png",
+                    "xp": 0,
+                    "selected": true
                 }
             ]
         },
@@ -140,6 +105,201 @@
                         "front": "assets/pictures/Grass/bulbasaur_front.png"
                     },
                     "xp": 50
+                },
+                {
+                    "pokemon id": 4,
+                    "name": "Charmander",
+                    "sprite": "assets/pictures/Fire/charmander_front.png",
+                    "xp": 0,
+                    "selected": true
+                },
+                {
+                    "pokemon id": 4,
+                    "name": "Charmander",
+                    "sprite": "assets/pictures/Fire/charmander_front.png",
+                    "xp": 0,
+                    "selected": true
+                }
+            ]
+        },
+        {
+            "player_name": "azer",
+            "pokedex": [
+                {
+                    "pokedex_id": 1,
+                    "name": "Bulbasaur",
+                    "sprites": {
+                        "front": "assets/pictures/Grass/bulbasaur_front.png"
+                    },
+                    "xp": 50
+                },
+                {
+                    "pokemon id": 4,
+                    "name": "Charmander",
+                    "sprite": "assets/pictures/Fire/charmander_front.png",
+                    "xp": 0,
+                    "selected": true
+                },
+                {
+                    "pokemon id": 4,
+                    "name": "Charmander",
+                    "sprite": "assets/pictures/Fire/charmander_front.png",
+                    "xp": 0,
+                    "selected": true
+                }
+            ]
+        },
+        {
+            "player_name": "lulu",
+            "pokedex": [
+                {
+                    "pokedex_id": 1,
+                    "name": "Bulbasaur",
+                    "sprites": {
+                        "front": "assets/pictures/Grass/bulbasaur_front.png"
+                    },
+                    "xp": 50
+                },
+                {
+                    "pokemon id": 4,
+                    "name": "Charmander",
+                    "sprite": "assets/pictures/Fire/charmander_front.png",
+                    "xp": 0,
+                    "selected": true
+                },
+                {
+                    "pokemon id": 4,
+                    "name": "Charmander",
+                    "sprite": "assets/pictures/Fire/charmander_front.png",
+                    "xp": 0,
+                    "selected": true
+                }
+            ]
+        },
+        {
+            "player_name": "lolo",
+            "pokedex": [
+                {
+                    "pokedex_id": 1,
+                    "name": "Bulbasaur",
+                    "sprites": {
+                        "front": "assets/pictures/Grass/bulbasaur_front.png"
+                    },
+                    "xp": 50
+                },
+                {
+                    "pokemon id": 4,
+                    "name": "Charmander",
+                    "sprite": "assets/pictures/Fire/charmander_front.png",
+                    "xp": 0,
+                    "selected": true
+                },
+                {
+                    "pokemon id": 4,
+                    "name": "Charmander",
+                    "sprite": "assets/pictures/Fire/charmander_front.png",
+                    "xp": 0,
+                    "selected": true
+                }
+            ]
+        },
+        {
+            "player_name": "lyly",
+            "pokedex": [
+                {
+                    "pokedex_id": 1,
+                    "name": "Bulbasaur",
+                    "sprites": {
+                        "front": "assets/pictures/Grass/bulbasaur_front.png"
+                    },
+                    "xp": 50
+                },
+                {
+                    "pokemon id": 4,
+                    "name": "Charmander",
+                    "sprite": "assets/pictures/Fire/charmander_front.png",
+                    "xp": 0,
+                    "selected": true
+                },
+                {
+                    "pokemon id": 4,
+                    "name": "Charmander",
+                    "sprite": "assets/pictures/Fire/charmander_front.png",
+                    "xp": 0,
+                    "selected": true
+                }
+            ]
+        },
+        {
+            "player_name": "rere",
+            "pokedex": [
+                {
+                    "pokedex_id": 1,
+                    "name": "Bulbasaur",
+                    "sprites": {
+                        "front": "assets/pictures/Grass/bulbasaur_front.png"
+                    },
+                    "xp": 50
+                },
+                {
+                    "pokemon id": 4,
+                    "name": "Charmander",
+                    "sprite": "assets/pictures/Fire/charmander_front.png",
+                    "xp": 0,
+                    "selected": true
+                },
+                {
+                    "pokemon id": 4,
+                    "name": "Charmander",
+                    "sprite": "assets/pictures/Fire/charmander_front.png",
+                    "xp": 0,
+                    "selected": true
+                }
+            ]
+        },
+        {
+            "player_name": "popo",
+            "pokedex": [
+                {
+                    "pokedex_id": 1,
+                    "name": "Bulbasaur",
+                    "sprites": {
+                        "front": "assets/pictures/Grass/bulbasaur_front.png"
+                    },
+                    "xp": 50
+                },
+                {
+                    "pokemon id": 4,
+                    "name": "Charmander",
+                    "sprite": "assets/pictures/Fire/charmander_front.png",
+                    "xp": 0,
+                    "selected": true
+                },
+                {
+                    "pokemon id": 4,
+                    "name": "Charmander",
+                    "sprite": "assets/pictures/Fire/charmander_front.png",
+                    "xp": 0,
+                    "selected": true
+                }
+            ]
+        },
+        {
+            "player_name": "loulou",
+            "pokedex": [
+                {
+                    "pokemon id": 4,
+                    "name": "Charmander",
+                    "sprite": "assets/pictures/Fire/charmander_front.png",
+                    "xp": 0,
+                    "selected": true
+                },
+                {
+                    "pokemon id": 1,
+                    "name": "Bulbasaur",
+                    "sprite": "assets/pictures/Grass/bulbasaur_front.png",
+                    "xp": 0,
+                    "selected": false
                 }
             ]
         }
