@@ -4,8 +4,8 @@ from models.window import Window
 from models.button import Button
 import json
 
-with open("models/pokemon.json", "r", encoding = "utf-8") as file:
-    data = json.load(file)
+# with open("models/pokemon.json", "r", encoding = "utf-8") as file:
+#     data = json.load(file)
 
 # with open("models/pokedex.json", "r", encoding = "utf-8") as file:
 #     player_pokedex = json.load(file)
@@ -77,7 +77,7 @@ class Player_menu():
                 elif event.key == K_RETURN: 
 
                     if self.selected_position == 1 : # Sign in
-                        return "starter_choice" 
+                        return "connect_player" 
                         
                     elif self.selected_position == 2 : # New player
                         return "create_player"                   
