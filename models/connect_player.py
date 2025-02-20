@@ -17,15 +17,14 @@ class Connect_player():
         #background
         self.window = Window()
         self.background = pygame.image.load("assets/pictures/menu.jpg")
-        self.selected_position = 1
         self.current_state = "connect_player"
 
         #button to select player
         self.button_select_player = []
         self.player_list = self.get_player_list()
-        self.total_buttons_select_player = len(self.player_list) + 1
+        self.total_buttons_select_player = len(self.player_list)
         self.position_player = self.get_position_player()
-        self.selected_position_select_player = 0
+        self.selected_position_select_player = 1
 
     def draw_background(self):
         """method to draw background"""
@@ -40,7 +39,7 @@ class Connect_player():
     
     def get_position_player(self):
         self.position_player = []
-        for position, player in enumerate(self.player_list):
+        for position, player in enumerate(self.player_list,1):
             self.position_player.append(position)
         return self.position_player
 
@@ -49,33 +48,26 @@ class Connect_player():
         position_x = 60
         position_y = 90
         for self.player_name in self.player_list:
+            
             self.player_name_img = self.window.create_text_image(self.player_name, self.window.text_font_battle, self.window.BLACK)
-            self.player_name_button = Button(position_x, (position_y + position_y), self.player_name_img, self.window)
-            self.player_name_button.window.screen.blit(self.player_name_img, (position_x, (position_y + 10)))
+            rect_player_sprite = self.player_name_img.get_rect()
+            rect_player_sprite.topleft = (position_x,position_y)
+
+            self.button_select_player.append(rect_player_sprite)
+            self.window.screen.blit(self.player_name_img, rect_player_sprite)
             position_y += 40
+
         return self.button_select_player    
 
     def select_player_name(self):
-        for position, self.player_name_button in enumerate(self.button_select_player):
+        for position, self.player_name_button in enumerate(self.button_select_player,1):
             if position == self.selected_position_select_player:
-                pygame.draw.rect(self.window.screen, self.window.WHITE, self.player_name_img, 4)
+                pygame.draw.rect(self.window.screen, self.window.GREY, self.player_name_button, 2)
 
-
-    def connect_player(self):
-        #set the scene
-        self.draw_background() 
-        self.draw_player_list() 
-        self.select_player_name()  
-        #handle events 
-        new_state = self.handle_events_connect_player()
-        return new_state    
-                      
 
     def handle_events_connect_player(self):
         """method to handle events on the connect player screen"""
-        for i, self.player_name in pokedex["players"]:
-            return i
-        
+
         for event in pygame.event.get():
             
             if event.type == pygame.QUIT:
@@ -86,11 +78,28 @@ class Connect_player():
                     return "player_menu"  
                 
                 if event.key == K_DOWN:
-                    self.selected_position_select_player = (self.selected_position % i) +1 
-                
+                    if self.selected_position_select_player != self.total_buttons_select_player:
+                        self.selected_position_select_player += 1
+                    else:
+                        self.selected_position_select_player = self.total_buttons_select_player
                 elif event.key == K_UP:
-                    self.selected_position = (self.selected_position - i) % self.total_buttons_select_player + 1            
-  
+                    if self.selected_position_select_player != 1:
+                        self.selected_position_select_player -=1
+                    else:
+                        self.selected_position_select_player = 1
+
+                if event.key == K_RETURN:
+
+                        return "game_menu"
+
         return "connect_player"      
-            
-    
+
+
+    def connect_player(self):
+        #set the scene
+        self.draw_background() 
+        self.draw_player_list() 
+        self.select_player_name()  
+        #handle events 
+        new_state = self.handle_events_connect_player()
+        return new_state
