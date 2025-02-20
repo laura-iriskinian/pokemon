@@ -26,8 +26,8 @@ class Fight():
         self.selected_position = 1
 
         # pokemon object
-        self.pokemon_player = Pokemon()
-        self.pokemon_opponent = [Pokemon()]
+        self.pokemon_player = Pokemon(3)
+        self.pokemon_opponent = [Pokemon(7)]
 
 
 
@@ -93,20 +93,20 @@ class Fight():
 
 
         # player attack 
-        self.pokemon_opponent[0].player_attack()
+        self.pokemon_player.attack(self.pokemon_opponent[0],"player")
 
         # if pokemon life opponnent = 0 -> replace a pokemon oponant
-        if self.pokemon_opponent[0].pokemon_opponent_life <=0:
+        if self.pokemon_opponent[0].pokemon_life <=0:
             self.pokemon_player.win_battle()
-            self.pokemon_opponent.append(Pokemon())
+            self.pokemon_opponent.append(Pokemon(4))
             del self.pokemon_opponent[0]
         
 
         # opponent attack
-        self.pokemon_player.opponent_attack()
+        self.pokemon_opponent[0].attack(self.pokemon_player,"opponent")
 
-        if self.pokemon_player.pokemon_player_life <= 0:
-            self.pokemon_player.pokemon_player_life = self.pokemon_player.get_pokemon_player_hp()
+        if self.pokemon_player.pokemon_life <= 0:
+            self.pokemon_player.pokemon_life = self.pokemon_player.get_pokemon_player_hp()
             return "lose_game"
 
         pygame.time.delay(500)
@@ -116,15 +116,15 @@ class Fight():
         self.draw_background_fight()
 
         # # draw pokemons 
-        self.pokemon_player.draw_pokemon_player()
-        self.pokemon_opponent[0].draw_pokemon_opponent()
+        self.pokemon_player.draw_pokemon_player(self.pokemon_player)
+        self.pokemon_opponent[0].draw_pokemon_opponent(self.pokemon_opponent[0])
         
         # panel 
         self.draw_panel()
 
         # text lifes
-        self.pokemon_opponent[0].draw_pokemon_opponent_hp()
-        self.pokemon_player.draw_pokemon_player_hp()
+        self.pokemon_opponent[0].draw_pokemon_opponent_hp(self.pokemon_opponent[0])
+        self.pokemon_player.draw_pokemon_player_hp(self.pokemon_player)
 
         return "fight"
     
@@ -149,10 +149,10 @@ class Fight():
         self.draw_background_fight()
 
         # draw pokemons
-        self.pokemon_opponent[0].draw_pokemon_opponent_hp()
-        self.pokemon_player.draw_pokemon_player()
-        self.pokemon_opponent[0].draw_pokemon_opponent()
-        self.pokemon_player.draw_pokemon_player_hp()
+        self.pokemon_opponent[0].draw_pokemon_opponent_hp(self.pokemon_opponent[0])
+        self.pokemon_player.draw_pokemon_player(self.pokemon_player)
+        self.pokemon_opponent[0].draw_pokemon_opponent(self.pokemon_opponent[0])
+        self.pokemon_player.draw_pokemon_player_hp(self.pokemon_player)
         self.draw_stats()
         self.draw_xp_bar()
 

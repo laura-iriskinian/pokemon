@@ -1,10 +1,12 @@
 from models.pokemon import Pokemon
 from models.window import Window
 
+import json
 import pygame
 from pygame.locals import *
 
-
+with open("models/pokemon.json", "r", encoding = "utf-8") as file:
+    data = json.load(file)
 
 class Add_pokemon():
     def __init__(self):
@@ -12,13 +14,38 @@ class Add_pokemon():
         self.background = pygame.image.load("assets/pictures/menu.jpg")
         self.selected_position = 1
         self.current_state = "add_pokemon"
-        self.pokemon = Pokemon()
 
         #  button for add_pokemon
         self.buttons_add_pokemon = []
-        self.total_buttons_add_pokemon = len(self.pokemon.pokemon_availability_sprite_list)+1
+        self.pokemon_availability_sprite_list = self.get_pokemon_availability_sprite_list()
+        self.total_buttons_add_pokemon = len(self.pokemon_availability_sprite_list)+1
         self.position_pokemon_sprite = self.get_position_pokemon_list()
         self.selected_position_add_pokemon = 0
+
+
+    def get_pokemon_availability_sprite_list(self):
+        self.pokemon_availability_sprite_list = []
+        for pokemon in data["pokemon"]:
+                pokemon_sprite = pokemon["sprites"]["front"]
+                pokemon_sprite_img = pygame.image.load(pokemon_sprite).convert_alpha()
+                if pokemon["active"] == False:
+                    pokemon_sprite_img.set_alpha(128)
+                    self.pokemon_availability_sprite_list.append(pokemon_sprite_img)
+                else:
+                    self.pokemon_availability_sprite_list.append(pokemon_sprite_img)
+        return self.pokemon_availability_sprite_list
+
+    def availability_pokemon(self,position_pokemon):
+
+        if data["pokemon"][position_pokemon]["active"] == True:
+            data["pokemon"][position_pokemon]["active"] = False
+        else : 
+            data["pokemon"][position_pokemon]["active"] = True
+
+        with open("models/pokemon.json", "w", encoding="utf-8") as file:
+            json.dump(data, file, ensure_ascii=False, indent=4)
+
+        self.get_pokemon_availability_sprite_list()
 
     def draw_background(self):
         """method to draw background"""
@@ -34,7 +61,7 @@ class Add_pokemon():
 
     def get_position_pokemon_list(self):
         self.position_pokemon_sprite = []
-        for position,sprite in enumerate(self.pokemon.pokemon_availability_sprite_list):
+        for position,sprite in enumerate(self.pokemon_availability_sprite_list):
             self.position_pokemon_sprite.append(position)
 
         return self.position_pokemon_sprite
@@ -43,7 +70,7 @@ class Add_pokemon():
         
 # line 1
         position_x = 60
-        for position_list, sprite in enumerate(self.pokemon.pokemon_availability_sprite_list):
+        for position_list, sprite in enumerate(self.pokemon_availability_sprite_list):
             if position_list <= 8:
 
                 rect_pokemon_sprite = sprite.get_rect()
@@ -54,7 +81,7 @@ class Add_pokemon():
                 position_x += 83
 # line 2
         position_x = 60
-        for position_list, sprite in enumerate(self.pokemon.pokemon_availability_sprite_list):
+        for position_list, sprite in enumerate(self.pokemon_availability_sprite_list):
             if position_list >= 9 and position_list <= 17:
 
                 rect_pokemon_sprite = sprite.get_rect()
@@ -65,7 +92,7 @@ class Add_pokemon():
                 position_x += 83
 # line 3
         position_x = 60
-        for position_list, sprite in enumerate(self.pokemon.pokemon_availability_sprite_list):
+        for position_list, sprite in enumerate(self.pokemon_availability_sprite_list):
             if position_list >= 18 and position_list <= 26:
 
                 rect_pokemon_sprite = sprite.get_rect()
@@ -76,7 +103,7 @@ class Add_pokemon():
                 position_x += 83
 # line 4
         position_x = 60
-        for position_list, sprite in enumerate(self.pokemon.pokemon_availability_sprite_list):
+        for position_list, sprite in enumerate(self.pokemon_availability_sprite_list):
             if position_list >= 27 and position_list <= 35:
 
                 rect_pokemon_sprite = sprite.get_rect()
@@ -87,7 +114,7 @@ class Add_pokemon():
                 position_x += 83
 # line 5
         position_x = 60
-        for position_list, sprite in enumerate(self.pokemon.pokemon_availability_sprite_list):
+        for position_list, sprite in enumerate(self.pokemon_availability_sprite_list):
             if position_list >= 35 and position_list <= 41:
 
                 rect_pokemon_sprite = sprite.get_rect()
@@ -130,7 +157,7 @@ class Add_pokemon():
 
                 if event.key == K_RETURN:
                     if  self.selected_position_add_pokemon in self.position_pokemon_sprite:
-                        self.pokemon.availability_pokemon(self.selected_position_add_pokemon)
+                        self.availability_pokemon(self.selected_position_add_pokemon)
 
                         return "add_pokemon"
                     if self.selected_position_add_pokemon == 3:

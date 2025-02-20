@@ -10,6 +10,7 @@ class Game_menu():
         self.background = pygame.image.load("assets/pictures/menu.jpg")
         self.selected_position = 1
         self.current_state = "game_menu"
+        # self.pokemon = Pokemon()
 
         #Load button images:
         self.resume_game_img = self.window.create_text_image("Resume game", self.window.text_font_menu, self.window.BLACK)
@@ -88,5 +89,3 @@ class Game_menu():
 
         new_state = self.handle_events_game_menu()
         return new_state
-
-
