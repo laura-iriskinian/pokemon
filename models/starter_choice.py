@@ -5,7 +5,6 @@ import pygame
 import json
 from pygame.locals import *
 
-
 with open("models/pokemon.json", "r", encoding = "utf-8") as file:
     data = json.load(file)
 
@@ -78,9 +77,36 @@ class Starter_choice():
             if position == self.selected_position:
                 pygame.draw.rect(self.window.screen, self.window.WHITE, sprite, 4)
 
+    def add_to_pokedex(self, pokemon_id):
+
+        pokemon = Pokemon(pokemon_id)
+
+        with open("models/pokedex.json", "r", encoding = "utf-8") as file:
+            pokedex_data = json.load(file)
+
+        new_pokemon = {
+        "pokemon id" : pokemon_id,
+        "name" : pokemon.get_pokemon_name(),
+        "sprite" : pokemon.get_pokemon_sprite(),
+        "xp" : 0,
+        "selected": True
+    }
+    
+        for player in pokedex_data["players"]:
+            if player["player_name"] == "player1":
+                
+                # Vérifie si "pokedex" est une liste, sinon la transforme en liste
+                if not isinstance(player["pokedex"], list):
+                    player["pokedex"] = [player["pokedex"]]
+                
+                # Ajoute le nouveau Pokémon à la liste
+                player["pokedex"].append(new_pokemon)
+
+        # Sauvegarder les modifications dans le fichier JSON
+        with open("models/pokedex.json", "w", encoding="utf-8") as file:
+            json.dump(pokedex_data, file, ensure_ascii=False, indent=4)
 
     def handle_envent_starter_choice(self):
-
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -103,10 +129,13 @@ class Starter_choice():
                 if event.key == K_RETURN:
 
                     if self.selected_position == 1:
+                        self.add_to_pokedex(1)
                         return "game_menu"
                     if self.selected_position == 2:
+                        self.add_to_pokedex(4)
                         return "game_menu"
                     if self.selected_position == 3:
+                        self.add_to_pokedex(7)
                         return "game_menu"
 
         return "starter_choice"
