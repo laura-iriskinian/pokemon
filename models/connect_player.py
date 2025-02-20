@@ -2,7 +2,6 @@ import pygame
 from pygame.locals import *
 import json
 from models.window import Window
-from models.button import Button
 # from models.pokemon import Pokemon
 
 
@@ -32,21 +31,34 @@ class Connect_player():
         self.window.draw_text("Select player:",self.window.text_font_menu,self.window.BLACK,300,20) 
 
     def get_player_list(self):
+
+        with open("models/pokedex.json", "r", encoding = "utf-8") as file:
+            pokedex = json.load(file)
+
         self.player_list = []
         for self.player_name in pokedex["players"]:
             self.player_list.append(self.player_name["player_name"])
+        
+
+        self.total_buttons_select_player = len(self.player_list)
+
         return self.player_list
     
     def get_position_player(self):
+
         self.position_player = []
         for position, player in enumerate(self.player_list,1):
             self.position_player.append(position)
         return self.position_player
 
     def draw_player_list(self):
+
+        self.button_select_player.clear()
+
         #column1
         position_x = 60
         position_y = 90
+        self.player_list = self.get_player_list()
         for self.player_name in self.player_list:
             
             self.player_name_img = self.window.create_text_image(self.player_name, self.window.text_font_battle, self.window.BLACK)
@@ -60,6 +72,8 @@ class Connect_player():
         return self.button_select_player    
 
     def select_player_name(self):
+
+        self.button_select_player = self.draw_player_list()
         for position, self.player_name_button in enumerate(self.button_select_player,1):
             if position == self.selected_position_select_player:
                 pygame.draw.rect(self.window.screen, self.window.GREY, self.player_name_button, 2)
@@ -96,6 +110,9 @@ class Connect_player():
 
 
     def connect_player(self):
+
+        self.get_player_list()  
+
         #set the scene
         self.draw_background() 
         self.draw_player_list() 

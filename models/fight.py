@@ -49,7 +49,7 @@ class Fight():
     }
     
         for player in pokedex_data["players"]:
-            if player["player_name"] == "player1":
+            if player["player_name"] == "loulou":
                 
                 if not isinstance(player["pokedex"], list):
                     player["pokedex"] = [player["pokedex"]]

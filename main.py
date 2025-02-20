@@ -1,4 +1,4 @@
-from models.game import Game
+from models.game_manager import Game
 
 
 
