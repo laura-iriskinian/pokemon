@@ -26,29 +26,28 @@ class Connect_player():
         #Create Button objects
         self.select_player_button = Button(300,100,self.select_player_img, self.window)
         self.select_pokemon_button = Button(300,100,self.select_pokemon_img, self.window)
-        #selection
-        self.buttons = (self.select_player_button, self.select_pokemon_button)
-        self.total_buttons = len(self.buttons)
-        self.selected_position = 1
+        
         self.current_state = "connect_player"
-        self.select = False
 
     def draw_background(self):
         """method to draw background"""
         self.window.screen.blit(self.background,(0,0))
 
-    def get_pokedex_players(self):
+    def get_player_list(self):
         self.player_list = []
         for player_name in pokedex["players"]:
             self.player_list.append(player_name["player_name"])
-            return self.player_list
-        
-
+            print(self.player_list)
+        return self.player_list
+    
     def draw_player_list(self):
-        for self.player_name in self.player_list:
-            self.player_name_img = self.window.create_text_image(self.player_name, self.window.text_font_battle, self.window.BLACK)
-            self.player_name_button = Button()
-
+        position_x = 60
+        position_y = 200
+        space_between_buttons = 10
+        for player_name in self.player_list:
+            player_name_img = self.window.create_text_image(player_name, self.window.text_font_battle, self.window.BLACK)
+            player_name_button = Button(position_x, (position_y + position_y), player_name_img, self.window)
+            player_name_button.window.screen.blit(player_name_img, (position_x, (position_y + space_between_buttons)))
 
 
     def draw_background_select_pokemon(self):
@@ -58,15 +57,17 @@ class Connect_player():
 
     def connect_player(self):
         self.select = True
-        while self.select:
-            #set the scene
-            self.draw_background() 
-            self.select_player_button.draw_button()
-            self.draw_background_select_pokemon()      
-            #handle events 
-            self.handle_events_connect_player()
-            pygame.display.update() 
-        return "game_menu"    
+        #set the scene
+        self.draw_background() 
+        self.select_player_button.draw_button()
+        self.get_player_list()
+        self.draw_player_list()
+     
+        # self.draw_background_select_pokemon()      
+        #handle events 
+        new_state = self.handle_events_connect_player()
+        pygame.display.update() 
+        return new_state    
                       
 
     def handle_events_connect_player(self):
@@ -78,8 +79,7 @@ class Connect_player():
 
             elif event.type == KEYDOWN:
                 if event.key == K_ESCAPE:
-                    print("ok")
-                    return "player_menu"           
+                    return "player_menu"         
   
         return "connect_player"      
             

@@ -183,7 +183,7 @@
             ]
         },
         {
-            "player_name": "",
+            "player_name": "v   ",
             "pokedex": [
                 {
                     "pokedex_id": 1,
@@ -196,85 +196,7 @@
             ]
         },
         {
-            "player_name": "llmmmmm",
-            "pokedex": [
-                {
-                    "pokedex_id": 1,
-                    "name": "Bulbasaur",
-                    "sprites": {
-                        "front": "assets/pictures/Grass/bulbasaur_front.png"
-                    },
-                    "xp": 50
-                }
-            ]
-        },
-        {
-            "player_name": "Elodie",
-            "pokedex": [
-                {
-                    "pokedex_id": 1,
-                    "name": "Bulbasaur",
-                    "sprites": {
-                        "front": "assets/pictures/Grass/bulbasaur_front.png"
-                    },
-                    "xp": 50
-                }
-            ]
-        },
-        {
-            "player_name": "",
-            "pokedex": [
-                {
-                    "pokedex_id": 1,
-                    "name": "Bulbasaur",
-                    "sprites": {
-                        "front": "assets/pictures/Grass/bulbasaur_front.png"
-                    },
-                    "xp": 50
-                }
-            ]
-        },
-        {
-            "player_name": "hello",
-            "pokedex": [
-                {
-                    "pokedex_id": 1,
-                    "name": "Bulbasaur",
-                    "sprites": {
-                        "front": "assets/pictures/Grass/bulbasaur_front.png"
-                    },
-                    "xp": 50
-                }
-            ]
-        },
-        {
-            "player_name": "hhhhh",
-            "pokedex": [
-                {
-                    "pokedex_id": 1,
-                    "name": "Bulbasaur",
-                    "sprites": {
-                        "front": "assets/pictures/Grass/bulbasaur_front.png"
-                    },
-                    "xp": 50
-                }
-            ]
-        },
-        {
-            "player_name": "toto",
-            "pokedex": [
-                {
-                    "pokedex_id": 1,
-                    "name": "Bulbasaur",
-                    "sprites": {
-                        "front": "assets/pictures/Grass/bulbasaur_front.png"
-                    },
-                    "xp": 50
-                }
-            ]
-        },
-        {
-            "player_name": "lolo",
+            "player_name": "   ",
             "pokedex": [
                 {
                     "pokedex_id": 1,

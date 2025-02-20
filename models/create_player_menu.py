@@ -23,6 +23,8 @@ class Create_player_menu():
         self.player_name = "" 
         self.input_box = pygame.Rect(100, 200, 300, 50) 
         self.typing = False
+        self.error_msg_name_too_short_img = self.window.create_text_image("Please type characters", self.window.text_font_menu, self.window.BLACK)
+        self.error_msg_name_too_short_button = Button(100,280, self.error_msg_name_too_short_img, self.window)
         self.error_msg_player_exists_img = self.window.create_text_image("This player already exists. \nType again or press ESC to go to previous menu", self.window.text_font_menu, self.window.BLACK)
         self.error_msg_player_exists_button = Button(100,280, self.error_msg_player_exists_img, self.window)
         self.player_added_img = self.window.create_text_image(f"New player created successfully!", self.window.text_font_menu, self.window.BLACK)
@@ -60,16 +62,21 @@ class Create_player_menu():
             elif event.type == KEYDOWN:
 
                 if event.key == K_ESCAPE:
-                    
                     self.current_state = "player_menu"
                     self.typing = False
                     return self.current_state
                 
                 elif event.key == K_RETURN:
-                    if self.player_name and len(self.player_name) > 1:  
-                        self.create_player()
-                        return "game_menu"
-                    else: print("name too short")
+                    if self.player_name and len(self.player_name) > 1: 
+                        if len(self.player_name.strip()) > 1: 
+                            self.error_msg_name_too_short_button.draw_button()
+                            print("ok")
+                            pygame.display.update()
+                            time.sleep(2)
+                            
+                        else: 
+                            self.create_player()
+                            return "game_menu"
 
                 elif event.key == K_BACKSPACE:  
                     self.player_name = self.player_name[:-1]
@@ -88,10 +95,9 @@ class Create_player_menu():
         # check if player already exists in pokedex
         for player in pokedex["players"]:
             if player["player_name"] == self.player_name:
-                # print(f"Player '{self.player_name}' already exists!")
                 self.error_msg_player_exists_button.draw_button()
                 pygame.display.update()
-                time.sleep(3)
+                time.sleep(2)
                 self.player_name = "" 
                 self.start_create_player()
             else: pass    
