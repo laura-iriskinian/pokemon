@@ -1,5 +1,6 @@
 import pygame
 
+pygame.init()
 
 class Window:
     """class to define the window, to link : window.screen"""
