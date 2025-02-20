@@ -268,7 +268,7 @@
                     "multiply": 0.5
                 }
             ],
-            "active": true
+            "active": false
         },
         {
             "pokedex_id": 4,
@@ -358,7 +358,7 @@
                     "multiply": 0.5
                 }
             ],
-            "active": false
+            "active": true
         },
         {
             "pokedex_id": 5,
@@ -1168,7 +1168,7 @@
                     "multiply": 1
                 }
             ],
-            "active": true
+            "active": false
         },
         {
             "pokedex_id": 17,

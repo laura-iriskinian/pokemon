@@ -51,6 +51,69 @@
                     "sprite": "assets/pictures/Grass/bulbasaur_front.png",
                     "xp": 0,
                     "selected": true
+                },
+                {
+                    "pokemon id": 1,
+                    "name": "Bulbasaur",
+                    "sprite": "assets/pictures/Grass/bulbasaur_front.png",
+                    "xp": 0,
+                    "selected": true
+                },
+                {
+                    "pokemon id": 1,
+                    "name": "Bulbasaur",
+                    "sprite": "assets/pictures/Grass/bulbasaur_front.png",
+                    "xp": 0,
+                    "selected": true
+                },
+                {
+                    "pokemon id": 1,
+                    "name": "Bulbasaur",
+                    "sprite": "assets/pictures/Grass/bulbasaur_front.png",
+                    "xp": 0,
+                    "selected": true
+                },
+                {
+                    "pokemon id": 1,
+                    "name": "Bulbasaur",
+                    "sprite": "assets/pictures/Grass/bulbasaur_front.png",
+                    "xp": 0,
+                    "selected": true
+                },
+                {
+                    "pokemon id": 1,
+                    "name": "Bulbasaur",
+                    "sprite": "assets/pictures/Grass/bulbasaur_front.png",
+                    "xp": 0,
+                    "selected": true
+                },
+                {
+                    "pokemon id": 1,
+                    "name": "Bulbasaur",
+                    "sprite": "assets/pictures/Grass/bulbasaur_front.png",
+                    "xp": 0,
+                    "selected": true
+                },
+                {
+                    "pokemon id": 1,
+                    "name": "Bulbasaur",
+                    "sprite": "assets/pictures/Grass/bulbasaur_front.png",
+                    "xp": 0,
+                    "selected": true
+                },
+                {
+                    "pokemon id": 1,
+                    "name": "Bulbasaur",
+                    "sprite": "assets/pictures/Grass/bulbasaur_front.png",
+                    "xp": 0,
+                    "selected": true
+                },
+                {
+                    "pokemon id": 1,
+                    "name": "Bulbasaur",
+                    "sprite": "assets/pictures/Grass/bulbasaur_front.png",
+                    "xp": 0,
+                    "selected": true
                 }
             ]
         },
@@ -68,20 +131,7 @@
             ]
         },
         {
-            "player_name": "momo",
-            "pokedex": [
-                {
-                    "pokedex_id": 1,
-                    "name": "Bulbasaur",
-                    "sprites": {
-                        "front": "assets/pictures/Grass/bulbasaur_front.png"
-                    },
-                    "xp": 50
-                }
-            ]
-        },
-        {
-            "player_name": "papa",
+            "player_name": "lili",
             "pokedex": [
                 {
                     "pokedex_id": 1,
