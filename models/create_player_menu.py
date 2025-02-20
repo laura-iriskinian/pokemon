@@ -68,7 +68,7 @@ class Create_player_menu():
                 elif event.key == K_RETURN:
                     if self.player_name and len(self.player_name) > 1:  
                         self.create_player()
-                        return "game_menu"
+                        return "starter_choice"
                     else: print("name too short")
 
                 elif event.key == K_BACKSPACE:  
