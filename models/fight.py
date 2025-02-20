@@ -30,10 +30,38 @@ class Fight():
         self.selected_position = 1
 
         # pokemon object
-        self.pokemon_player = Pokemon(1)
+        self.pokemon_player = Pokemon(3)
 
         self.pokemon_opponent_id = self.get_pokemon_opponent_id()
         self.pokemon_opponent = [Pokemon(self.pokemon_opponent_id)]
+
+    def add_to_pokedex(self):
+
+        with open("models/pokedex.json", "r", encoding = "utf-8") as file:
+            pokedex_data = json.load(file)
+
+        new_pokemon = {
+        "pokemon id" : self.pokemon_opponent[0].pokemon_id,
+        "name" : self.pokemon_opponent[0].pokemon_name,
+        "sprite" : self.pokemon_opponent[0].get_pokemon_sprite(),
+        "xp" : 0,
+        "selected": False
+    }
+    
+        for player in pokedex_data["players"]:
+            if player["player_name"] == "player1":
+                
+                # Vérifie si "pokedex" est une liste, sinon la transforme en liste
+                if not isinstance(player["pokedex"], list):
+                    player["pokedex"] = [player["pokedex"]]
+                
+                # Ajoute le nouveau Pokémon à la liste
+                player["pokedex"].append(new_pokemon)
+
+        # Sauvegarder les modifications dans le fichier JSON
+        with open("models/pokedex.json", "w", encoding="utf-8") as file:
+            json.dump(pokedex_data, file, ensure_ascii=False, indent=4)
+
 
     def get_pokemon_opponent_id(self):
 
@@ -122,6 +150,7 @@ class Fight():
         # if pokemon life opponnent = 0 -> replace a pokemon oponant
         if self.pokemon_opponent[0].pokemon_life <=0:
             self.pokemon_player.win_battle()
+            self.add_to_pokedex()
             del self.pokemon_opponent[0]
             self.pokemon_opponent.append(Pokemon(self.pokemon_opponent_id))
 
