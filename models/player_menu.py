@@ -2,7 +2,6 @@ import pygame
 from pygame.locals import *
 from models.window import Window
 from models.button import Button
-from models.pokemon import Pokemon
 import json
 
 with open("models/pokemon.json", "r", encoding = "utf-8") as file:
@@ -78,7 +77,7 @@ class Player_menu():
                 elif event.key == K_RETURN: 
 
                     if self.selected_position == 1 : # Sign in
-                        return "connect_player" 
+                        return "starter_choice" 
                         
                     elif self.selected_position == 2 : # New player
                         return "create_player"                   

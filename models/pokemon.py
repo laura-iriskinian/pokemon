@@ -58,33 +58,6 @@ class Pokemon():
 
         self.position_pokemon = ""
 
-        self.pokemon_availability_sprite_list = self.get_pokemon_availability_sprite_list()
-
-
-    def get_pokemon_availability_sprite_list(self):
-        self.pokemon_availability_sprite_list = []
-        for pokemon in data["pokemon"]:
-                pokemon_sprite = pokemon["sprites"]["front"]
-                pokemon_sprite_img = pygame.image.load(pokemon_sprite).convert_alpha()
-                if pokemon["active"] == False:
-                    pokemon_sprite_img.set_alpha(128)
-                    self.pokemon_availability_sprite_list.append(pokemon_sprite_img)
-                else:
-                    self.pokemon_availability_sprite_list.append(pokemon_sprite_img)
-        return self.pokemon_availability_sprite_list
-
-    def availability_pokemon(self,position_pokemon):
-
-
-        if data["pokemon"][position_pokemon]["active"] == True:
-            data["pokemon"][position_pokemon]["active"] = False
-        else : 
-            data["pokemon"][position_pokemon]["active"] = True
-
-        with open("models/pokemon.json", "w", encoding="utf-8") as file:
-            json.dump(data, file, ensure_ascii=False, indent=4)
-
-        self.get_pokemon_availability_sprite_list()
 
 
 # defs get players
