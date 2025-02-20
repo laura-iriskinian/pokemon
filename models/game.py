@@ -8,6 +8,7 @@ from models.create_player_menu import Create_player_menu
 from models.connect_player import Connect_player
 from models.add_pokemon import Add_pokemon
 from models.starter_choice import Starter_choice
+from models.pokedex import Pokedex
 
 pygame.init()
 clock = pygame.time.Clock()
@@ -23,7 +24,7 @@ class Game():
         self.starter_choice = Starter_choice()
         self.game_menu = Game_menu()
         self.add_pokemon = Add_pokemon()
-
+        self.pokedex = Pokedex()
         self.fight = Fight()
         self.run = True
         self.current_state = "player_menu"
@@ -46,11 +47,19 @@ class Game():
             if self.current_state == "create_player":
                 self.current_state = self.create_player_menu.start_create_player()
 
+
             if self.current_state == "starter_choice":
                 self.current_state = self.starter_choice.start_starter_choice()
 
+
+
+
             if self.current_state == "game_menu":
                 self.current_state = self.game_menu.start_game_menu()
+
+            if self.current_state == "pokedex":
+                self.current_state = self.pokedex.start_pokedex_menu()
+
 
             if self.current_state == "add_pokemon":
                 self.current_state = self.add_pokemon.start_add_pokemon()

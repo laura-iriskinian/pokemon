@@ -67,16 +67,10 @@ class Create_player_menu():
                     return self.current_state
                 
                 elif event.key == K_RETURN:
-                    if self.player_name and len(self.player_name) > 1: 
-                        if len(self.player_name.strip()) > 1: 
-                            self.error_msg_name_too_short_button.draw_button()
-                            print("ok")
-                            pygame.display.update()
-                            time.sleep(2)
-                            
-                        else: 
-                            self.create_player()
-                            return "game_menu"
+                    if self.player_name and len(self.player_name) > 1:  
+                        self.create_player()
+                        return "starter_choice"
+                    else: print("name too short")
 
                 elif event.key == K_BACKSPACE:  
                     self.player_name = self.player_name[:-1]
