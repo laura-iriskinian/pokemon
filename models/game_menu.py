@@ -11,7 +11,7 @@ class Game_menu():
         self.background = pygame.image.load("assets/pictures/menu.jpg")
         self.selected_position = 1
         self.current_state = "game_menu"
-        self.pokemon = Pokemon()
+        # self.pokemon = Pokemon()
 
         #Load button images:
         self.resume_game_img = self.window.create_text_image("Resume game", self.window.text_font_menu, self.window.BLACK)
@@ -29,11 +29,11 @@ class Game_menu():
         self.buttons = (self.resume_game_button, self.pokedex_button, self.add_pokemon_button, self.new_game_button)
         self.total_buttons = len(self.buttons)
 
-        #  button for add_pokemon
-        self.buttons_add_pokemon = []
-        self.total_buttons_add_pokemon = len(self.pokemon.pokemon_availability_sprite_list)+1
-        self.position_pokemon_sprite = self.get_position_pokemon_list()
-        self.selected_position_add_pokemon = 0
+        # #  button for add_pokemon
+        # self.buttons_add_pokemon = []
+        # self.total_buttons_add_pokemon = len(self.pokemon.pokemon_availability_sprite_list)+1
+        # self.position_pokemon_sprite = self.get_position_pokemon_list()
+        # self.selected_position_add_pokemon = 0
 
     def draw_background(self):
         """method to draw background"""
@@ -97,135 +97,135 @@ class Game_menu():
         return new_state
 
 
-    def draw_background_add_pokemon(self):
+#     def draw_background_add_pokemon(self):
 
-        background_add_pokemon = pygame.Rect(10,10,self.window.screen_width-20,self.window.screen_height-20)
-        pygame.draw.rect(self.window.screen,self.window.BLUE,background_add_pokemon)
-        pygame.draw.rect(self.window.screen,self.window.GREY,background_add_pokemon,4)
-        self.window.draw_text("Pokemon in the world :",self.window.text_font_menu_battle,self.window.WHITE,20,20)
+#         background_add_pokemon = pygame.Rect(10,10,self.window.screen_width-20,self.window.screen_height-20)
+#         pygame.draw.rect(self.window.screen,self.window.BLUE,background_add_pokemon)
+#         pygame.draw.rect(self.window.screen,self.window.GREY,background_add_pokemon,4)
+#         self.window.draw_text("Pokemon in the world :",self.window.text_font_menu_battle,self.window.WHITE,20,20)
 
-    def get_position_pokemon_list(self):
-        self.position_pokemon_sprite = []
-        for position,sprite in enumerate(self.pokemon.pokemon_availability_sprite_list):
-            self.position_pokemon_sprite.append(position)
+#     def get_position_pokemon_list(self):
+#         self.position_pokemon_sprite = []
+#         for position,sprite in enumerate(self.pokemon.pokemon_availability_sprite_list):
+#             self.position_pokemon_sprite.append(position)
 
-        return self.position_pokemon_sprite
+#         return self.position_pokemon_sprite
 
-    def draw_pokemons_add_pokemon(self):
+#     def draw_pokemons_add_pokemon(self):
         
-# line 1
-        position_x = 60
-        for position_list, sprite in enumerate(self.pokemon.pokemon_availability_sprite_list):
-            if position_list <= 8:
+# # line 1
+#         position_x = 60
+#         for position_list, sprite in enumerate(self.pokemon.pokemon_availability_sprite_list):
+#             if position_list <= 8:
 
-                rect_pokemon_sprite = sprite.get_rect()
-                rect_pokemon_sprite.center = (position_x,100)
+#                 rect_pokemon_sprite = sprite.get_rect()
+#                 rect_pokemon_sprite.center = (position_x,100)
 
-                self.buttons_add_pokemon.append(rect_pokemon_sprite)
-                self.window.screen.blit(sprite,rect_pokemon_sprite)
-                position_x += 83
-# line 2
-        position_x = 60
-        for position_list, sprite in enumerate(self.pokemon.pokemon_availability_sprite_list):
-            if position_list >= 9 and position_list <= 17:
+#                 self.buttons_add_pokemon.append(rect_pokemon_sprite)
+#                 self.window.screen.blit(sprite,rect_pokemon_sprite)
+#                 position_x += 83
+# # line 2
+#         position_x = 60
+#         for position_list, sprite in enumerate(self.pokemon.pokemon_availability_sprite_list):
+#             if position_list >= 9 and position_list <= 17:
 
-                rect_pokemon_sprite = sprite.get_rect()
-                rect_pokemon_sprite.center = (position_x,190)
+#                 rect_pokemon_sprite = sprite.get_rect()
+#                 rect_pokemon_sprite.center = (position_x,190)
 
-                self.buttons_add_pokemon.append(rect_pokemon_sprite)
-                self.window.screen.blit(sprite,rect_pokemon_sprite)
-                position_x += 83
-# line 3
-        position_x = 60
-        for position_list, sprite in enumerate(self.pokemon.pokemon_availability_sprite_list):
-            if position_list >= 18 and position_list <= 26:
+#                 self.buttons_add_pokemon.append(rect_pokemon_sprite)
+#                 self.window.screen.blit(sprite,rect_pokemon_sprite)
+#                 position_x += 83
+# # line 3
+#         position_x = 60
+#         for position_list, sprite in enumerate(self.pokemon.pokemon_availability_sprite_list):
+#             if position_list >= 18 and position_list <= 26:
 
-                rect_pokemon_sprite = sprite.get_rect()
-                rect_pokemon_sprite.center = (position_x,290)
+#                 rect_pokemon_sprite = sprite.get_rect()
+#                 rect_pokemon_sprite.center = (position_x,290)
 
-                self.buttons_add_pokemon.append(rect_pokemon_sprite)
-                self.window.screen.blit(sprite,rect_pokemon_sprite)
-                position_x += 83
-# line 4
-        position_x = 60
-        for position_list, sprite in enumerate(self.pokemon.pokemon_availability_sprite_list):
-            if position_list >= 27 and position_list <= 35:
+#                 self.buttons_add_pokemon.append(rect_pokemon_sprite)
+#                 self.window.screen.blit(sprite,rect_pokemon_sprite)
+#                 position_x += 83
+# # line 4
+#         position_x = 60
+#         for position_list, sprite in enumerate(self.pokemon.pokemon_availability_sprite_list):
+#             if position_list >= 27 and position_list <= 35:
 
-                rect_pokemon_sprite = sprite.get_rect()
-                rect_pokemon_sprite.center = (position_x,390)
+#                 rect_pokemon_sprite = sprite.get_rect()
+#                 rect_pokemon_sprite.center = (position_x,390)
 
-                self.buttons_add_pokemon.append(rect_pokemon_sprite)
-                self.window.screen.blit(sprite,rect_pokemon_sprite)
-                position_x += 83
-# line 5
-        position_x = 60
-        for position_list, sprite in enumerate(self.pokemon.pokemon_availability_sprite_list):
-            if position_list >= 35 and position_list <= 41:
+#                 self.buttons_add_pokemon.append(rect_pokemon_sprite)
+#                 self.window.screen.blit(sprite,rect_pokemon_sprite)
+#                 position_x += 83
+# # line 5
+#         position_x = 60
+#         for position_list, sprite in enumerate(self.pokemon.pokemon_availability_sprite_list):
+#             if position_list >= 35 and position_list <= 41:
 
-                rect_pokemon_sprite = sprite.get_rect()
-                rect_pokemon_sprite.center = (position_x,490)
+#                 rect_pokemon_sprite = sprite.get_rect()
+#                 rect_pokemon_sprite.center = (position_x,490)
 
-                self.buttons_add_pokemon.append(rect_pokemon_sprite)
-                self.window.screen.blit(sprite,rect_pokemon_sprite)
-                position_x += 83
+#                 self.buttons_add_pokemon.append(rect_pokemon_sprite)
+#                 self.window.screen.blit(sprite,rect_pokemon_sprite)
+#                 position_x += 83
 
-        return self.buttons_add_pokemon
+#         return self.buttons_add_pokemon
 
-    def select_add_pokemon(self):
+#     def select_add_pokemon(self):
 
-        for position,sprite in enumerate(self.buttons_add_pokemon):
-            if position == self.selected_position_add_pokemon:
-                pygame.draw.rect(self.window.screen, self.window.GREY, sprite, 3)
+#         for position,sprite in enumerate(self.buttons_add_pokemon):
+#             if position == self.selected_position_add_pokemon:
+#                 pygame.draw.rect(self.window.screen, self.window.GREY, sprite, 3)
 
 
-    def handle_envent_add_pokemon(self):
+#     def handle_envent_add_pokemon(self):
 
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                pygame.quit()
+#         for event in pygame.event.get():
+#             if event.type == pygame.QUIT:
+#                 pygame.quit()
 
-            #handle events based on the type of menu
+#             #handle events based on the type of menu
 
-            if event.type == KEYDOWN:
-                if event.key == K_RIGHT:
-                    if self.selected_position_add_pokemon % 9 != 8 and self.selected_position_add_pokemon < self.total_buttons_add_pokemon - 1:
-                        self.selected_position_add_pokemon += 1
-                if event.key == K_LEFT:
-                    if self.selected_position_add_pokemon % 9 != 0:
-                        self.selected_position_add_pokemon -= 1
-                if event.key == K_DOWN:
-                    if self.selected_position_add_pokemon + 9 < self.total_buttons_add_pokemon:
-                        self.selected_position_add_pokemon += 9
-                if event.key == K_UP:
-                    if self.selected_position_add_pokemon - 9 >= 0:
-                        self.selected_position_add_pokemon -= 9
+#             if event.type == KEYDOWN:
+#                 if event.key == K_RIGHT:
+#                     if self.selected_position_add_pokemon % 9 != 8 and self.selected_position_add_pokemon < self.total_buttons_add_pokemon - 1:
+#                         self.selected_position_add_pokemon += 1
+#                 if event.key == K_LEFT:
+#                     if self.selected_position_add_pokemon % 9 != 0:
+#                         self.selected_position_add_pokemon -= 1
+#                 if event.key == K_DOWN:
+#                     if self.selected_position_add_pokemon + 9 < self.total_buttons_add_pokemon:
+#                         self.selected_position_add_pokemon += 9
+#                 if event.key == K_UP:
+#                     if self.selected_position_add_pokemon - 9 >= 0:
+#                         self.selected_position_add_pokemon -= 9
 
-                if event.key == K_RETURN:
-                    if  self.selected_position_add_pokemon in self.position_pokemon_sprite:
-                        self.pokemon.availability_pokemon(self.selected_position_add_pokemon)
-                        return "add_pokemon"
-                    if self.selected_position_add_pokemon == 3:
-                        return "add_pokemon"
-                    else:
-                        return "game_menu"
+#                 if event.key == K_RETURN:
+#                     if  self.selected_position_add_pokemon in self.position_pokemon_sprite:
+#                         self.pokemon.availability_pokemon(self.selected_position_add_pokemon)
+#                         return "add_pokemon"
+#                     if self.selected_position_add_pokemon == 3:
+#                         return "add_pokemon"
+#                     else:
+#                         return "game_menu"
                 
-                if event.key == K_ESCAPE:
-                    return "game_menu"
+#                 if event.key == K_ESCAPE:
+#                     return "game_menu"
                 
-        return "add_pokemon"
+#         return "add_pokemon"
 
-    # def activate_pokemon(self,position):
-
-
-    def start_add_pokemon(self):
-
-        self.draw_background()
-        self.draw_background_add_pokemon()
-        self.draw_pokemons_add_pokemon()
-        self.select_add_pokemon()
+#     # def activate_pokemon(self,position):
 
 
+#     def start_add_pokemon(self):
 
-        new_state = self.handle_envent_add_pokemon()
-        return new_state
+#         self.draw_background()
+#         self.draw_background_add_pokemon()
+#         self.draw_pokemons_add_pokemon()
+#         self.select_add_pokemon()
+
+
+
+#         new_state = self.handle_envent_add_pokemon()
+#         return new_state
 
