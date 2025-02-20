@@ -42,12 +42,12 @@ class Connect_player():
     
     def draw_player_list(self):
         position_x = 60
-        position_y = 200
-        space_between_buttons = 10
+        position_y = 160
         for player_name in self.player_list:
             player_name_img = self.window.create_text_image(player_name, self.window.text_font_battle, self.window.BLACK)
             player_name_button = Button(position_x, (position_y + position_y), player_name_img, self.window)
-            player_name_button.window.screen.blit(player_name_img, (position_x, (position_y + space_between_buttons)))
+            player_name_button.window.screen.blit(player_name_img, (position_x, (position_y + 10)))
+            position_y += 40
 
 
     def draw_background_select_pokemon(self):
