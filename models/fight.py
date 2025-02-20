@@ -51,14 +51,14 @@ class Fight():
         for player in pokedex_data["players"]:
             if player["player_name"] == "player1":
                 
-                # Vérifie si "pokedex" est une liste, sinon la transforme en liste
                 if not isinstance(player["pokedex"], list):
                     player["pokedex"] = [player["pokedex"]]
                 
-                # Ajoute le nouveau Pokémon à la liste
-                player["pokedex"].append(new_pokemon)
+                if new_pokemon not in player["pokedex"]:
+                    player["pokedex"].append(new_pokemon)
+                else:
+                    print(f"Pokemon déjà présent dans le pokédex")
 
-        # Sauvegarder les modifications dans le fichier JSON
         with open("models/pokedex.json", "w", encoding="utf-8") as file:
             json.dump(pokedex_data, file, ensure_ascii=False, indent=4)
 
