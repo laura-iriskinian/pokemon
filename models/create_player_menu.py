@@ -98,7 +98,7 @@ class Create_player_menu():
 
         # create new empty pokedex
         new_player = {
-            "player_name": self.player_name, 'pokedex': [{'pokedex_id': 1, 'name': 'Bulbasaur', 'sprites': {'front': 'assets/pictures/Grass/bulbasaur_front.png'}, 'xp': 50}]}
+            "player_name": self.player_name, 'pokedex': []}
 
         # add new player to pokedex
         pokedex["players"].append(new_player)

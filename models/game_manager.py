@@ -52,8 +52,6 @@ class Game():
                 self.current_state = self.starter_choice.start_starter_choice()
 
 
-
-
             if self.current_state == "game_menu":
                 self.current_state = self.game_menu.start_game_menu()
 
