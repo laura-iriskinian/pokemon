@@ -41,13 +41,11 @@ class Pokemon():
         # pokemon 
         self.pokemon_player = ""
         self.pokemon_id = pokemon_id
-        self.pokemon_sprite = self.get_pokemon_sprite()
 
         self.pokemon_life = self.get_pokemon_hp()
         self.pokemon_name = self.get_pokemon_name()
         self.pokemon_type = self.get_pokemon_type()
         self.pokemon_def = self.get_pokemon_defense()
-        # self.pokemon_resistance = self.get_pokemon_resistance()
         self.pokemon_atk = self.get_pokemon_attack()
         self.level = level
         self.xp = 0
@@ -66,10 +64,8 @@ class Pokemon():
 
         for pokemon in data["pokemon"]:
             if pokemon["pokedex_id"]==self.pokemon_id:
-                sprite_path = pokemon["sprites"]["back"]
-                self.pokemon_sprite = pygame.image.load(sprite_path).convert_alpha()
-                self.pokemon_sprite = pygame.transform.scale(self.pokemon_sprite, (self.pokemon_sprite.get_width()*3, self.pokemon_sprite.get_height()*3))
-                return self.pokemon_sprite
+                sprite_path = pokemon["sprites"]["front"]
+                return sprite_path
 
     def get_pokemon_attack(self):
         for pokemon in data["pokemon"]:
