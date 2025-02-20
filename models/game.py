@@ -28,6 +28,8 @@ class Game():
         self.run = True
         self.current_state = "player_menu"
 
+        self.reset_fight = True
+
 
     def game(self):
 
@@ -54,9 +56,15 @@ class Game():
                 self.current_state = self.add_pokemon.start_add_pokemon()
 
 
-
             if self.current_state == "fight":
+                if self.reset_fight == True:
+                    self.fight.initialize_opponent()
+                    self.reset_fight = False
+                
                 self.current_state = self.fight.start_fight()
+
+                if self.current_state != "fight":
+                    self.reset_fight = True
 
             if self.current_state == "lose_game":
                 self.current_state = self.fight.lose_fight()

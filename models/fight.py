@@ -2,9 +2,13 @@ from models.window import Window
 from models.pokemon import Pokemon
 from models.button import Button
 
+import json
 import random
 import pygame
 from pygame.locals import *
+
+with open("models/pokemon.json", "r", encoding = "utf-8") as file:
+    data = json.load(file)
 
 
 class Fight():
@@ -26,10 +30,30 @@ class Fight():
         self.selected_position = 1
 
         # pokemon object
-        self.pokemon_player = Pokemon(3)
-        self.pokemon_opponent = [Pokemon(7)]
+        self.pokemon_player = Pokemon(1)
 
+        self.pokemon_opponent_id = self.get_pokemon_opponent_id()
+        self.pokemon_opponent = [Pokemon(self.pokemon_opponent_id)]
 
+    def get_pokemon_opponent_id(self):
+
+        with open("models/pokemon.json", "r", encoding = "utf-8") as file:
+            data = json.load(file)
+
+        available_ids = []
+        for pokemon in data["pokemon"]:
+                if pokemon["active"] == True:
+                    available_ids.append(pokemon["pokedex_id"])
+        return random.choice(available_ids)
+
+    def initialize_opponent(self):
+
+        self.pokemon_opponent.clear()
+
+        new_pokemon_opponent_id = self.get_pokemon_opponent_id()
+
+        return self.pokemon_opponent.append(Pokemon(new_pokemon_opponent_id))
+        
 
     def draw_panel(self):
         """draw rectangle for bottom panel"""
@@ -81,7 +105,7 @@ class Fight():
                         if random.random() > 0.1:
                             return "game_menu"
                         else:
-                            self.pokemon_player.opponent_attack()
+                            self.pokemon_opponent[0].attack(self.pokemon_player,"opponent")
                             pygame.time.delay(500)
                     else:
                         return "fight"
@@ -98,15 +122,16 @@ class Fight():
         # if pokemon life opponnent = 0 -> replace a pokemon oponant
         if self.pokemon_opponent[0].pokemon_life <=0:
             self.pokemon_player.win_battle()
-            self.pokemon_opponent.append(Pokemon(4))
             del self.pokemon_opponent[0]
+            self.pokemon_opponent.append(Pokemon(self.pokemon_opponent_id))
+
         
 
         # opponent attack
         self.pokemon_opponent[0].attack(self.pokemon_player,"opponent")
 
         if self.pokemon_player.pokemon_life <= 0:
-            self.pokemon_player.pokemon_life = self.pokemon_player.get_pokemon_player_hp()
+            self.pokemon_player.pokemon_life = self.pokemon_player.get_pokemon_hp()
             return "lose_game"
 
         pygame.time.delay(500)
