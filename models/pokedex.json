@@ -10,6 +10,13 @@
                         "front": "assets/pictures/Grass/bulbasaur_front.png"
                     },
                     "xp": 50
+                },
+                {
+                    "pokemon id": 16,
+                    "name": "Pidgey",
+                    "sprite": "assets/pictures/Normal/pidgey_front.png",
+                    "xp": 0,
+                    "selected": false
                 }
             ]
         },
