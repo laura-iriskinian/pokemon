@@ -6,11 +6,10 @@
                 {
                     "pokedex_id": 1,
                     "name": "Bulbasaur",
-                    "sprites": {
-                        "front": "assets/pictures/Grass/bulbasaur_front.png"
+                    "sprite": "assets/pictures/Grass/bulbasaur_front.png",
+                    "xp": 50,
+                    "selected": true
                     },
-                    "xp": 50
-                },
                 {
                     "pokemon id": 16,
                     "name": "Pidgey",
@@ -282,6 +281,19 @@
         },
         {
             "player_name": "lolo",
+            "pokedex": [
+                {
+                    "pokedex_id": 1,
+                    "name": "Bulbasaur",
+                    "sprites": {
+                        "front": "assets/pictures/Grass/bulbasaur_front.png"
+                    },
+                    "xp": 50
+                }
+            ]
+        },
+        {
+            "player_name": "papa",
             "pokedex": [
                 {
                     "pokedex_id": 1,

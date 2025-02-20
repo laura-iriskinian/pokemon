@@ -69,6 +69,8 @@ class Game_menu():
                 if event.key == K_RETURN:
                     if self.selected_position == 1 :
                         return "fight"  
+                    if self.selected_position == 2:
+                        return "pokedex"
                     if self.selected_position == 3:
                         return "add_pokemon"
                     else:
