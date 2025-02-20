@@ -115,7 +115,7 @@ class Add_pokemon():
 # line 5
         position_x = 60
         for position_list, sprite in enumerate(self.pokemon_availability_sprite_list):
-            if position_list >= 35 and position_list <= 41:
+            if position_list >= 36 and position_list <= 41:
 
                 rect_pokemon_sprite = sprite.get_rect()
                 rect_pokemon_sprite.center = (position_x,490)
