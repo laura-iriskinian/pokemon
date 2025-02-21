@@ -15,7 +15,7 @@ with open("models/pokemon.json", "r", encoding = "utf-8") as file:
 
 class Fight():
     """class to print combat"""
-    def __init__(self):
+    def __init__(self,player_name):
 
         # background image
         self.window = Window() 
@@ -33,10 +33,9 @@ class Fight():
         self.selected_position = 1
 
         # pokemon object
-        self.player_name = self.connect_player.player_selected
+        self.player_name = player_name
         self.pokemon_player_selected = self.get_pokemon_player_selected()
         self.pokemon_player = Pokemon(self.pokemon_player_selected)
-
         self.pokemon_opponent_id = self.get_pokemon_opponent_id()
         self.pokemon_opponent = [Pokemon(self.pokemon_opponent_id)]
 
@@ -48,7 +47,7 @@ class Fight():
         print(f"player name = {self.player_name}")
 
         for player in pokedex_data["players"]:
-            if player["player_name"] == "player1":
+            if player["player_name"] == self.player_name:
                     for pokemon in player["pokedex"]:
                         if pokemon["selected"] == True:
                             pokemon_id_player = pokemon["pokemon_id"]

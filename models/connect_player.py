@@ -92,7 +92,7 @@ class Connect_player():
 
             elif event.type == KEYDOWN:
                 if event.key == K_ESCAPE:
-                    return "player_menu"  
+                    return "player_menu", None
                 
                 if event.key == K_DOWN:
                     if self.selected_position_select_player != self.total_buttons_select_player:
@@ -108,16 +108,11 @@ class Connect_player():
                 if event.key == K_RETURN:
 
                     if self.selected_position_select_player in self.position_player:
-                        self.player_selected = self.player_list[self.selected_position_select_player]
-                        self.get_player_selected(self.player_selected)
-                        return "game_menu"
+                        self.player_selected = self.player_list[self.selected_position_select_player-1]
+                        return "game_menu", self.player_selected
 
-        return "connect_player"      
-            
+        return "connect_player",None 
 
-    def get_player_selected(self, player_selected):
-        self.player_selected = player_selected
-        return self.player_selected
 
     def connect_player(self):
 
@@ -129,5 +124,5 @@ class Connect_player():
         self.draw_player_list() 
         self.select_player_name()  
         #handle events 
-        new_state = self.handle_events_connect_player()
-        return new_state
+        new_state, self.player_selected = self.handle_events_connect_player()
+        return new_state,self.player_selected
