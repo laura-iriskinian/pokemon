@@ -9,7 +9,6 @@ from pygame.locals import *
 with open("models/pokemon.json", "r", encoding = "utf-8") as file:
     data = json.load(file)
 
-
 class Fight():
     """class to print combat"""
     def __init__(self):
@@ -33,6 +32,7 @@ class Fight():
 
         self.pokemon_opponent_id = self.get_pokemon_opponent_id()
         self.pokemon_opponent = [Pokemon(self.pokemon_opponent_id)]
+
 
     def add_to_pokedex(self):
 
