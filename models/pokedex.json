@@ -9,18 +9,11 @@
                     "sprite": "assets/pictures/Grass/bulbasaur_front.png",
                     "xp": 0,
                     "selected": false
-                },
-                {
-                    "pokemon_id": 16,
-                    "name": "Pidgey",
-                    "sprite": "assets/pictures/Normal/pidgey_front.png",
-                    "xp": 0,
-                    "selected": true
                 }
             ]
         },
         {
-            "player_name": "Elo",
+            "player_name": "momo",
             "pokedex": [
                 {
                     "pokemon_id": 4,
@@ -30,11 +23,59 @@
                     "selected": true
                 },
                 {
-                    "pokemon_id": 16,
-                    "name": "Pidgey",
-                    "sprite": "assets/pictures/Normal/pidgey_front.png",
+                    "pokemon_id": 1,
+                    "name": "Bulbasaur",
+                    "sprite": "assets/pictures/Grass/bulbasaur_front.png",
                     "xp": 0,
                     "selected": false
+                }
+            ]
+        },
+        {
+            "player_name": "juju",
+            "pokedex": [
+                {
+                    "pokemon_id": 7,
+                    "name": "Squirtle",
+                    "sprite": "assets/pictures/Water/squirtle_front.png",
+                    "xp": 0,
+                    "selected": true
+                }
+            ]
+        },
+        {
+            "player_name": "yuyu",
+            "pokedex": [
+                {
+                    "pokemon_id": 1,
+                    "name": "Bulbasaur",
+                    "sprite": "assets/pictures/Grass/bulbasaur_front.png",
+                    "xp": 0,
+                    "selected": true
+                }
+            ]
+        },
+        {
+            "player_name": "gygy",
+            "pokedex": [
+                {
+                    "pokemon_id": 7,
+                    "name": "Squirtle",
+                    "sprite": "assets/pictures/Water/squirtle_front.png",
+                    "xp": 0,
+                    "selected": true
+                }
+            ]
+        },
+        {
+            "player_name": "frfr",
+            "pokedex": [
+                {
+                    "pokemon_id": 4,
+                    "name": "Charmander",
+                    "sprite": "assets/pictures/Fire/charmander_front.png",
+                    "xp": 0,
+                    "selected": true
                 }
             ]
         }

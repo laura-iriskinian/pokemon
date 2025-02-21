@@ -44,15 +44,18 @@ class Fight():
         with open("models/pokedex.json", "r", encoding = "utf-8") as file:
             pokedex_data = json.load(file)
 
-        print(f"player name = {self.player_name}")
+        pokemon_id_player = 3
 
         for player in pokedex_data["players"]:
             if player["player_name"] == self.player_name:
                     for pokemon in player["pokedex"]:
                         if pokemon["selected"] == True:
                             pokemon_id_player = pokemon["pokemon_id"]
+                        else:
+                            pass
 
         return pokemon_id_player
+
 
     def add_to_pokedex(self):
 
