@@ -1,6 +1,4 @@
-from models.pokemon import Pokemon
 from models.window import Window
-
 import json
 import pygame
 from pygame.locals import *
@@ -21,7 +19,6 @@ class Add_pokemon():
         self.total_buttons_add_pokemon = len(self.pokemon_availability_sprite_list)+1
         self.position_pokemon_sprite = self.get_position_pokemon_list()
         self.selected_position_add_pokemon = 0
-
 
     def get_pokemon_availability_sprite_list(self):
         self.pokemon_availability_sprite_list = []
@@ -50,7 +47,6 @@ class Add_pokemon():
     def draw_background(self):
         """method to draw background"""
         self.window.screen.blit(self.background,(0,0))
-
 
     def draw_background_add_pokemon(self):
 
@@ -132,8 +128,7 @@ class Add_pokemon():
             if position == self.selected_position_add_pokemon:
                 pygame.draw.rect(self.window.screen, self.window.GREY, sprite, 3)
 
-
-    def handle_envent_add_pokemon(self):
+    def handle_event_add_pokemon(self):
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -172,7 +167,6 @@ class Add_pokemon():
 
     # def activate_pokemon(self,position):
 
-
     def start_add_pokemon(self):
 
         self.draw_background()
@@ -182,6 +176,6 @@ class Add_pokemon():
 
 
 
-        new_state = self.handle_envent_add_pokemon()
+        new_state = self.handle_event_add_pokemon()
         return new_state
 

@@ -1,8 +1,8 @@
+from models.button import Button
+from models.window import Window
 import pygame
 import pygame.draw_py
 from pygame.locals import *
-from models.button import Button
-from models.window import Window
 
 class Game_menu():
     def __init__(self):
@@ -28,11 +28,9 @@ class Game_menu():
         self.buttons = (self.resume_game_button, self.pokedex_button, self.add_pokemon_button, self.new_game_button)
         self.total_buttons = len(self.buttons)
 
-
     def draw_background(self):
         """method to draw background"""
         self.window.screen.blit(self.background,(0,0))
-
 
     def draw_buttons(self):
         self.resume_game_button.draw_button()
@@ -47,7 +45,6 @@ class Game_menu():
             if position == self.selected_position:  
                 #draw the rectangle around it
                 pygame.draw.rect(self.window.screen, self.window.GREY, button.rect, 3)
-
 
     def handle_events_game_menu(self):   
 
@@ -78,7 +75,6 @@ class Game_menu():
 
 
         return "game_menu"
-
 
     def start_game_menu(self):
 

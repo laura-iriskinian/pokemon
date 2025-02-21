@@ -1,6 +1,3 @@
-import pygame
-from pygame.locals import *
-
 from models.fight import Fight
 from models.player_menu import Player_menu
 from models.game_menu import Game_menu
@@ -9,12 +6,14 @@ from models.connect_player import Connect_player
 from models.add_pokemon import Add_pokemon
 from models.starter_choice import Starter_choice
 from models.pokedex import Pokedex
+import pygame
+from pygame.locals import *
 
 pygame.init()
 clock = pygame.time.Clock()
 fps = 60
 
-class Game():
+class Game_manager():
 
     def __init__(self):
         
@@ -28,7 +27,6 @@ class Game():
         self.fight = Fight()
         self.run = True
         self.current_state = "player_menu"
-
         self.reset_fight = True
 
 
