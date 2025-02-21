@@ -1,6 +1,8 @@
 from models.window import Window
 from models.pokemon import Pokemon
 from models.button import Button
+from models.connect_player import Connect_player
+
 
 import json
 import random
@@ -18,6 +20,7 @@ class Fight():
         # background image
         self.window = Window() 
         self.background = pygame.image.load("assets/pictures/background.png").convert_alpha()
+        self.connect_player = Connect_player()
 
         # create button objects
         self.attack_button = pygame.Rect(self.window.px_pannel_left, self.window.py_rectangle_top, self.window.sx_button, self.window.sy_button)
@@ -30,10 +33,27 @@ class Fight():
         self.selected_position = 1
 
         # pokemon object
-        self.pokemon_player = Pokemon(3)
+        self.player_name = self.connect_player.player_selected
+        self.pokemon_player_selected = self.get_pokemon_player_selected()
+        self.pokemon_player = Pokemon(self.pokemon_player_selected)
 
         self.pokemon_opponent_id = self.get_pokemon_opponent_id()
         self.pokemon_opponent = [Pokemon(self.pokemon_opponent_id)]
+
+    def get_pokemon_player_selected(self):
+
+        with open("models/pokedex.json", "r", encoding = "utf-8") as file:
+            pokedex_data = json.load(file)
+
+        print(f"player name = {self.player_name}")
+
+        for player in pokedex_data["players"]:
+            if player["player_name"] == "player1":
+                    for pokemon in player["pokedex"]:
+                        if pokemon["selected"] == True:
+                            pokemon_id_player = pokemon["pokemon_id"]
+
+        return pokemon_id_player
 
     def add_to_pokedex(self):
 
@@ -41,7 +61,7 @@ class Fight():
             pokedex_data = json.load(file)
 
         new_pokemon = {
-        "pokemon id" : self.pokemon_opponent[0].pokemon_id,
+        "pokemon_id" : self.pokemon_opponent[0].pokemon_id,
         "name" : self.pokemon_opponent[0].pokemon_name,
         "sprite" : self.pokemon_opponent[0].get_pokemon_sprite(),
         "xp" : 0,
@@ -49,7 +69,7 @@ class Fight():
     }
     
         for player in pokedex_data["players"]:
-            if player["player_name"] == "loulou":
+            if player["player_name"] == self.player_name:
                 
                 if not isinstance(player["pokedex"], list):
                     player["pokedex"] = [player["pokedex"]]
@@ -201,6 +221,7 @@ class Fight():
 
         # draw background
         self.draw_background_fight()
+
 
         # draw pokemons
         self.pokemon_opponent[0].draw_pokemon_opponent_hp(self.pokemon_opponent[0])

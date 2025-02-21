@@ -2,11 +2,10 @@ import pygame
 from pygame.locals import *
 import json
 from models.window import Window
-# from models.pokemon import Pokemon
 
 
-# with open("models/pokemon.json", "r", encoding = "utf-8") as file:
-#     data = json.load(file)
+
+
 
 with open("models/pokedex.json", "r", encoding = "utf-8") as file:
     pokedex = json.load(file)
@@ -18,12 +17,16 @@ class Connect_player():
         self.background = pygame.image.load("assets/pictures/menu.jpg")
         self.current_state = "connect_player"
 
+        self.player_selected = ""
+
+
         #button to select player
         self.button_select_player = []
         self.player_list = self.get_player_list()
         self.total_buttons_select_player = len(self.player_list)
         self.position_player = self.get_position_player()
         self.selected_position_select_player = 1
+
 
     def draw_background(self):
         """method to draw background"""
@@ -104,14 +107,22 @@ class Connect_player():
 
                 if event.key == K_RETURN:
 
+                    if self.selected_position_select_player in self.position_player:
+                        self.player_selected = self.player_list[self.selected_position_select_player]
+                        self.get_player_selected(self.player_selected)
                         return "game_menu"
 
         return "connect_player"      
+            
 
+    def get_player_selected(self, player_selected):
+        self.player_selected = player_selected
+        return self.player_selected
 
     def connect_player(self):
 
         self.get_player_list()  
+        self.get_position_player()
 
         #set the scene
         self.draw_background() 
