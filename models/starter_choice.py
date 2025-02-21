@@ -85,7 +85,7 @@ class Starter_choice():
             pokedex_data = json.load(file)
 
         new_pokemon = {
-        "pokemon id" : pokemon.pokemon_id,
+        "pokemon_id" : pokemon.pokemon_id,
         "name" : pokemon.get_pokemon_name(),
         "sprite" : pokemon.get_pokemon_sprite(),
         "xp" : 0,
