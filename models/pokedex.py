@@ -8,11 +8,13 @@ with open("models/pokedex.json", "r", encoding = "utf-8") as file:
     data = json.load(file)
 
 class Pokedex():
-    def __init__(self):
+    def __init__(self, player_selected):
         self.window = Window()
         self.background = pygame.image.load("assets/pictures/menu.jpg")
         self.selected_position = 1
         self.current_state = "pokedex"
+
+        self.player_selected = player_selected
 
         #  button for add_pokemon
         self.buttons_add_pokemon = []
@@ -22,9 +24,13 @@ class Pokedex():
         # self.selected_position_add_pokemon = 0
 
     def get_pokemon_selected_sprite_list(self):
+
+        with open("models/pokedex.json", "r", encoding = "utf-8") as file:
+            data = json.load(file)
+
         self.pokemon_selected_sprite_list = []
         for player in data["players"]:
-                if player["player_name"] == "player1":
+                if player["player_name"] == self.player_selected:
                     for pokemon in player["pokedex"]:
                         pokemon_sprite = pokemon["sprite"]
                         pokemon_sprite_img = pygame.image.load(pokemon_sprite).convert_alpha()
@@ -162,7 +168,7 @@ class Pokedex():
                     #     return "add_pokemon"
                     # else:
                     #     return "game_menu"
-                
+            if event.type == KEYDOWN:
                 if event.key == K_ESCAPE:
                     return "game_menu"
                 
