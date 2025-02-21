@@ -1,3 +1,6 @@
+import pygame
+from pygame.locals import *
+from models.sound import Sound
 from models.fight import Fight
 from models.player_menu import Player_menu
 from models.game_menu import Game_menu
@@ -16,20 +19,22 @@ fps = 60
 class Game_manager():
 
     def __init__(self):
-        
+
+        self.music = Sound()
         self.player_menu = Player_menu()
         self.create_player_menu = Create_player_menu()
         self.connect_player = Connect_player()
-        self.starter_choice = Starter_choice()
+        # self.starter_choice = Starter_choice()
         self.game_menu = Game_menu()
         self.add_pokemon = Add_pokemon()
-        self.pokedex = Pokedex()
-        self.fight = Fight()
+        # self.pokedex = Pokedex()
+        # self.fight = Fight()
+
         self.run = True
         self.current_state = "player_menu"
         self.reset_fight = True
-
-
+        # self.player_selected = None
+        # self.fight = Fight(self.player_selected) 
     def game(self):
 
         while self.run:
@@ -40,14 +45,32 @@ class Game_manager():
                 self.current_state = self.player_menu.start_player_menu()
 
             if self.current_state == "connect_player":
-                self.current_state = self.connect_player.connect_player()
-                
+                self.current_state,self.player_selected = self.connect_player.connect_player()
+                if self.current_state == "game_menu" and self.player_selected:
+                    self.fight = Fight(self.player_selected) 
+                    self.pokedex = Pokedex(self.player_selected)
+                else:
+                    self.current_state = "connect_player"
+
+
+
             if self.current_state == "create_player":
-                self.current_state = self.create_player_menu.start_create_player()
+                self.current_state,self.player_created = self.create_player_menu.start_create_player()
+                if self.current_state == "starter_choice" and self.player_created:
+                    self.starter_choice = Starter_choice(self.player_created)
+                else:
+                    self.current_state = "create_player"
 
 
             if self.current_state == "starter_choice":
-                self.current_state = self.starter_choice.start_starter_choice()
+
+                self.current_state,self.player_created = self.starter_choice.start_starter_choice()
+
+                if self.current_state == "game_menu" and self.player_created:
+                    self.fight = Fight(self.player_created)
+                    self.pokedex = Pokedex(self.player_created) 
+                else : 
+                    self.current_state = "starter_choice"
 
 
             if self.current_state == "game_menu":
@@ -56,10 +79,8 @@ class Game_manager():
             if self.current_state == "pokedex":
                 self.current_state = self.pokedex.start_pokedex_menu()
 
-
             if self.current_state == "add_pokemon":
                 self.current_state = self.add_pokemon.start_add_pokemon()
-
 
             if self.current_state == "fight":
                 if self.reset_fight == True:
