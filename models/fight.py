@@ -2,8 +2,6 @@ from models.window import Window
 from models.pokemon import Pokemon
 from models.button import Button
 from models.connect_player import Connect_player
-
-
 import json
 import random
 import pygame
@@ -36,6 +34,9 @@ class Fight():
         self.player_name = player_name
         self.pokemon_player_selected = self.get_pokemon_player_selected()
         self.pokemon_player = Pokemon(self.pokemon_player_selected)
+        self.player_name = player_name
+        self.pokemon_player_selected = self.get_pokemon_player_selected()
+        self.pokemon_player = Pokemon(self.pokemon_player_selected)
         self.pokemon_opponent_id = self.get_pokemon_opponent_id()
         self.pokemon_opponent = [Pokemon(self.pokemon_opponent_id)]
 
@@ -44,15 +45,18 @@ class Fight():
         with open("models/pokedex.json", "r", encoding = "utf-8") as file:
             pokedex_data = json.load(file)
 
-        print(f"player name = {self.player_name}")
+        pokemon_id_player = 3
 
         for player in pokedex_data["players"]:
             if player["player_name"] == self.player_name:
                     for pokemon in player["pokedex"]:
                         if pokemon["selected"] == True:
                             pokemon_id_player = pokemon["pokemon_id"]
+                        else:
+                            pass
 
         return pokemon_id_player
+
 
     def add_to_pokedex(self):
 

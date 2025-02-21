@@ -9,11 +9,13 @@ with open("models/pokedex.json", "r", encoding = "utf-8") as file:
     data = json.load(file)
 
 class Pokedex():
-    def __init__(self):
+    def __init__(self, player_selected):
         self.window = Window()
         self.background = pygame.image.load("assets/pictures/menu.jpg")
         self.selected_position = 1
         self.current_state = "pokedex"
+
+        self.player_selected = player_selected
 
         #  button for add_pokemon
         self.buttons_add_pokemon = []
@@ -30,7 +32,7 @@ class Pokedex():
 
         self.pokemon_selected_sprite_list = []
         for player in data["players"]:
-                if player["player_name"] == "player1":
+                if player["player_name"] == self.player_selected:
                     for pokemon in player["pokedex"]:
                         pokemon_sprite = pokemon["sprite"]
                         pokemon_sprite_img = pygame.image.load(pokemon_sprite).convert_alpha()
@@ -40,20 +42,21 @@ class Pokedex():
 
         return self.pokemon_selected_sprite_list
 
-    def selected_pokemon(self,player_index,position_pokemon):
+    def selected_pokemon(self, position_pokemon):
 
         with open("models/pokedex.json", "r", encoding="utf-8") as file:
             data = json.load(file)
 
-        player = data["players"][player_index]
 
-        for pokemon in player["pokedex"]:
-            pokemon["selected"] = False
+        for player in data["players"]:
+                if player["player_name"] == self.player_selected:
+                    for pokemon in player["pokedex"]:
+                        pokemon["selected"] = False
 
-        pokemon = player["pokedex"][position_pokemon]
-        pokemon["selected"] = False
+                    player["pokedex"][position_pokemon]["selected"] = True
+        
 
-        pokemon["selected"] = not pokemon["selected"]
+
 
         with open("models/pokedex.json", "w", encoding="utf-8") as file:
             json.dump(data, file, ensure_ascii=False, indent=4)
@@ -82,6 +85,7 @@ class Pokedex():
     def draw_pokemons_add_pokemon(self):
         
 # line 1
+        self.pokemon_in_pokedex_list = self.get_pokemon_selected_sprite_list()
         position_x = 60
         for position_list, sprite in enumerate(self.pokemon_in_pokedex_list):
             if position_list <= 8:
@@ -170,10 +174,10 @@ class Pokedex():
 
                 if event.key == K_RETURN:
                     if  self.selected_position_add_pokemon in self.position_pokemon_sprite:
-                        self.selected_pokemon(0, self.selected_position_add_pokemon)
+                        self.selected_pokemon(self.selected_position_add_pokemon)
                         return "pokedex"
                     
-                
+            if event.type == KEYDOWN:
                 if event.key == K_ESCAPE:
                     return "game_menu"
                 
@@ -183,6 +187,8 @@ class Pokedex():
 
 
     def start_pokedex_menu(self):
+
+        self.get_pokemon_selected_sprite_list()
 
         self.draw_background()
         self.draw_background_add_pokemon()

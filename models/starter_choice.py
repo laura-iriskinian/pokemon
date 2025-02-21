@@ -9,10 +9,12 @@ with open("models/pokemon.json", "r", encoding = "utf-8") as file:
     data = json.load(file)
 
 class Starter_choice():
-    def __init__(self):
+    def __init__(self,player_created):
         self.window = Window()
         self.background = pygame.image.load("assets/pictures/menu.jpg")
         self.current_state = "starter_choice"
+
+        self.player_created = player_created
 
         self.x = 80
         self.y = 120
@@ -93,16 +95,13 @@ class Starter_choice():
     }
     
         for player in pokedex_data["players"]:
-            # if player["player_name"] == "player1":
+            if player["player_name"] == self.player_created:
                 
-            #     # Vérifie si "pokedex" est une liste, sinon la transforme en liste
-            #     if not isinstance(player["pokedex"], list):
-            #         player["pokedex"] = [player["pokedex"]]
+                if not isinstance(player["pokedex"], list):
+                    player["pokedex"] = [player["pokedex"]]
                 
-                # Ajoute le nouveau Pokémon à la liste
                 player["pokedex"].append(new_pokemon)
 
-        # Sauvegarder les modifications dans le fichier JSON
         with open("models/pokedex.json", "w", encoding="utf-8") as file:
             json.dump(pokedex_data, file, ensure_ascii=False, indent=4)
 
@@ -130,15 +129,15 @@ class Starter_choice():
 
                     if self.selected_position == 1:
                         self.add_to_pokedex(1)
-                        return "game_menu"
+                        return "game_menu",self.player_created
                     if self.selected_position == 2:
                         self.add_to_pokedex(4)
-                        return "game_menu"
+                        return "game_menu",self.player_created
                     if self.selected_position == 3:
                         self.add_to_pokedex(7)
-                        return "game_menu"
+                        return "game_menu",self.player_created
 
-        return "starter_choice"
+        return "starter_choice",None
 
 
 
@@ -150,5 +149,5 @@ class Starter_choice():
         self.select_starter_choice()
 
         #handle events
-        new_state = self.handle_envent_starter_choice()
-        return new_state
+        new_state, player_created = self.handle_envent_starter_choice()
+        return new_state, player_created
