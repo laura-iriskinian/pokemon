@@ -145,5 +145,5 @@ class Starter_choice():
         self.select_starter_choice()
 
         #handle events
-        new_state, player_created = self.handle_envent_starter_choice()
+        new_state, player_created = self.handle_event_starter_choice()
         return new_state, player_created

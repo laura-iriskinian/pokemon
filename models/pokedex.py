@@ -148,7 +148,7 @@ class Pokedex():
                 pygame.draw.rect(self.window.screen, self.window.GREY, sprite, 3)
 
 
-    def handle_envent_pokedex(self):
+    def handle_envent_pokedex(self,total_buttons_add_pokemon):
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -158,13 +158,13 @@ class Pokedex():
 
             if event.type == KEYDOWN:
                 if event.key == K_RIGHT:
-                    if self.selected_position_add_pokemon % 9 != 8 and self.selected_position_add_pokemon < self.total_buttons_add_pokemon - 1:
+                    if self.selected_position_add_pokemon % 9 != 8 and self.selected_position_add_pokemon < total_buttons_add_pokemon - 1:
                         self.selected_position_add_pokemon += 1
                 if event.key == K_LEFT:
                     if self.selected_position_add_pokemon % 9 != 0:
                         self.selected_position_add_pokemon -= 1
                 if event.key == K_DOWN:
-                    if self.selected_position_add_pokemon + 9 < self.total_buttons_add_pokemon:
+                    if self.selected_position_add_pokemon + 9 < total_buttons_add_pokemon:
                         self.selected_position_add_pokemon += 9
                 if event.key == K_UP:
                     if self.selected_position_add_pokemon - 9 >= 0:
@@ -186,7 +186,7 @@ class Pokedex():
     def start_pokedex_menu(self):
 
         self.get_pokemon_selected_sprite_list()
-
+        self.total_buttons_add_pokemon = len(self.get_pokemon_selected_sprite_list())
         self.draw_background()
         self.draw_background_add_pokemon()
         self.draw_pokemons_add_pokemon()
@@ -194,6 +194,6 @@ class Pokedex():
 
 
 
-        new_state = self.handle_envent_pokedex()
+        new_state = self.handle_envent_pokedex(self.total_buttons_add_pokemon)
         return new_state
 
