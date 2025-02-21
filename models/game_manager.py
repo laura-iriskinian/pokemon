@@ -1,6 +1,6 @@
 import pygame
 from pygame.locals import *
-
+from models.sound import Sound
 from models.fight import Fight
 from models.player_menu import Player_menu
 from models.game_menu import Game_menu
@@ -17,7 +17,8 @@ fps = 60
 class Game():
 
     def __init__(self):
-        
+
+        self.music = Sound()
         self.player_menu = Player_menu()
         self.create_player_menu = Create_player_menu()
         self.connect_player = Connect_player()
