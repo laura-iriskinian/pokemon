@@ -25,14 +25,13 @@ class Game_manager():
         # self.starter_choice = Starter_choice()
         self.game_menu = Game_menu()
         self.add_pokemon = Add_pokemon()
-        # self.pokedex = Pokedex()
+        self.pokedex = Pokedex()
         # self.fight = Fight()
-
         self.run = True
         self.current_state = "player_menu"
         self.reset_fight = True
-        # self.player_selected = None
-        # self.fight = Fight(self.player_selected) 
+        self.player_selected = None
+
     def game(self):
 
         while self.run:
@@ -45,10 +44,10 @@ class Game_manager():
                 self.current_state,self.player_selected = self.connect_player.connect_player()
                 if self.current_state == "game_menu" and self.player_selected:
                     self.fight = Fight(self.player_selected) 
-                    self.pokedex = Pokedex(self.player_selected)
+                    # self.current_state = "fight"
+
                 else:
                     self.current_state = "connect_player"
-
 
 
             if self.current_state == "create_player":

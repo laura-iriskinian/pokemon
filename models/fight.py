@@ -3,6 +3,8 @@ from models.pokemon import Pokemon
 from models.button import Button
 from models.connect_player import Connect_player
 
+from models.connect_player import Connect_player
+
 
 import json
 import random
@@ -43,18 +45,15 @@ class Fight():
         with open("models/pokedex.json", "r", encoding = "utf-8") as file:
             pokedex_data = json.load(file)
 
-        pokemon_id_player = 3
+        print(f"player name = {self.player_name}")
 
         for player in pokedex_data["players"]:
             if player["player_name"] == self.player_name:
                     for pokemon in player["pokedex"]:
                         if pokemon["selected"] == True:
                             pokemon_id_player = pokemon["pokemon_id"]
-                        else:
-                            pass
 
         return pokemon_id_player
-
 
     def add_to_pokedex(self):
 

@@ -106,7 +106,7 @@ class Connect_player():
                         self.player_selected = self.player_list[self.selected_position_select_player-1]
                         return "game_menu", self.player_selected
 
-        return "connect_player"      
+        return "connect_player",None 
 
 
     def connect_player(self):

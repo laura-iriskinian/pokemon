@@ -28,6 +28,10 @@ class Pokedex():
         with open("models/pokedex.json", "r", encoding = "utf-8") as file:
             data = json.load(file)
 
+
+        with open("models/pokedex.json", "r", encoding = "utf-8") as file:
+            data = json.load(file)
+
         self.pokemon_selected_sprite_list = []
         for player in data["players"]:
                 if player["player_name"] == self.player_selected:
@@ -36,22 +40,29 @@ class Pokedex():
                         pokemon_sprite_img = pygame.image.load(pokemon_sprite).convert_alpha()
                         if pokemon["selected"] == False:
                             pokemon_sprite_img.set_alpha(128)   
-                            self.pokemon_selected_sprite_list.append(pokemon_sprite_img)
-                        else:
-                            self.pokemon_selected_sprite_list.append(pokemon_sprite_img)
+                        self.pokemon_selected_sprite_list.append(pokemon_sprite_img)
+
         return self.pokemon_selected_sprite_list
 
-    # def selected_pokemon(self,position_pokemon):
+    def selected_pokemon(self,player_index,position_pokemon):
 
-    #     if data["pokemon"][position_pokemon]["active"] == True:
-    #         data["pokemon"][position_pokemon]["active"] = False
-    #     else : 
-    #         data["pokemon"][position_pokemon]["active"] = True
+        with open("models/pokedex.json", "r", encoding="utf-8") as file:
+            data = json.load(file)
 
-    #     with open("models/pokemon.json", "w", encoding="utf-8") as file:
-    #         json.dump(data, file, ensure_ascii=False, indent=4)
+        player = data["players"][player_index]
 
-    #     self.get_pokemon_selected_sprite_list()
+        for pokemon in player["pokedex"]:
+            pokemon["selected"] = False
+
+        pokemon = player["pokedex"][position_pokemon]
+        pokemon["selected"] = False
+
+        pokemon["selected"] = not pokemon["selected"]
+
+        with open("models/pokedex.json", "w", encoding="utf-8") as file:
+            json.dump(data, file, ensure_ascii=False, indent=4)
+
+        self.pokemon_in_pokedex_list = self.get_pokemon_selected_sprite_list()
 
     def draw_background(self):
         """method to draw background"""
@@ -64,12 +75,12 @@ class Pokedex():
         pygame.draw.rect(self.window.screen,self.window.GREY,background_add_pokemon,4)
         self.window.draw_text("Pokemon in pokedex :",self.window.text_font_menu_battle,self.window.WHITE,20,20)
 
-    # def get_position_pokemon_list(self):
-    #     self.position_pokemon_sprite = []
-    #     for position,sprite in enumerate(self.pokemon_availability_sprite_list):
-    #         self.position_pokemon_sprite.append(position)
+    def get_position_pokemon_list(self):
+        self.position_pokemon_sprite = []
+        for position,sprite in enumerate(self.pokemon_selected_sprite_list):
+            self.position_pokemon_sprite.append(position)
 
-    #     return self.position_pokemon_sprite
+        return self.position_pokemon_sprite
 
     def draw_pokemons_add_pokemon(self):
         
@@ -129,13 +140,13 @@ class Pokedex():
 #                 self.window.screen.blit(sprite,rect_pokemon_sprite)
 #                 position_x += 83
 
-#         return self.buttons_add_pokemon
+        return self.buttons_add_pokemon
 
-    # def select_add_pokemon(self):
+    def select_add_pokemon(self):
 
-    #     for position,sprite in enumerate(self.buttons_add_pokemon):
-    #         if position == self.selected_position_add_pokemon:
-    #             pygame.draw.rect(self.window.screen, self.window.GREY, sprite, 3)
+        for position,sprite in enumerate(self.buttons_add_pokemon):
+            if position == self.selected_position_add_pokemon:
+                pygame.draw.rect(self.window.screen, self.window.GREY, sprite, 3)
 
     def handle_event_pokedex(self):
 
@@ -145,30 +156,26 @@ class Pokedex():
 
             #handle events based on the type of menu
 
-            # if event.type == KEYDOWN:
-            #     if event.key == K_RIGHT:
-            #         if self.selected_position_add_pokemon % 9 != 8 and self.selected_position_add_pokemon < self.total_buttons_add_pokemon - 1:
-            #             self.selected_position_add_pokemon += 1
-            #     if event.key == K_LEFT:
-            #         if self.selected_position_add_pokemon % 9 != 0:
-            #             self.selected_position_add_pokemon -= 1
-            #     if event.key == K_DOWN:
-            #         if self.selected_position_add_pokemon + 9 < self.total_buttons_add_pokemon:
-            #             self.selected_position_add_pokemon += 9
-            #     if event.key == K_UP:
-            #         if self.selected_position_add_pokemon - 9 >= 0:
-            #             self.selected_position_add_pokemon -= 9
-
-                # if event.key == K_RETURN:
-                    # if  self.selected_position_add_pokemon in self.position_pokemon_sprite:
-                    # #     self.availability_pokemon(self.selected_position_add_pokemon)
-
-                    #     return "add_pokemon"
-                    # if self.selected_position_add_pokemon == 3:
-                    #     return "add_pokemon"
-                    # else:
-                    #     return "game_menu"
             if event.type == KEYDOWN:
+                if event.key == K_RIGHT:
+                    if self.selected_position_add_pokemon % 9 != 8 and self.selected_position_add_pokemon < self.total_buttons_add_pokemon - 1:
+                        self.selected_position_add_pokemon += 1
+                if event.key == K_LEFT:
+                    if self.selected_position_add_pokemon % 9 != 0:
+                        self.selected_position_add_pokemon -= 1
+                if event.key == K_DOWN:
+                    if self.selected_position_add_pokemon + 9 < self.total_buttons_add_pokemon:
+                        self.selected_position_add_pokemon += 9
+                if event.key == K_UP:
+                    if self.selected_position_add_pokemon - 9 >= 0:
+                        self.selected_position_add_pokemon -= 9
+
+                if event.key == K_RETURN:
+                    if  self.selected_position_add_pokemon in self.position_pokemon_sprite:
+                        self.selected_pokemon(0, self.selected_position_add_pokemon)
+                        return "pokedex"
+                    
+                
                 if event.key == K_ESCAPE:
                     return "game_menu"
                 
