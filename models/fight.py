@@ -1,7 +1,6 @@
 from models.window import Window
 from models.pokemon import Pokemon
 from models.button import Button
-
 import json
 import random
 import pygame
@@ -62,7 +61,6 @@ class Fight():
         with open("models/pokedex.json", "w", encoding="utf-8") as file:
             json.dump(pokedex_data, file, ensure_ascii=False, indent=4)
 
-
     def get_pokemon_opponent_id(self):
 
         with open("models/pokemon.json", "r", encoding = "utf-8") as file:
@@ -82,7 +80,6 @@ class Fight():
 
         return self.pokemon_opponent.append(Pokemon(new_pokemon_opponent_id))
         
-
     def draw_panel(self):
         """draw rectangle for bottom panel"""
         # full Rectangle 
@@ -112,7 +109,6 @@ class Fight():
                 #draw the rectangle around it
                 pygame.draw.rect(self.window.screen, self.window.GREY, button, 3)
         
-
     def handle_events_battle(self):   
         """method to handle menu battle events"""
 
@@ -198,7 +194,6 @@ class Fight():
 
     def start_fight(self):
 
-
         # draw background
         self.draw_background_fight()
 
@@ -214,13 +209,9 @@ class Fight():
         self.draw_panel()
         self.select_menu_button_battle()
 
-
-
-
         # select action
         new_state = self.handle_events_battle()
         return new_state
-
 
     def draw_lose_buttons(self):
         """method to draw button on screen"""
@@ -236,7 +227,6 @@ class Fight():
         self.retry.draw_button()
         self.return_to_menu.draw_button()
 
-
     def select_menu_button_lose(self):
         """method to show which button is selected"""
 
@@ -247,7 +237,6 @@ class Fight():
             if position == self.selected_position:  
                 #draw the rectangle around it
                 pygame.draw.rect(self.window.screen, self.window.GREY, button, 3)
-
 
     def handle_events_lose(self):   
         """method to handle menu events"""
@@ -272,7 +261,6 @@ class Fight():
                         self.selected_position = 1
                         return "player_menu"
         return "lose_game"
-
 
     def lose_fight(self):
 

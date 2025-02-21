@@ -1,14 +1,8 @@
-import pygame
-from pygame.locals import *
 from models.window import Window
 from models.button import Button
-import json
+import pygame
+from pygame.locals import *
 
-# with open("models/pokemon.json", "r", encoding = "utf-8") as file:
-#     data = json.load(file)
-
-# with open("models/pokedex.json", "r", encoding = "utf-8") as file:
-#     player_pokedex = json.load(file)
 
 class Player_menu():
     #first menu
@@ -49,7 +43,6 @@ class Player_menu():
                 pygame.draw.rect(self.window.screen, self.window.GREY, button.rect, 3)
 
     def start_player_menu(self):
-
         #set the scene
         self.draw_background()
         self.draw_buttons()

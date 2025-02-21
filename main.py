@@ -1,10 +1,10 @@
-from models.game_manager import Game
+from models.game_manager import Game_manager
 
 
 
 if __name__ == "__main__":
 
-    g = Game()
+    g = Game_manager()
     g.game()
 
 

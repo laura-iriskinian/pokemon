@@ -31,7 +31,6 @@ evolutions = {
     228: {"evolves_to": 229, "level_required": 5}
 }
 
-
 class Pokemon():
     """class to init pokemon, caract and draw"""
 
@@ -55,8 +54,6 @@ class Pokemon():
         self.target = ""
 
         self.position_pokemon = ""
-
-
 
 # defs get players
 
@@ -101,11 +98,6 @@ class Pokemon():
                     if resistance["name"] == attacker_type:
                         return resistance["multiply"]
             
-    def get_pokemon_type(self):
-        for pokemon in data["pokemon"]:
-            if pokemon["pokedex_id"] == self.pokemon_id:
-                return pokemon["type"]
-            
     def gain_xp(self, amount):
         self.xp += amount
         while self.xp >= self.xp_to_next_level:
@@ -140,12 +132,7 @@ class Pokemon():
     def win_battle(self):
         self.gain_xp(5)
 
-
-
-
 # # defs get opponent
-
-
 
 #     def get_pokemon_opponent_sprite(self):
 
@@ -156,9 +143,7 @@ class Pokemon():
 #                 self.pokemon_opponent_sprite = pygame.transform.scale(self.pokemon_opponent_sprite, (self.pokemon_opponent_sprite.get_width()*3, self.pokemon_opponent_sprite.get_height()*3))
 #                 return self.pokemon_opponent_sprite
 
-
 # defs fight system :
-
     def attack(self,target, attacker):
         """the player attack the opponent"""
         if random.random() > 0.1:   
@@ -173,7 +158,6 @@ class Pokemon():
         else:
             damage = 0
             self.draw_damage(damage,target,attacker)
-
 
     def draw_damage(self, damage,target, attacker):
         """Display the damage dealt on the screen for a short time"""
@@ -204,8 +188,6 @@ class Pokemon():
         self.window.screen.blit(damage_text, position)
         pygame.display.update()
 
-
-
     def draw_pokemon_opponent_hp(self,opponent):
         """draw HP to pokemon opponent"""
         self.window.draw_text(f"{opponent.pokemon_name} HP : {opponent.pokemon_life}",
@@ -223,8 +205,6 @@ class Pokemon():
         self.window.draw_text(f"{player.pokemon_name} XP : {player.pokemon_xp}",
                             self.window.text_font_hp_opponent,
                             self.window.WHITE, 160, 180)
-
-
 
     def draw_pokemon_player(self,player):
         """function to draw pokemon player"""

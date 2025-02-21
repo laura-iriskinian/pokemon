@@ -1,14 +1,10 @@
+from models.window import Window
+from models.button import Button
 import pygame
 from pygame.locals import *
 import json
 import time
-from models.window import Window
-from models.button import Button
-# from models.pokemon import Pokemon
 
-
-# with open("models/pokemon.json", "r", encoding = "utf-8") as file:
-#     data = json.load(file)
 
 class Create_player_menu():
     def __init__(self):
@@ -48,7 +44,6 @@ class Create_player_menu():
             new_state = self.handle_events_create_player()
             pygame.display.update() 
         return new_state
-
 
     def handle_events_create_player(self):
         """method to handle events on the create player screen"""

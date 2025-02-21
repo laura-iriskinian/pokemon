@@ -1,6 +1,5 @@
 from models.window import Window
 from models.pokemon import Pokemon
-
 import pygame
 import json
 from pygame.locals import *
@@ -42,7 +41,6 @@ class Starter_choice():
                 self.pokemon_starter_list.append(pokemon_sprite_img)
         return self.pokemon_starter_list
     
-
     def draw_background_starter_choice(self):
 
         self.window.screen.blit(self.background,(0,0))
@@ -58,7 +56,6 @@ class Starter_choice():
 
         self.window.draw_text("Choice your starter pokemon :",self.window.text_font_menu,self.window.BLACK,20,20)
 
-
     def draw_pokemons_starter_choice(self):
         
         position_x = 170
@@ -69,7 +66,6 @@ class Starter_choice():
                 
                 self.window.screen.blit(pokemon_sprite_img,rect_pokemon_sprite)
                 position_x += 235
-
 
     def select_starter_choice(self):
 
@@ -106,7 +102,7 @@ class Starter_choice():
         with open("models/pokedex.json", "w", encoding="utf-8") as file:
             json.dump(pokedex_data, file, ensure_ascii=False, indent=4)
 
-    def handle_envent_starter_choice(self):
+    def handle_event_starter_choice(self):
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -140,8 +136,6 @@ class Starter_choice():
 
         return "starter_choice"
 
-
-
     def start_starter_choice(self):
 
         #set the scene
@@ -150,5 +144,5 @@ class Starter_choice():
         self.select_starter_choice()
 
         #handle events
-        new_state = self.handle_envent_starter_choice()
+        new_state = self.handle_event_starter_choice()
         return new_state

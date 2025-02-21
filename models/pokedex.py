@@ -1,6 +1,5 @@
 
 from models.window import Window
-
 import json
 import pygame
 from pygame.locals import *
@@ -21,7 +20,6 @@ class Pokedex():
         # self.total_buttons_add_pokemon = len(self.pokemon_availability_sprite_list)+1
         # self.position_pokemon_sprite = self.get_position_pokemon_list()
         # self.selected_position_add_pokemon = 0
-
 
     def get_pokemon_selected_sprite_list(self):
         self.pokemon_selected_sprite_list = []
@@ -52,7 +50,6 @@ class Pokedex():
     def draw_background(self):
         """method to draw background"""
         self.window.screen.blit(self.background,(0,0))
-
 
     def draw_background_add_pokemon(self):
 
@@ -134,8 +131,7 @@ class Pokedex():
     #         if position == self.selected_position_add_pokemon:
     #             pygame.draw.rect(self.window.screen, self.window.GREY, sprite, 3)
 
-
-    def handle_envent_pokedex(self):
+    def handle_event_pokedex(self):
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -174,16 +170,13 @@ class Pokedex():
 
     # def activate_pokemon(self,position):
 
-
     def start_pokedex_menu(self):
-
+        #set the scene
         self.draw_background()
         self.draw_background_add_pokemon()
         self.draw_pokemons_add_pokemon()
         # self.select_add_pokemon()
-
-
-
-        new_state = self.handle_envent_pokedex()
+        #handle events
+        new_state = self.handle_event_pokedex()
         return new_state
 

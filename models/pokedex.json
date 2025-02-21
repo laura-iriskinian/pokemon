@@ -65,6 +65,20 @@
                     "sprite": "assets/pictures/Fire/charmander_front.png",
                     "xp": 0,
                     "selected": true
+                },
+                {
+                    "pokemon id": 7,
+                    "name": "Squirtle",
+                    "sprite": "assets/pictures/Water/squirtle_front.png",
+                    "xp": 0,
+                    "selected": true
+                },
+                {
+                    "pokemon id": 4,
+                    "name": "Charmander",
+                    "sprite": "assets/pictures/Fire/charmander_front.png",
+                    "xp": 0,
+                    "selected": true
                 }
             ]
         },
@@ -83,6 +97,20 @@
                     "pokemon id": 4,
                     "name": "Charmander",
                     "sprite": "assets/pictures/Fire/charmander_front.png",
+                    "xp": 0,
+                    "selected": true
+                },
+                {
+                    "pokemon id": 4,
+                    "name": "Charmander",
+                    "sprite": "assets/pictures/Fire/charmander_front.png",
+                    "xp": 0,
+                    "selected": true
+                },
+                {
+                    "pokemon id": 7,
+                    "name": "Squirtle",
+                    "sprite": "assets/pictures/Water/squirtle_front.png",
                     "xp": 0,
                     "selected": true
                 },
@@ -119,6 +147,20 @@
                     "sprite": "assets/pictures/Fire/charmander_front.png",
                     "xp": 0,
                     "selected": true
+                },
+                {
+                    "pokemon id": 7,
+                    "name": "Squirtle",
+                    "sprite": "assets/pictures/Water/squirtle_front.png",
+                    "xp": 0,
+                    "selected": true
+                },
+                {
+                    "pokemon id": 4,
+                    "name": "Charmander",
+                    "sprite": "assets/pictures/Fire/charmander_front.png",
+                    "xp": 0,
+                    "selected": true
                 }
             ]
         },
@@ -137,6 +179,20 @@
                     "pokemon id": 4,
                     "name": "Charmander",
                     "sprite": "assets/pictures/Fire/charmander_front.png",
+                    "xp": 0,
+                    "selected": true
+                },
+                {
+                    "pokemon id": 4,
+                    "name": "Charmander",
+                    "sprite": "assets/pictures/Fire/charmander_front.png",
+                    "xp": 0,
+                    "selected": true
+                },
+                {
+                    "pokemon id": 7,
+                    "name": "Squirtle",
+                    "sprite": "assets/pictures/Water/squirtle_front.png",
                     "xp": 0,
                     "selected": true
                 },
@@ -173,6 +229,20 @@
                     "sprite": "assets/pictures/Fire/charmander_front.png",
                     "xp": 0,
                     "selected": true
+                },
+                {
+                    "pokemon id": 7,
+                    "name": "Squirtle",
+                    "sprite": "assets/pictures/Water/squirtle_front.png",
+                    "xp": 0,
+                    "selected": true
+                },
+                {
+                    "pokemon id": 4,
+                    "name": "Charmander",
+                    "sprite": "assets/pictures/Fire/charmander_front.png",
+                    "xp": 0,
+                    "selected": true
                 }
             ]
         },
@@ -191,6 +261,20 @@
                     "pokemon id": 4,
                     "name": "Charmander",
                     "sprite": "assets/pictures/Fire/charmander_front.png",
+                    "xp": 0,
+                    "selected": true
+                },
+                {
+                    "pokemon id": 4,
+                    "name": "Charmander",
+                    "sprite": "assets/pictures/Fire/charmander_front.png",
+                    "xp": 0,
+                    "selected": true
+                },
+                {
+                    "pokemon id": 7,
+                    "name": "Squirtle",
+                    "sprite": "assets/pictures/Water/squirtle_front.png",
                     "xp": 0,
                     "selected": true
                 },
@@ -227,6 +311,20 @@
                     "sprite": "assets/pictures/Fire/charmander_front.png",
                     "xp": 0,
                     "selected": true
+                },
+                {
+                    "pokemon id": 7,
+                    "name": "Squirtle",
+                    "sprite": "assets/pictures/Water/squirtle_front.png",
+                    "xp": 0,
+                    "selected": true
+                },
+                {
+                    "pokemon id": 4,
+                    "name": "Charmander",
+                    "sprite": "assets/pictures/Fire/charmander_front.png",
+                    "xp": 0,
+                    "selected": true
                 }
             ]
         },
@@ -254,24 +352,11 @@
                     "sprite": "assets/pictures/Fire/charmander_front.png",
                     "xp": 0,
                     "selected": true
-                }
-            ]
-        },
-        {
-            "player_name": "popo",
-            "pokedex": [
-                {
-                    "pokedex_id": 1,
-                    "name": "Bulbasaur",
-                    "sprites": {
-                        "front": "assets/pictures/Grass/bulbasaur_front.png"
-                    },
-                    "xp": 50
                 },
                 {
-                    "pokemon id": 4,
-                    "name": "Charmander",
-                    "sprite": "assets/pictures/Fire/charmander_front.png",
+                    "pokemon id": 7,
+                    "name": "Squirtle",
+                    "sprite": "assets/pictures/Water/squirtle_front.png",
                     "xp": 0,
                     "selected": true
                 },
@@ -285,7 +370,7 @@
             ]
         },
         {
-            "player_name": "loulou",
+            "player_name": "Try",
             "pokedex": [
                 {
                     "pokemon id": 4,
@@ -293,13 +378,6 @@
                     "sprite": "assets/pictures/Fire/charmander_front.png",
                     "xp": 0,
                     "selected": true
-                },
-                {
-                    "pokemon id": 1,
-                    "name": "Bulbasaur",
-                    "sprite": "assets/pictures/Grass/bulbasaur_front.png",
-                    "xp": 0,
-                    "selected": false
                 }
             ]
         }

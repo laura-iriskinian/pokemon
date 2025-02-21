@@ -1,12 +1,7 @@
+from models.window import Window
 import pygame
 from pygame.locals import *
 import json
-from models.window import Window
-# from models.pokemon import Pokemon
-
-
-# with open("models/pokemon.json", "r", encoding = "utf-8") as file:
-#     data = json.load(file)
 
 with open("models/pokedex.json", "r", encoding = "utf-8") as file:
     pokedex = json.load(file)
@@ -78,7 +73,6 @@ class Connect_player():
             if position == self.selected_position_select_player:
                 pygame.draw.rect(self.window.screen, self.window.GREY, self.player_name_button, 2)
 
-
     def handle_events_connect_player(self):
         """method to handle events on the connect player screen"""
 
@@ -107,7 +101,6 @@ class Connect_player():
                         return "game_menu"
 
         return "connect_player"      
-
 
     def connect_player(self):
 

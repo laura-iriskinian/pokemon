@@ -358,7 +358,7 @@
                     "multiply": 0.5
                 }
             ],
-            "active": false
+            "active": true
         },
         {
             "pokedex_id": 5,
