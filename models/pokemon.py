@@ -11,7 +11,7 @@ evolutions = {
     2: {"evolves_to": 3, "level_required": 10},
     4: {"evolves_to": 5, "level_required": 5},
     5: {"evolves_to": 6, "level_required": 10},
-    7: {"evolves_to": 8, "level_required": 5},
+    7: {"evolves_to": 8, "level_required": 2},
     8: {"evolves_to": 9, "level_required": 10},
     10: {"evolves_to": 11, "level_required": 5},
     11: {"evolves_to": 12, "level_required": 10},
